@@ -1,5 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* background: #fdfdfd; */
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
 .resume {
-  width: 50%;
+  width: 80%;
   margin: auto;
   margin-top: 20px;
 }
@@ -46,6 +61,11 @@
   display: inline-block;
   float: right;
   text-align: right;
+}
+
+.resume-date a {
+  color: black;
+  text-decoration: none;
 }
 
 .item-objective-list {
