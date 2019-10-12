@@ -1,0 +1,61 @@
+.resume {
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.item {
+  margin-left: 10px
+}
+
+.profile {}
+
+.item-text {}
+
+.category-title {
+  margin: 10px 0px 0px 0px;
+}
+
+.item-header {
+  margin: 0px 10px;
+}
+
+.title-text {
+  display: inline-block;
+}
+
+.workplace {
+  margin: 10px 0px 0px 0px;
+}
+
+.workplace a {
+  text-decoration: none;
+  color: #090c08;
+}
+
+.role {
+  margin: 0px 0px 10px 0px;
+}
+
+.item-date {
+  display: inline-block;
+  float: right;
+}
+
+.resume-date {
+  display: inline-block;
+  float: right;
+  text-align: right;
+}
+
+.item-objective-list {
+  margin: 0px 0px 10px 0px;
+}
+
+.footer {
+  height: 100px;
+}
+
+.resume-header {
+  height: 78px;
+}
