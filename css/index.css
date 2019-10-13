@@ -1,12 +1,13 @@
 body {
   margin: 0;
   padding: 0;
-  /* background: #fdfdfd; */
+  background: #f6f7f8;
+  color: #2d3047;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: #1e1e24;
 }
 
 a:hover {
@@ -30,6 +31,32 @@ a:hover {
 
 .category-title {
   margin: 10px 0px 0px 0px;
+  color: #f4989c
+}
+
+.Intellimind {
+  color: #00b0c8 !important;
+}
+
+.unlvASC {
+  color: #ff2400 !important;
+}
+
+.codecentral {
+  /* color: #ffc300 !important; */
+  color: #297ce4 !important;
+}
+
+.idtech {
+  color: #65c96b !important;
+}
+
+.unlvit {
+  color: #B8B8B8 !important;
+}
+
+.mesquite {
+  color: #5d965d !important;
 }
 
 .item-header {
@@ -46,7 +73,7 @@ a:hover {
 
 .workplace a {
   text-decoration: none;
-  color: #090c08;
+  color: #1e1e24;
 }
 
 .role {
@@ -65,7 +92,7 @@ a:hover {
 }
 
 .resume-date a {
-  color: black;
+  color: #1e1e24;
   text-decoration: none;
 }
 
@@ -79,4 +106,8 @@ a:hover {
 
 .resume-header {
   height: 78px;
+}
+
+.myName {
+  color: #20a4f3 !important;
 }
