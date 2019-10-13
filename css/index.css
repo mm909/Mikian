@@ -105,9 +105,13 @@ a:hover {
 }
 
 .resume-header {
-  height: 78px;
+  height: 90px;
 }
 
 .myName {
   color: #20a4f3 !important;
+}
+
+.firsthr {
+  margin-top: 0px;
 }
