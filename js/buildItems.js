@@ -6,6 +6,19 @@ jQuery(document).ready(function() {
     }
   }
   console.log(categoryList);
+
+  for (var i = 0; i < categoryList.length; i++) {
+    let cat = `
+    <div class="category">
+      <h2 class="category-title"><u><i>` + categoryList[i] + `</i></u></h2>
+      <div id=` + categoryList[i].replace(" ", "-") + `> </div>
+      <hr>
+    </div>
+    `
+    $jcat = $(cat)
+    $(".resume").append($jcat);
+  }
+
   for (var i = 0; i < items.length; i++) {
     let objectives = "";
 
@@ -43,6 +56,6 @@ jQuery(document).ready(function() {
     </div>
     `
     $jitem = $(item)
-    // $(".resume").append($jitem);
+    $("#" + items[i].category.replace(" ", "-")).append($jitem);
   }
 });
