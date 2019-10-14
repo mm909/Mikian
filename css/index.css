@@ -115,3 +115,9 @@ a:hover {
 .firsthr {
   margin-top: 0px;
 }
+
+.search {
+  border-width: 0px;
+  background-color: inherit;
+  padding-left: 2px
+}

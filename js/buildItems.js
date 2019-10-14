@@ -31,7 +31,7 @@ jQuery(document).ready(function() {
     }
 
     let item = `
-    <div class="item">
+    <div class="item" id="item` + i + `">
       <div class="profile"></div>
       <div class="item-text">
         <div class="item-header">
