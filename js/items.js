@@ -139,5 +139,85 @@ items = [{
       "Used my application <a href='https://mm909.github.io/NeuralNet-Tester/'>\"Neural Network White Box\"</a> to allow the user to draw a digit to the screen and have it be displayed on the seven segment display.",
       "Created a seven segment display using servos and an arduino microcontroller."
     ]
+  },
+  {
+    category: "Other Projects",
+    workplace: "<a href='https://github.com/mm909/Convolutional-Neural-Network-MNIST'>Convolutional Neural Network</a> — <a href='http://yann.lecun.com/exdb/mnist/'>MNIST</a>",
+    role: "CNN to recognize MNIST digits",
+    date: "Spring 2019",
+    objectives: [
+      "Calculated the partial derivatives for backpropagation in a multi-layer CNN and implemented them in C.",
+      "Achieved 99% accuracy on the MNIST dataset using this network written in C without any libraries.",
+      "Implemented backpropagation optimizers such as momentum gradient descent to converge quickly."
+    ]
+  },
+  {
+    category: "Other Projects",
+    workplace: "<a href='https://github.com/mm909/Artificial-Neural-Network-MNIST'>Artificial Neural Network </a> — <a href='http://yann.lecun.com/exdb/mnist/'>MNIST</a>",
+    role: "ANN to recognize MNIST digits",
+    date: "Spring 2019",
+    objectives: [
+      "Calculated the partial derivatives for backpropagation in a multi-layer ANN and implemented them in C.",
+      "Achieved 97.5% accuracy on the MNIST dataset using this network written without any libraries.",
+      "Used several activation functions such as: ReLU, sigmoid, double sigmoid, and tanh.",
+      "Implemented backpropagation optimizers such as momentum gradient descent to converge quickly."
+    ]
+  },
+  {
+    category: "Other Projects",
+    workplace: "<a href='https://github.com/mm909/CS783-ANN-OnlineTraining'>Artificial Neural Network </a> — XOR",
+    role: "ANN to predict output for the XOR logic gate",
+    date: "Feb 2019",
+    objectives: [
+      "Calculated the partial derivatives for backpropagation in a multi-layer ANN and implemented them in C.",
+      "Wrote a python script to visualize the weights, biases, and test values using matplotlib.",
+      "Used several activation functions such as: ReLU, sigmoid, double sigmoid, and tanh."
+    ]
+  },
+  {
+    category: "Other Projects",
+    workplace: "<a href='https://github.com/mm909/Flappy-Bird-NNV'>Flappy Bird — Neuroevolution</a>",
+    role: "Evolution of neural network",
+    date: "Summer 2018",
+    objectives: [
+      "Created the game 'Flappy Bird' using p5.js.",
+      "Allowed hundreds of AI birds to play the level using their own 'brain' to control their decisions.",
+      "Used a genetic algorithm to pass on successful weights and biases based on how well each bird did.",
+      "Designed a way to 'white box' how information is passing through the birds' brains."
+    ]
+  },
+  {
+    category: "Certifications",
+    workplace: "<a href='https://www.comptia.org/'>CompTIA A+</a>",
+    role: "Certified Technician",
+    date: "July 2017 - Present",
+    objectives: []
+  },
+  {
+    category: "Certifications",
+    workplace: "<a href='https://www.redcross.org/'>BLS</a>",
+    role: "Basic Life Support",
+    date: "May 2018 - Present",
+    objectives: []
+  },
+  {
+    category: "Service",
+    workplace: "<a href='https://sunshinenevada.org/'>Sunshine Nevada</a>",
+    role: "Summer Camp Counselor",
+    date: "May 2015 - Present",
+    objectives: [
+      "Volunteered hundreds of hours each summer to ensure that every child, dispite their disabilities, gets the chance to experience normal childhood activities like summer camp.",
+      "Lead a group a 5-10 volunteers and 15-30 children through day to day summer camp activities.",
+      "Engaged with kids on the autism spectrum and made them feel like the 'World's Greatest.'"
+    ]
+  },
+  {
+    category: "Service",
+    workplace: "<a href='https://featsonv.org/'>FEAT</a>",
+    role: "Families for Effective Autism Treatment - Peer mentor",
+    date: "Aug 2018 - Present",
+    objectives: [
+      "Spent one night each month watching children on the autism spectrum to give autism parents a night out."
+    ]
   }
 ]
