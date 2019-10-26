@@ -111,7 +111,7 @@ items = [{
     category: "Notable Projects",
     workplace: "<a href='https://github.com/mm909/Convolutional-Neural-Network-CIFAR10'>Convolutional Neural Network</a> — <a href='https://www.cs.toronto.edu/~kriz/cifar.html'>CIFAR-10</a>",
     role: "CNN to recognize CIFAR-10 images",
-    date: "Spring 2019t",
+    date: "Spring 2019",
     objectives: [
       "Calculated the partial derivatives for backpropagation in a multi-layer CNN and implemented them in C.",
       "Achieved 70% accuracy on the CIFAR-10 dataset using this network written in C without any libraries.",
@@ -193,13 +193,13 @@ items = [{
     date: "July 2017 - Present",
     objectives: []
   },
-  {
-    category: "Certifications",
-    workplace: "<a href='https://www.redcross.org/'>BLS</a>",
-    role: "Basic Life Support",
-    date: "May 2018 - Present",
-    objectives: []
-  },
+  // {
+  //   category: "Certifications",
+  //   workplace: "<a href='https://www.redcross.org/'>BLS</a>",
+  //   role: "Basic Life Support",
+  //   date: "May 2018 - Present",
+  //   objectives: []
+  // },
   {
     category: "Service",
     workplace: "<a href='https://sunshinenevada.org/'>Sunshine Nevada</a>",

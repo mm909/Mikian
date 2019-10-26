@@ -1,8 +1,44 @@
 jQuery(document).ready(function() {
-  let categoryList = []
+  buildItems("");
+});
+
+function buildItems(filter) {
+  $(".resumeBox").empty()
+  if (filter == "") console.log("Empty Filter");
+
+  var canidates = [];
   for (var i = 0; i < items.length; i++) {
-    if (!categoryList.includes(items[i].category)) {
-      categoryList.push(items[i].category)
+    var include = false
+
+    let key = items[i].workplace.toLowerCase()
+    key = key.replace(/\s+/g, '')
+    if (key.includes(filter)) {
+      include = true
+    }
+
+    key = items[i].role.toLowerCase()
+    key = key.replace(/\s+/g, '')
+    if (key.includes(filter)) {
+      include = true
+    }
+
+    for (var j = 0; j < items[i].objectives.length; j++) {
+      key = items[i].objectives[j].toLowerCase();
+      key = key.replace(/\s+/g, '')
+      if (key.includes(filter)) {
+        include = true
+      }
+    }
+
+    if (include) canidates.push(items[i])
+  }
+  if (filter == "") canidates = items
+  console.log(canidates);
+
+  let categoryList = []
+  for (var i = 0; i < canidates.length; i++) {
+    if (!categoryList.includes(canidates[i].category)) {
+      categoryList.push(canidates[i].category)
     }
   }
   console.log(categoryList);
@@ -16,14 +52,14 @@ jQuery(document).ready(function() {
     </div>
     `
     $jcat = $(cat)
-    $(".resume").append($jcat);
+    $(".resumeBox").append($jcat);
   }
 
-  for (var i = 0; i < items.length; i++) {
+  for (var i = 0; i < canidates.length; i++) {
     let objectives = "";
 
-    for (var j = 0; j < items[i].objectives.length; j++) {
-      objectives += "<li class='objective'>" + items[i].objectives[j] + "</li>"
+    for (var j = 0; j < canidates[i].objectives.length; j++) {
+      objectives += "<li class='objective'>" + canidates[i].objectives[j] + "</li>"
     }
 
     if (items[i].objectives.length > 0) {
@@ -37,15 +73,15 @@ jQuery(document).ready(function() {
         <div class="item-header">
           <div class="title-text">
             <h3 class="workplace">
-              ` + items[i].workplace + `
+              ` + canidates[i].workplace + `
             </h3>
             <p class="role">
-              <i>` + items[i].role + `</i>
+              <i>` + canidates[i].role + `</i>
             </p>
           </div>
           <div class="item-date">
             <p>
-              <i>` + items[i].date + `</i>
+              <i>` + canidates[i].date + `</i>
             </p>
           </div>
         </div>
@@ -56,6 +92,6 @@ jQuery(document).ready(function() {
     </div>
     `
     $jitem = $(item)
-    $("#" + items[i].category.replace(" ", "-")).append($jitem);
+    $("#" + canidates[i].category.replace(" ", "-")).append($jitem);
   }
-});
+}
