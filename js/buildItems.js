@@ -63,7 +63,7 @@ function buildItems(filter) {
     for (var j = 0; j < canidates[i].objectives.length; j++) {
       if (canidates[i].objectives[j].toLowerCase().includes(filter) && objCount < 3) {
         objIndexes.push(j)
-        objectives += "<li class='objective'>" + canidates[i].objectives[j] + "</li>"
+        objectives += "<li class='objective'>" + canidates[i].objectives[j].replace(filter, "<u>" + filter + "</u>") + "</li>"
         objCount++
       }
     }
