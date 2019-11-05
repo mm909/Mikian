@@ -2,6 +2,13 @@ jQuery(document).ready(function() {
   buildItems("");
 });
 
+String.prototype.replaceAll = function(strReplace, strWith) {
+  // See http://stackoverflow.com/a/3561711/556609
+  var esc = strReplace.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+  var reg = new RegExp(esc, 'ig');
+  return this.replace(reg, strWith);
+};
+
 function buildItems(filter) {
   $(".resumeBox").empty()
   // if (filter == "") console.log("Empty Filter");
@@ -64,6 +71,7 @@ function buildItems(filter) {
       if (canidates[i].objectives[j].toLowerCase().includes(filter) && objCount < 3) {
         objIndexes.push(j)
         objectives += "<li class='objective'>" + canidates[i].objectives[j].replace(filter, "<u>" + filter + "</u>") + "</li>"
+        // objectives += "<li class='objective'>" + canidates[i].objectives[j].replaceAll(filter, "<u>" + filter + "</u>") + "</li>"
         objCount++
       }
     }
