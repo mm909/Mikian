@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
 
 function buildItems(filter) {
   $(".resumeBox").empty()
-  if (filter == "") console.log("Empty Filter");
+  // if (filter == "") console.log("Empty Filter");
 
   var canidates = [];
   for (var i = 0; i < items.length; i++) {
@@ -33,7 +33,7 @@ function buildItems(filter) {
     if (include) canidates.push(items[i])
   }
   if (filter == "") canidates = items
-  console.log(canidates);
+  // console.log(canidates);
 
   let categoryList = []
   for (var i = 0; i < canidates.length; i++) {
@@ -41,7 +41,7 @@ function buildItems(filter) {
       categoryList.push(canidates[i].category)
     }
   }
-  console.log(categoryList);
+  // console.log(categoryList);
 
   for (var i = 0; i < categoryList.length; i++) {
     let cat = `
@@ -62,15 +62,15 @@ function buildItems(filter) {
     let objIndexes = []
     let objCount = 0
     for (var j = 0; j < canidates[i].objectives.length; j++) {
-      if (canidates[i].objectives[j].includes(filter) && objCount < 3) {
-        // objIndexes
+      if (canidates[i].objectives[j].toLowerCase().includes(filter) && objCount < 3) {
+        objIndexes.push(j)
         objectives += "<li class='objective'>" + canidates[i].objectives[j] + "</li>"
         objCount++
       }
     }
 
-    for (var j = objCount; j < canidates[i].objectives.length; j++) {
-      if (objCount < 3) {
+    for (var j = 0; j < canidates[i].objectives.length; j++) {
+      if (objCount < 3 && !objIndexes.includes(j)) {
         objectives += "<li class='objective'>" + canidates[i].objectives[j] + "</li>"
         objCount++
       }
