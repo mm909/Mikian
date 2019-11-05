@@ -25,9 +25,9 @@ items = [{
     role: "<a href='https://www.unlv.edu/'>UNLV</a> - Computer Science Tutor",
     date: "Aug 2019 - Oct 2019",
     objectives: [
-      "Taught students of all levels and ages how to make websites, games, and robots.",
-      "Lead classes about OOP in P5.js and game development in Javascript and GameMaker.",
-      "Developed project-based web development curriculum for twenty-five to fifty advanced students."
+      "Tutored twenty-four core computer science, computer engineering, statistics, and math classes.",
+      "Measurably improved students' performance in class, on assignments, and during exams.",
+      "Effectively used teaching strategies to tutor multiple students at the same time."
     ]
   },
   {
@@ -36,9 +36,9 @@ items = [{
     role: "Las Vegas - Computer Science Mentor",
     date: "Aug 2018 - Aug 2019",
     objectives: [
-      "Tutored twenty-four core computer science, computer engineering, statistics, and math classes.",
-      "Measurably improved students' performance in class, on assignments, and during exams.",
-      "Effectively used teaching strategies to tutor multiple students at the same time."
+      "Taught students of all levels and ages how to make websites, games, and robots.",
+      "Lead classes about OOP in P5.js and game development in Javascript and GameMaker.",
+      "Developed project-based web development curriculum for twenty-five to fifty advanced students."
     ]
   },
   {

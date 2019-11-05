@@ -58,8 +58,22 @@ function buildItems(filter) {
   for (var i = 0; i < canidates.length; i++) {
     let objectives = "";
 
+    // for (var j = 0; j < canidates[i].objectives.length; j++) {
+    let objIndexes = []
+    let objCount = 0
     for (var j = 0; j < canidates[i].objectives.length; j++) {
-      objectives += "<li class='objective'>" + canidates[i].objectives[j] + "</li>"
+      if (canidates[i].objectives[j].includes(filter) && objCount < 3) {
+        // objIndexes
+        objectives += "<li class='objective'>" + canidates[i].objectives[j] + "</li>"
+        objCount++
+      }
+    }
+
+    for (var j = objCount; j < canidates[i].objectives.length; j++) {
+      if (objCount < 3) {
+        objectives += "<li class='objective'>" + canidates[i].objectives[j] + "</li>"
+        objCount++
+      }
     }
 
     if (items[i].objectives.length > 0) {

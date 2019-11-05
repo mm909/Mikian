@@ -52,7 +52,7 @@ a:hover {
 }
 
 .unlvit {
-  color: #B8B8B8 !important;
+  color: #777 !important;
 }
 
 .mesquite {
@@ -119,5 +119,5 @@ a:hover {
 .search {
   border-width: 0px;
   background-color: inherit;
-  padding-left: 2px
+  padding-left: 1px;
 }
