@@ -113,11 +113,13 @@ a:hover {
 }
 
 .firsthr {
-  margin-top: 0px;
+  margin-top: 2px;
 }
 
 .search {
   /* border-width: 1px; */
   /* background-color: inherit; */
   padding-left: 1px;
+  margin-top: 2px;
+  /* margin-bottom: 4px; */
 }

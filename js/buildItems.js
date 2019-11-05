@@ -2,6 +2,10 @@ jQuery(document).ready(function() {
   buildItems("");
 });
 
+String.prototype.splice = function(idx, rem, str) {
+  return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
+};
+
 function betterReplace(testStr, filter) {
   if (filter != "" && testStr.toLowerCase().includes(filter.toLowerCase())) {
     testStr = testStr.splice(testStr.toLowerCase().indexOf(filter.toLowerCase()), 0, "<u>")
