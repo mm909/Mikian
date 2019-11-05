@@ -2,14 +2,8 @@ jQuery(document).ready(function() {
   buildItems("");
 });
 
-String.prototype.replaceAll = function(strReplace, strWith) {
-  // See http://stackoverflow.com/a/3561711/556609
-  var esc = strReplace.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-  var reg = new RegExp(esc, 'ig');
-  return this.replace(reg, strWith);
-};
-
 function buildItems(filter) {
+  // let filters =
   $(".resumeBox").empty()
   // if (filter == "") console.log("Empty Filter");
 
@@ -18,20 +12,20 @@ function buildItems(filter) {
     var include = false
 
     let key = items[i].workplace.toLowerCase()
-    key = key.replace(/\s+/g, '')
+    // key = key.replace(/\s+/g, '')
     if (key.includes(filter)) {
       include = true
     }
 
     key = items[i].role.toLowerCase()
-    key = key.replace(/\s+/g, '')
+    // key = key.replace(/\s+/g, '')
     if (key.includes(filter)) {
       include = true
     }
 
     for (var j = 0; j < items[i].objectives.length; j++) {
       key = items[i].objectives[j].toLowerCase();
-      key = key.replace(/\s+/g, '')
+      // key = key.replace(/\s+/g, '')
       if (key.includes(filter)) {
         include = true
       }

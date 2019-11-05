@@ -17,7 +17,9 @@ items = [{
     workplace: "Developer — <a class='Intellimind' href='https://www.intellimind.com/en'>Intellimind</a>",
     role: "Las Vegas - Software Developer",
     date: "Oct 2019 - Present",
-    objectives: []
+    objectives: [
+      "Used Twitter API to display real time Twitter data analytics."
+    ]
   },
   {
     category: "Experience",

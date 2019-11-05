@@ -117,7 +117,7 @@ a:hover {
 }
 
 .search {
-  border-width: 0px;
-  background-color: inherit;
+  /* border-width: 1px; */
+  /* background-color: inherit; */
   padding-left: 1px;
 }
