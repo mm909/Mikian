@@ -2,10 +2,18 @@ jQuery(document).ready(function() {
   buildItems("");
 });
 
+function betterReplace(testStr, filter) {
+  if (filter != "" && testStr.toLowerCase().includes(filter.toLowerCase())) {
+    testStr = testStr.splice(testStr.toLowerCase().indexOf(filter.toLowerCase()), 0, "<u>")
+    testStr = testStr.splice(testStr.toLowerCase().indexOf(filter.toLowerCase()) + filter.length, 0, "</u>")
+  }
+  return testStr
+}
+
 function buildItems(filter) {
-  // let filters =
   $(".resumeBox").empty()
   // if (filter == "") console.log("Empty Filter");
+  filter = filter.toLowerCase();
 
   var canidates = [];
   for (var i = 0; i < items.length; i++) {
@@ -64,8 +72,7 @@ function buildItems(filter) {
     for (var j = 0; j < canidates[i].objectives.length; j++) {
       if (canidates[i].objectives[j].toLowerCase().includes(filter) && objCount < 3) {
         objIndexes.push(j)
-        objectives += "<li class='objective'>" + canidates[i].objectives[j].replace(filter, "<u>" + filter + "</u>") + "</li>"
-        // objectives += "<li class='objective'>" + canidates[i].objectives[j].replaceAll(filter, "<u>" + filter + "</u>") + "</li>"
+        objectives += "<li class='objective'>" + betterReplace(canidates[i].objectives[j], filter) + "</li>"
         objCount++
       }
     }
