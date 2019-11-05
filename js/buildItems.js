@@ -57,10 +57,9 @@ function buildItems(filter) {
 
   for (var i = 0; i < canidates.length; i++) {
     let objectives = "";
-
-    // for (var j = 0; j < canidates[i].objectives.length; j++) {
     let objIndexes = []
     let objCount = 0
+
     for (var j = 0; j < canidates[i].objectives.length; j++) {
       if (canidates[i].objectives[j].toLowerCase().includes(filter) && objCount < 3) {
         objIndexes.push(j)
@@ -76,13 +75,12 @@ function buildItems(filter) {
       }
     }
 
-    if (items[i].objectives.length > 0) {
+    if (objectives != "") {
       objectives = "<ul class='item-objective-list'> " + objectives + "</ul>"
     }
 
     let item = `
     <div class="item" id="item` + i + `">
-      <div class="profile"></div>
       <div class="item-text">
         <div class="item-header">
           <div class="title-text">
