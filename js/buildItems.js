@@ -59,7 +59,7 @@ function buildItems(filter) {
   for (var i = 0; i < categoryList.length; i++) {
     let cat = `
     <div class="category">
-      <h2 class="category-title"><u><i>` + categoryList[i] + `</i></u></h2>
+      <h4 class="category-title"><u><i>` + categoryList[i] + `</i></u></h4>
       <div id=` + categoryList[i].replace(" ", "-") + `> </div>
       <hr>
     </div>
@@ -97,9 +97,9 @@ function buildItems(filter) {
       <div class="item-text">
         <div class="item-header">
           <div class="title-text">
-            <h3 class="workplace">
+            <h5 class="workplace">
               ` + canidates[i].workplace + `
-            </h3>
+            </h5>
             <p class="role">
               <i>` + canidates[i].role + `</i>
             </p>

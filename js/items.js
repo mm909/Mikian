@@ -20,7 +20,7 @@ items = [{
     objectives: [
       "Used Twitter API to display real time Twitter data analytics.",
       "Provided text sentiment analytics of tweets using ML5.js.",
-      "Used node.js to get data from a mySQL database and used ejs to generate client side views.",
+      "Used node.js to get data from a mySQL database and created client side views with ejs.",
       "Made python scripts that query Twitter API and store that information in a mySQL database.",
       "Used chart.js to display data analytics graphics for a Twitter dashboard."
     ]
@@ -58,45 +58,45 @@ items = [{
       "Balanced teaching the class and working with each student one on one to ensure each student was learning."
     ]
   },
-  {
-    category: "Experience",
-    workplace: "IT — <a class='unlvit' href='https://www.it.unlv.edu/'>UNLV OIT</a>",
-    role: "Field and Desktop Technician",
-    date: "Aug 2017 - May 2018",
-    objectives: [
-      "Worked with university faculty and staff to resolve computer, printer, and network issues.",
-      "Resolved common hardware issues, ordered and replaced hardware when needed.",
-      "Managed a service ticket queue of ten or more field requests."
-    ]
-  },
-  {
-    category: "Experience",
-    workplace: "IT — <a class='unlvit' href='https://www.it.unlv.edu/'>UNLV OIT</a>",
-    role: "Help Desk Technician",
-    date: "Aug 2016 - Aug 2017",
-    objectives: [
-      "Worked with students at the university to resolve common hardware and software issues.",
-      "Managed a queue of more than two-hundred at a time, quickly resolving issues.",
-      "Troubleshooted issues over the phone, through email, and in person."
-    ]
-  },
-  {
-    category: "Experience",
-    workplace: "IT — <a class='mesquite' href='https://www.mesquitenv.gov/'>City of Mesquite</a>",
-    role: "Technician Intern",
-    date: "May 2016 - Aug 2016",
-    objectives: [
-      "Assisted IT Technicians with day to day operations.",
-      "Documented tickets, service requests, and research."
-    ]
-  },
+  // {
+  //   category: "Experience",
+  //   workplace: "IT — <a class='unlvit' href='https://www.it.unlv.edu/'>UNLV OIT</a>",
+  //   role: "Field and Desktop Technician",
+  //   date: "Aug 2017 - May 2018",
+  //   objectives: [
+  //     "Worked with university faculty and staff to resolve computer, printer, and network issues.",
+  //     "Resolved common hardware issues, ordered and replaced hardware when needed.",
+  //     "Managed a service ticket queue of ten or more field requests."
+  //   ]
+  // },
+  // {
+  //   category: "Experience",
+  //   workplace: "IT — <a class='unlvit' href='https://www.it.unlv.edu/'>UNLV OIT</a>",
+  //   role: "Help Desk Technician",
+  //   date: "Aug 2016 - Aug 2017",
+  //   objectives: [
+  //     "Worked with students at the university to resolve common hardware and software issues.",
+  //     "Managed a queue of more than two-hundred at a time, quickly resolving issues.",
+  //     "Troubleshooted issues over the phone, through email, and in person."
+  //   ]
+  // },
+  // {
+  //   category: "Experience",
+  //   workplace: "IT — <a class='mesquite' href='https://www.mesquitenv.gov/'>City of Mesquite</a>",
+  //   role: "Technician Intern",
+  //   date: "May 2016 - Aug 2016",
+  //   objectives: [
+  //     "Assisted IT Technicians with day to day operations.",
+  //     "Documented tickets, service requests, and research."
+  //   ]
+  // },
   {
     category: "Notable Projects",
     workplace: "<a href='http://MikianMusser.com'>MikianMusser.com</a>",
     role: "Personal web site - html/css/js/pug/sass ",
     date: "Aug 2018 - Present",
     objectives: [
-      "Iteratively designed and programmed a personal website to showcase projects and contact information.",
+      "Iteratively designed and programmed a personal website to showcase projects and experience.",
       "Used CSS and HTML preprocessors such as SASS and PUG to increase productivity.",
       "Taught myself the web programming languages through self guided intuition."
     ]
@@ -192,13 +192,13 @@ items = [{
       "Designed a way to 'white box' how information is passing through the birds' brains."
     ]
   },
-  {
-    category: "Certifications",
-    workplace: "<a href='https://www.comptia.org/'>CompTIA A+</a>",
-    role: "Certified Technician",
-    date: "July 2017 - Present",
-    objectives: []
-  },
+  // {
+  //   category: "Certifications",
+  //   workplace: "<a href='https://www.comptia.org/'>CompTIA A+</a>",
+  //   role: "Certified Technician",
+  //   date: "July 2017 - Present",
+  //   objectives: []
+  // },
   // {
   //   category: "Certifications",
   //   workplace: "<a href='https://www.redcross.org/'>BLS</a>",
