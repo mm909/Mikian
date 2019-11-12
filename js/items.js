@@ -18,7 +18,11 @@ items = [{
     role: "Las Vegas - Software Developer",
     date: "Oct 2019 - Present",
     objectives: [
-      "Used Twitter API to display real time Twitter data analytics."
+      "Used Twitter API to display real time Twitter data analytics.",
+      "Provided text sentiment analytics of tweets using ML5.js.",
+      "Used node.js to get data from a mySQL database and used ejs to generate client side views.",
+      "Made python scripts that query Twitter API and store that information in a mySQL database.",
+      "Used chart.js to display data analytics graphics for a Twitter dashboard."
     ]
   },
   {
