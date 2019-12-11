@@ -78,6 +78,7 @@ function buildItems(filter) {
     <div class="category">
       <h4 class="category-title"><u><i>` + categoryList[i] + `</i></u></h4>
       <div id=` + categoryList[i].replace(" ", "-") + `> </div>
+      <a class="showMore"> </a>
       <hr>
     </div>
     `

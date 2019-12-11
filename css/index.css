@@ -31,7 +31,8 @@ hr {
 }
 
 .item {
-  margin-left: 10px
+  margin-left: 10px;
+  margin-top: 10px
 }
 
 .profile {}
@@ -109,15 +110,28 @@ hr {
 }
 
 .item-objective-list {
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 0px 0px;
+  width: 90%;
 }
 
 .footer {
   height: 100px;
 }
 
+.showMore {
+  font-size: 14px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+
 .resume-header {
   height: 90px;
+}
+
+.highlight{
+  /* color: #20a4f3 !important; */
+  font-style: italic;
 }
 
 .myName {

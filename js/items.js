@@ -18,9 +18,10 @@ items = [{
     role: "Las Vegas - Software Developer",
     date: "Oct 2019 - Present",
     objectives: [
-      "Designed a real time Twitter analytics dashboard using data from Twitter API.",
-      "Provided text sentiment analytics of tweets using ML5.js.",
+      "Reduced downtime on Node.js server by 93% by casheing redundant data calculations.",
       "Queried Twitter API and stored tweet/user/influencer data in a mySQL database.",
+      "Provided text sentiment analytics of tweets using ML5.js.",
+      "Designed a real time Twitter analytics dashboard using data from Twitter API.",
       "Generated and designed client side views with ejs with live data from a mySQL database ",
       "Analyzed meta data from tweets and displayed important company metrics in a Twitter dashboard."
     ],
@@ -135,10 +136,11 @@ items = [{
     role: "Senior Design - Automatic Pooper Scooper",
     date: "Jul 2019 - Present",
     objectives: [
-      "Created, labeled, and cleaned a database of over 1000 images and 3000 objects used for object detection.",
-      "Wrote scripts to interface with many hardware devices: motors, load cell, relay, voltage sensor",
+      "Created, labeled, and cleaned a database of over 2300 images and 6000 objects used for object detection.",
       "Used Tensorflow to train several different models based on the environment the robot is in.",
-      "Wrote scripts to automate nearly every part of the data processing pipeline."
+      "Wrote scripts to automate nearly every part of the data processing pipeline.",
+      "Discovered critical battery life issues with voltage detectors and matplotlib.",
+      "Wrote scripts to interface with many hardware devices: motors, load cell, relay, voltage sensor",
     ]
   },
   {
