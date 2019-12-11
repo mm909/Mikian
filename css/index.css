@@ -124,6 +124,11 @@ hr {
   color: #20a4f3 !important;
 }
 
+.languages {
+  color: #20a4f3 !important;
+  font-weight: 500
+}
+
 .firsthr {
   margin-top: 14px;
 }

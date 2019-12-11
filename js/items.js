@@ -25,16 +25,19 @@ items = [{
       "Analyzed meta data from tweets and displayed important company metrics in a Twitter dashboard."
     ],
     index: [
-        "js",
-        "javascript",
-        "html",
-        "ejs",
-        "mysql",
-        "python",
-        "ml5.js",
-        "api",
-        "chart.js",
-        "css"
+      "js",
+      "javascript",
+      "html",
+      "ejs",
+      "mysql",
+      "python",
+      "ml5.js",
+      "api",
+      "chart.js",
+      "css",
+      "node",
+      "innosetup",
+      "installers",
     ]
   },
   {
@@ -111,6 +114,19 @@ items = [{
       "Iteratively designed and programmed a personal website to showcase projects and experience.",
       "Used CSS and HTML preprocessors such as SASS and PUG to increase productivity.",
       "Taught myself the web programming languages through self guided intuition."
+    ],
+    index: [
+      "js",
+      "javascript",
+      "html",
+      "css",
+      "bootstrap",
+      "p5.js",
+      "animation",
+      "Webhosting",
+      "ftps",
+      "dynamic design",
+      "responsive"
     ]
   },
   {

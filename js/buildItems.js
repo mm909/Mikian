@@ -15,47 +15,64 @@ function betterReplace(testStr, filter) {
 }
 
 function buildItems(filter) {
+
+  // CLear out div
   $(".resumeBox").empty()
-  // if (filter == "") console.log("Empty Filter");
+
+  // Grab filter
+  ogFilter = filter
   filter = filter.toLowerCase();
 
+  // Start to get list of canidates
   var canidates = [];
-  for (var i = 0; i < items.length; i++) {
-    var include = false
+  if (filter == "") {
+    canidates = items
+  } else {
+    for (var i = 0; i < items.length; i++) {
+      var include = false
 
-    let key = items[i].workplace.toLowerCase()
-    // key = key.replace(/\s+/g, '')
-    if (key.includes(filter)) {
-      include = true
-    }
-
-    key = items[i].role.toLowerCase()
-    // key = key.replace(/\s+/g, '')
-    if (key.includes(filter)) {
-      include = true
-    }
-
-    for (var j = 0; j < items[i].objectives.length; j++) {
-      key = items[i].objectives[j].toLowerCase();
-      // key = key.replace(/\s+/g, '')
+      let key = items[i].workplace.toLowerCase()
       if (key.includes(filter)) {
         include = true
       }
+
+      key = items[i].role.toLowerCase()
+      if (key.includes(filter)) {
+        include = true
+      }
+
+      for (var j = 0; j < items[i].objectives.length; j++) {
+        key = items[i].objectives[j].toLowerCase();
+        if (key.includes(filter)) {
+          include = true
+        }
+      }
+
+      if (items[i].index) {
+        for (var j = 0; j < items[i].index.length; j++) {
+          key = items[i].index[j].toLowerCase();
+          if (key.includes(filter)) {
+            include = true
+            console.log(items[i].workplace);
+          }
+        }
+      }
+
+      if (include) canidates.push(items[i])
     }
-
-    if (include) canidates.push(items[i])
   }
-  if (filter == "") canidates = items
-  // console.log(canidates);
+  console.log(canidates);
 
+  // Create category list
   let categoryList = []
   for (var i = 0; i < canidates.length; i++) {
     if (!categoryList.includes(canidates[i].category)) {
       categoryList.push(canidates[i].category)
     }
   }
-  // console.log(categoryList);
+  console.log(categoryList);
 
+  // Build categories
   for (var i = 0; i < categoryList.length; i++) {
     let cat = `
     <div class="category">
@@ -68,21 +85,26 @@ function buildItems(filter) {
     $(".resumeBox").append($jcat);
   }
 
+
   for (var i = 0; i < canidates.length; i++) {
     let objectives = "";
     let objIndexes = []
     let objCount = 0
+    let highlight = false
 
+    // Get most relevent objective and underline search term
     for (var j = 0; j < canidates[i].objectives.length; j++) {
       if (canidates[i].objectives[j].toLowerCase().includes(filter) && objCount < 3) {
         objIndexes.push(j)
         objectives += "<li class='objective'>" + betterReplace(canidates[i].objectives[j], filter) + "</li>"
         objCount++
+        highlight = true
       }
     }
 
-    for (var j = 0; j < canidates[i].objectives.length; j++) {
-      if (objCount < 3 && !objIndexes.includes(j)) {
+    for (var j = 0; j < canidates[i].objectives.length && objCount < 3; j++) {
+      if (!objIndexes.includes(j)) {
+        objIndexes.push(j)
         objectives += "<li class='objective'>" + canidates[i].objectives[j] + "</li>"
         objCount++
       }
@@ -92,13 +114,27 @@ function buildItems(filter) {
       objectives = "<ul class='item-objective-list'> " + objectives + "</ul>"
     }
 
+    workplaceStr = canidates[i].workplace
+    if (!highlight) {
+      if (canidates[i].index) {
+        for (var j = 0; j < canidates[i].index.length; j++) {
+          key = canidates[i].index[j].toLowerCase();
+          if (key.includes(filter) && !canidates[i].role.includes(filter)) {
+            // if (key == filter) {
+            workplaceStr += " (" + canidates[i].index[j] + ")"
+            break
+          }
+        }
+      }
+    }
+
     let item = `
     <div class="item" id="item` + i + `">
       <div class="item-text">
         <div class="item-header">
           <div class="title-text">
             <h5 class="workplace">
-              ` + canidates[i].workplace + `
+              ` + workplaceStr + `
             </h5>
             <p class="role">
               <i>` + canidates[i].role + `</i>
