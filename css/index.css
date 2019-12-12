@@ -36,6 +36,12 @@ hr {
   display: none;
 }
 
+.language:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  
+}
+
 .resume {
   width: 50%;
   margin: auto;

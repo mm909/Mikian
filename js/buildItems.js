@@ -190,6 +190,12 @@ function buildItems(filter) {
       $("#" + this.id).text("+ Show More (" + Math.abs(3 - catListCount[this.id.split('sm')[1]]) + ")")
       $(".item" + this.id).css('display', 'none')
     }
+  });
+
+  $(".language").click(function() {
+    console.log($(this).text());
+    buildItems($(this).text());
+    document.getElementById("searchBox").value = $(this).text()
 
   });
 
