@@ -183,8 +183,14 @@ function buildItems(filter) {
   }
 
   $(".showMore").click(function() {
-    $("#" + this.id).css('display', 'none')
-    $(".item" + this.id).css('display', 'block')
+    if ($("#" + this.id).text().toLowerCase().includes("more")) {
+      $("#" + this.id).text("- Show Less")
+      $(".item" + this.id).css('display', 'block')
+    } else {
+      $("#" + this.id).text("+ Show More (" + Math.abs(3 - catListCount[this.id.split('sm')[1]]) + ")")
+      $(".item" + this.id).css('display', 'none')
+    }
+
   });
 
 }
