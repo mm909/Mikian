@@ -3,7 +3,7 @@ items = [{
     workplace: "Computer Science, BS",
     role: "<a href='https://www.unlv.edu/'>University of Nevada, Las Vegas</a>",
     date: "Aug 2016 - Present",
-    objectives: ["Computer science senior | Expected graduation - May 2020 | GPA: 3.97"]
+    objectives: ["Computer science senior | Expected graduation - May 2020 | GPA: 3.96"]
   },
   {
     category: "Education",
@@ -28,15 +28,15 @@ items = [{
     index: [
       "js",
       "javascript",
-      "html",
+      "HTML",
       "ejs",
       "mysql",
-      "python",
-      "ml5.js",
+      "Python",
+      "ML5.js",
       "api",
       "chart.js",
-      "css",
-      "node",
+      "CSS",
+      "Node.js",
       "innosetup",
       "installers",
     ]
@@ -143,14 +143,21 @@ items = [{
       "Wrote scripts to interface with many hardware devices: motors, load cell, relay, voltage sensor",
     ],
     index: [
-      'tensorflow',
-      'ml',
+      'TensorFlow',
+      'ML',
       'machine learning',
       'data science',
       'image processing',
       'labeling',
       'LabelImg',
       'Robot',
+      'Python',
+      'C++',
+      'Arduino',
+      'breadboard',
+      'Neural Network',
+      'CNN',
+      'SSD MobileNet'
     ]
   },
   {
@@ -162,6 +169,19 @@ items = [{
       "Calculated the partial derivatives for backpropagation in a multi-layer CNN and implemented them in C.",
       "Achieved 70% accuracy on the CIFAR-10 dataset using this network written in C without any libraries.",
       "Implemented backpropagation optimizers such as momentum gradient descent to converge quickly."
+    ],
+    index: [
+      "Python",
+      'TensorFlow',
+      'ML',
+      'Machine Learning',
+      'Image Processing',
+      'C++',
+      'C',
+      'Neural Network',
+      'CNN',
+      'CS783'
+
     ]
   },
   {

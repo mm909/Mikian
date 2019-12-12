@@ -53,7 +53,6 @@ function buildItems(filter) {
           key = items[i].index[j].toLowerCase();
           if (key.includes(filter)) {
             include = true
-            console.log(items[i].workplace);
           }
         }
       }
@@ -61,7 +60,6 @@ function buildItems(filter) {
       if (include) canidates.push(items[i])
     }
   }
-  console.log(canidates);
 
   // Create category list
   let categoryList = []
@@ -193,10 +191,8 @@ function buildItems(filter) {
   });
 
   $(".language").click(function() {
-    console.log($(this).text());
     buildItems($(this).text());
     document.getElementById("searchBox").value = $(this).text()
-
   });
 
 }
