@@ -141,6 +141,16 @@ items = [{
       "Wrote scripts to automate nearly every part of the data processing pipeline.",
       "Discovered critical battery life issues with voltage detectors and matplotlib.",
       "Wrote scripts to interface with many hardware devices: motors, load cell, relay, voltage sensor",
+    ],
+    index: [
+      'tensorflow',
+      'ml',
+      'machine learning',
+      'data science',
+      'image processing',
+      'labeling',
+      'LabelImg',
+      'Robot',
     ]
   },
   {

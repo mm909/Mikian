@@ -19,8 +19,21 @@ a:hover {
 }
 
 hr {
-  margin-top: 0px;
+  margin-top: 3px;
   margin-bottom: 5px
+}
+
+.emptyhr {
+  margin-top: 7px
+}
+
+.showMore:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.showmore {
+  display: none
 }
 
 .resume {

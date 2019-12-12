@@ -65,33 +65,53 @@ function buildItems(filter) {
 
   // Create category list
   let categoryList = []
+  let catListCount = []
+  let catIndexCount = 0
   for (var i = 0; i < canidates.length; i++) {
     if (!categoryList.includes(canidates[i].category)) {
+      catListCount[catIndexCount] = 1
+      catIndexCount++
       categoryList.push(canidates[i].category)
+    } else {
+      catListCount[(categoryList.indexOf(canidates[i].category))]++
     }
   }
-  console.log(categoryList);
 
   // Build categories
   for (var i = 0; i < categoryList.length; i++) {
     let cat = `
     <div class="category">
       <h4 class="category-title"><u><i>` + categoryList[i] + `</i></u></h4>
-      <div id=` + categoryList[i].replace(" ", "-") + `> </div>
-      <a class="showMore"> </a>
-      <hr>
-    </div>
-    `
+      <div id=` + categoryList[i].replace(" ", "-") + `> </div>`
+    if (catListCount[i] > 3) {
+      cat += `<p class="showMore" id="sm` + i + `"> + Show More (` + Math.abs(3 - catListCount[i]) + `) </p> <hr></div>`
+    } else {
+      cat += `
+      <hr class='emptyhr'>
+
+          </div>`
+    }
+
     $jcat = $(cat)
     $(".resumeBox").append($jcat);
   }
 
-
+  currentPlacements = [0]
   for (var i = 0; i < canidates.length; i++) {
     let objectives = "";
     let objIndexes = []
     let objCount = 0
     let highlight = false
+    let more = false
+
+    if (currentPlacements[(categoryList.indexOf(canidates[i].category))]) {
+      currentPlacements[(categoryList.indexOf(canidates[i].category))]++
+      if (currentPlacements[(categoryList.indexOf(canidates[i].category))] > 3) {
+        more = true
+      }
+    } else {
+      currentPlacements[(categoryList.indexOf(canidates[i].category))] = 1
+    }
 
     // Get most relevent objective and underline search term
     for (var j = 0; j < canidates[i].objectives.length; j++) {
@@ -153,7 +173,18 @@ function buildItems(filter) {
       </div>
     </div>
     `
+
+    if (more) {
+      item = `<span class='showmore itemsm` + (categoryList.indexOf(canidates[i].category)) + `'> ` + item + ' </span>'
+    }
+
     $jitem = $(item)
     $("#" + canidates[i].category.replace(" ", "-")).append($jitem);
   }
+
+  $(".showMore").click(function() {
+    $("#" + this.id).css('display', 'none')
+    $(".item" + this.id).css('display', 'block')
+  });
+
 }
