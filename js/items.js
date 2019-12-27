@@ -18,10 +18,11 @@ items = [{
     role: "Las Vegas - Software Developer",
     date: "Oct 2019 - Present",
     objectives: [
-      "Reduced downtime on Node.js server by 93% by casheing redundant data calculations.",
+      "Reduced downtime on Node.js server by 93% by cashing redundant data calculations.",
       "Queried Twitter API and stored tweet/user/influencer data in a mySQL database.",
-      "Provided text sentiment analytics of tweets using ML5.js.",
+      "Deployed software using custom installers made by innosetup and Amazon S3 Buckets.",
       "Designed a real time Twitter analytics dashboard using data from Twitter API.",
+      "Provided text sentiment analytics of tweets using ML5.js.",
       "Generated and designed client side views with ejs with live data from a mySQL database ",
       "Analyzed meta data from tweets and displayed important company metrics in a Twitter dashboard."
     ],
@@ -39,6 +40,8 @@ items = [{
       "Node.js",
       "innosetup",
       "installers",
+      "Twitter",
+      'API'
     ]
   },
   {
@@ -50,6 +53,15 @@ items = [{
       "Tutored twenty-four core computer science, computer engineering, statistics, and math classes.",
       "Measurably improved students' performance in class, on assignments, and during exams.",
       "Effectively used teaching strategies to tutor multiple students at the same time."
+    ],
+    index: [
+      "Python",
+      "Math",
+      "C++",
+      "ASM",
+      "Machine Languages",
+      "MIPS",
+      "C"
     ]
   },
   {
@@ -58,9 +70,16 @@ items = [{
     role: "Las Vegas - Computer Science Mentor",
     date: "Aug 2018 - Aug 2019",
     objectives: [
-      "Taught students of all levels and ages how to make websites, games, and robots.",
+      "Taught students of all levels and ages and skill levels how to make websites, games, and robots.",
       "Lead classes about OOP in P5.js and game development in Javascript and GameMaker.",
       "Developed project-based web development curriculum for twenty-five to fifty advanced students."
+    ],
+    index: [
+      "Python",
+      "C++",
+      "HTML",
+      "CSS",
+      "JS"
     ]
   },
   {
@@ -72,6 +91,13 @@ items = [{
       "Lead a classroom of eight young kids to create video games and robots.",
       "Created lesson plans and coding challenges for each day and presented material in fun and unique ways.",
       "Balanced teaching the class and working with each student one on one to ensure each student was learning."
+    ],
+    index: [
+      "Java",
+      "Minecraft",
+      "HTML",
+      "CSS",
+      "JS"
     ]
   },
   // {
