@@ -1,5 +1,20 @@
 jQuery(document).ready(function() {
   buildItems("");
+
+  $(".showMore").click(function() {
+    if ($("#" + this.id).text().toLowerCase().includes("more")) {
+      $("#" + this.id).text("- Show Less")
+      $(".item" + this.id).css('display', 'block')
+    } else {
+      $("#" + this.id).text("+ Show More (" + Math.abs(3 - catListCount[this.id.split('sm')[1]]) + ")")
+      $(".item" + this.id).css('display', 'none')
+    }
+  });
+
+  $(".language").click(function() {
+    buildItems($(this).text());
+    document.getElementById("searchBox").value = $(this).text()
+  });
 });
 
 String.prototype.splice = function(idx, rem, str) {
@@ -24,7 +39,8 @@ function buildItems(filter) {
   filter = filter.toLowerCase();
 
   // Start to get list of canidates
-  var canidates = [];
+  // console.log(items.length);
+  let canidates = [];
   if (filter == "") {
     canidates = items
   } else {
@@ -94,6 +110,7 @@ function buildItems(filter) {
     $(".resumeBox").append($jcat);
   }
 
+  let currentPlacements = []
   currentPlacements = [0]
   for (var i = 0; i < canidates.length; i++) {
     let objectives = "";
@@ -179,20 +196,4 @@ function buildItems(filter) {
     $jitem = $(item)
     $("#" + canidates[i].category.replace(" ", "-")).append($jitem);
   }
-
-  $(".showMore").click(function() {
-    if ($("#" + this.id).text().toLowerCase().includes("more")) {
-      $("#" + this.id).text("- Show Less")
-      $(".item" + this.id).css('display', 'block')
-    } else {
-      $("#" + this.id).text("+ Show More (" + Math.abs(3 - catListCount[this.id.split('sm')[1]]) + ")")
-      $(".item" + this.id).css('display', 'none')
-    }
-  });
-
-  $(".language").click(function() {
-    buildItems($(this).text());
-    document.getElementById("searchBox").value = $(this).text()
-  });
-
 }
