@@ -1,6 +1,16 @@
+let catListCount = []
+
 jQuery(document).ready(function() {
   buildItems("");
 
+
+  $(".language").click(function() {
+    buildItems($(this).text());
+    document.getElementById("searchBox").value = $(this).text()
+  });
+});
+
+function attachEvents() {
   $(".showMore").click(function() {
     if ($("#" + this.id).text().toLowerCase().includes("more")) {
       $("#" + this.id).text("- Show Less")
@@ -10,12 +20,7 @@ jQuery(document).ready(function() {
       $(".item" + this.id).css('display', 'none')
     }
   });
-
-  $(".language").click(function() {
-    buildItems($(this).text());
-    document.getElementById("searchBox").value = $(this).text()
-  });
-});
+}
 
 String.prototype.splice = function(idx, rem, str) {
   return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
@@ -79,7 +84,6 @@ function buildItems(filter) {
 
   // Create category list
   let categoryList = []
-  let catListCount = []
   let catIndexCount = 0
   for (var i = 0; i < canidates.length; i++) {
     if (!categoryList.includes(canidates[i].category)) {
@@ -157,7 +161,7 @@ function buildItems(filter) {
           key = canidates[i].index[j].toLowerCase();
           if (key.includes(filter) && !canidates[i].role.includes(filter)) {
             // if (key == filter) {
-            workplaceStr += " (" + canidates[i].index[j] + ")"
+            workplaceStr += " <span class='indexValue'>(" + canidates[i].index[j] + ")</span>"
             break
           }
         }
@@ -196,4 +200,5 @@ function buildItems(filter) {
     $jitem = $(item)
     $("#" + canidates[i].category.replace(" ", "-")).append($jitem);
   }
+  attachEvents();
 }

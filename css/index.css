@@ -23,6 +23,33 @@ hr {
   margin-bottom: 5px
 }
 
+.currentProject {
+  color: #FF686D
+}
+
+.indexValue {
+  font-style: italic;
+}
+
+.rhsintro {
+  margin: 0px
+}
+
+.projectCat {
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.searchTitle {
+  display: inline;
+  margin-bottom: 0px;
+  margin-right: 10px;
+}
+
 .emptyhr {
   margin-top: 7px
 }
@@ -39,7 +66,7 @@ hr {
 .language:hover {
   text-decoration: underline;
   cursor: pointer;
-  
+
 }
 
 .resume {
@@ -68,7 +95,7 @@ hr {
 }
 
 .unlvASC {
-  color: #ff2400 !important;
+  color: #FF6D72 !important;
 }
 
 .codecentral {
@@ -159,11 +186,20 @@ hr {
 
 .languages {
   color: #20a4f3 !important;
-  font-weight: 500
+  font-weight: 500;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .firsthr {
   margin-top: 14px;
+}
+
+.search:focus{
+  width:275px;
 }
 
 .search {
@@ -172,7 +208,9 @@ hr {
   padding-left: 1px;
   margin-top: 7px;
   height: 25px;
-  width: 150px;
-  font-size: 14px
+  /* width: 150px; */
+  width: 275px;
+  font-size: 14px;
+  /* transition:0.3s; -webkit-transition: 0.3s; */
     /* margin-bottom: 4px; */
 }
