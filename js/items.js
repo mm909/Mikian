@@ -355,6 +355,27 @@ items = [{
   },
   {
     category: "Other Projects",
+    workplace: "<a href='https://github.com/mm909/Kernel-Trick-XOR'>Kernel Trick XOR </a>",
+    role: "Used a kernel trick to make XOR linearly separable",
+    date: "Spring 2020",
+    objectives: [
+      "Implemented a nonlinear kernel trick to make XOR linearly separable by a plane.",
+      "Preformed dimension manipulation to add a dimension to XOR data."
+    ],
+    index: [
+      "Python",
+      'ML',
+      'Machine Learning',
+      'Kernel Trick',
+      'PCA',
+      'Principal Component Analysis',
+      'ANN',
+      'Backpropagation',
+      'Neural Network',
+    ]
+  },
+  {
+    category: "Other Projects",
     workplace: "<a href='https://github.com/mm909/Artificial-Neural-Network-MNIST'>Artificial Neural Network </a> — <a href='http://yann.lecun.com/exdb/mnist/'>MNIST</a>",
     role: "ANN to recognize MNIST digits",
     date: "Spring 2019",
