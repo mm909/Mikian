@@ -173,24 +173,26 @@ items = [{
   },
   {
     category: "Notable Projects",
-    workplace: "<a href='https://github.com/mm909/Convolutional-Neural-Network-CIFAR10'>Convolutional Neural Network</a> — <a href='https://www.cs.toronto.edu/~kriz/cifar.html'>CIFAR-10</a>",
-    role: "CNN to recognize CIFAR-10 images",
+    workplace: "<a href='https://mm909.github.io/NeuralNet-Tester/'>Neural Network White Box</a> — <a href='http://yann.lecun.com/exdb/mnist/'>MNIST</a>",
+    role: "Application to visualize ANN predictions",
     date: "Spring 2019",
     objectives: [
-      "Calculated the partial derivatives for backpropagation in a multi-layer CNN and implemented them in C.",
-      "Achieved 70% accuracy on the CIFAR-10 dataset using this network written in C without any libraries.",
-      "Implemented backpropagation optimizers such as momentum gradient descent to converge quickly."
+      "Developed an application that allows users to draw images on the screen on, send that image through the network, and display the network's predictions.",
+      "Created a sandbox to understand how well the neural network was learning.",
+      "Wrote documentation showing what the hidden layer of the network is seeing."
     ],
     index: [
-      "Python",
       'ML',
       'Machine Learning',
       'Image Processing',
       'C++',
       'C',
       'Neural Network',
-      'CNN',
-      'CS783'
+      'CS783',
+      'Web Development',
+      'js',
+      'p5.js',
+      'ANN',
     ]
   },
   {
@@ -220,26 +222,24 @@ items = [{
   },
   {
     category: "Notable Projects",
-    workplace: "<a href='https://mm909.github.io/NeuralNet-Tester/'>Neural Network White Box</a> — <a href='http://yann.lecun.com/exdb/mnist/'>MNIST</a>",
-    role: "Application to visualize ANN predictions",
+    workplace: "<a href='https://github.com/mm909/Convolutional-Neural-Network-CIFAR10'>Convolutional Neural Network</a> — <a href='https://www.cs.toronto.edu/~kriz/cifar.html'>CIFAR-10</a>",
+    role: "CNN to recognize CIFAR-10 images",
     date: "Spring 2019",
     objectives: [
-      "Developed an application that allows users to draw images on the screen on, send that image through the network, and display the network's predictions.",
-      "Created a sandbox to understand how well the neural network was learning.",
-      "Wrote documentation showing what the hidden layer of the network is seeing."
+      "Calculated the partial derivatives for backpropagation in a multi-layer CNN and implemented them in C.",
+      "Achieved 70% accuracy on the CIFAR-10 dataset using this network written in C without any libraries.",
+      "Implemented backpropagation optimizers such as momentum gradient descent to converge quickly."
     ],
     index: [
+      "Python",
       'ML',
       'Machine Learning',
       'Image Processing',
       'C++',
       'C',
       'Neural Network',
-      'CS783',
-      'Web Development',
-      'js',
-      'p5.js',
-      'ANN',
+      'CNN',
+      'CS783'
     ]
   },
   {
@@ -268,7 +268,7 @@ items = [{
     category: "Other Projects",
     workplace: "<a href='https://victortaksheyev.github.io/portfolio/pages/segDisplay.html'>Seven Segment Neural Network </a> — <a href='http://yann.lecun.com/exdb/mnist/'>MNIST</a>",
     role: "Neural network predictions displayed on seven segment display",
-    date: "May 2019",
+    date: "Summer 2019",
     objectives: [
       "Trained a KNN to recognize MNIST digits and used a video feed to predict what number was held up.",
       "Used my application <a href='https://mm909.github.io/NeuralNet-Tester/'>\"Neural Network White Box\"</a> to allow the user to draw a digit to the screen and have it be displayed on the seven segment display.",
@@ -308,6 +308,49 @@ items = [{
       'Neural Network',
       'CNN',
       'CS783',
+    ]
+  },
+  {
+    category: "Other Projects",
+    workplace: "<a href='https://github.com/mm909/Flappy-Bird-NNV'>Flappy Bird — Neuroevolution</a>",
+    role: "Evolution of neural network",
+    date: "Summer 2018",
+    objectives: [
+      "Created the game 'Flappy Bird' using p5.js.",
+      "Allowed hundreds of AI birds to play the level using their own 'brain' to control their decisions.",
+      "Used a genetic algorithm to pass on successful weights and biases based on how well each bird did.",
+      "Designed a way to 'white box' how information is passing through the birds' brains."
+    ],
+    index: [
+      'ML',
+      'Machine Learning',
+      'Neural Network',
+      'Web Development',
+      'js',
+      'p5.js',
+      'ANN',
+      'Genetic Algorithm',
+      'Game',
+      'Fun',
+    ]
+  },
+  {
+    category: "Other Projects",
+    workplace: "<a href='https://github.com/mm909/KNN-MNIST'>KNN MNIST </a> — <a href='http://yann.lecun.com/exdb/mnist/'>MNIST</a>",
+    role: "KNN to classify MNIST digits",
+    date: "Spring 2020",
+    objectives: [
+      "Implemented a KNN from scratch in python to classify MNIST digits.",
+      "Used cosine similarity to speed up computation rather than Minkowski or Euclidean distances."
+    ],
+    index: [
+      "Python",
+      'ML',
+      'Machine Learning',
+      'Image Processing',
+      'MNIST',
+      'KNN',
+      'sklearn',
     ]
   },
   {
@@ -403,30 +446,6 @@ items = [{
       'CS783',
       'XOR',
       'Backpropagation',
-    ]
-  },
-  {
-    category: "Other Projects",
-    workplace: "<a href='https://github.com/mm909/Flappy-Bird-NNV'>Flappy Bird — Neuroevolution</a>",
-    role: "Evolution of neural network",
-    date: "Summer 2018",
-    objectives: [
-      "Created the game 'Flappy Bird' using p5.js.",
-      "Allowed hundreds of AI birds to play the level using their own 'brain' to control their decisions.",
-      "Used a genetic algorithm to pass on successful weights and biases based on how well each bird did.",
-      "Designed a way to 'white box' how information is passing through the birds' brains."
-    ],
-    index: [
-      'ML',
-      'Machine Learning',
-      'Neural Network',
-      'Web Development',
-      'js',
-      'p5.js',
-      'ANN',
-      'Genetic Algorithm',
-      'Game',
-      'Fun',
     ]
   },
   // {
