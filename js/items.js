@@ -376,6 +376,29 @@ items = [{
   },
   {
     category: "Other Projects",
+    workplace: "<a href='https://github.com/mm909/Kaggle-Glass'><span class=kaggle>Kaggle</span> Glass </a> — <a href='https://www.kaggle.com/uciml/glass'>Data </a>",
+    role: "Used decision trees to predict glass type",
+    date: "Spring 2020",
+    objectives: [
+      "Used Scikit-Learn's grid search to find optimal parameters for a decision tree classifier.",
+      "Used an open source dataset from Kaggle.com to implement a decision tree classifier.",
+      "Achieved 90% accuracy with depth of 3 and built visual graph using Graphviz."
+    ],
+    index: [
+      "Python",
+      'ML',
+      'Machine Learning',
+      'Kaggle',
+      'Open Source',
+      'Scikit-Learn',
+      'Decision Trees',
+      'Forest',
+      'Tree',
+      'Glass',
+    ]
+  },
+  {
+    category: "Other Projects",
     workplace: "<a href='https://github.com/mm909/Artificial-Neural-Network-MNIST'>Artificial Neural Network </a> — <a href='http://yann.lecun.com/exdb/mnist/'>MNIST</a>",
     role: "ANN to recognize MNIST digits",
     date: "Spring 2019",
