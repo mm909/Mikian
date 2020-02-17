@@ -400,6 +400,33 @@ items = [{
   },
   {
     category: "Other Projects",
+    workplace: "<a href='https://github.com/mm909/Kaggle-World-Happiness-Report'><span class=kaggle>Kaggle: </span> World Happiness Report </a> — <a href='https://www.kaggle.com/unsdsn/world-happiness'>Data </a>",
+    role: "Used a Random Forest Regressor to predict happiness.",
+    date: "Spring 2020",
+    objectives: [
+      "Used an open source dataset from Kaggle.com to implement a Random Forest Regressor.",
+      "Used Scikit-Learn's grid search to find optimal parameters for a Random Forest Regressor.",
+      "Used PCA and TSNE to visualize the data in a low dimensional space.",
+      "Used cross validation to train a Random Forest Regressor model able to predict at 94.24% accuracy."
+    ],
+    index: [
+      "Python",
+      'ML',
+      'Machine Learning',
+      'Kaggle',
+      'Open Source',
+      'Scikit-Learn',
+      'Decision Trees',
+      'Random Forest Regressor',
+      'Regressor',
+      'Forest',
+      'Tree',
+      'Glass',
+      'DTC'
+    ]
+  },
+  {
+    category: "Other Projects",
     workplace: "<a href='https://github.com/mm909/Artificial-Neural-Network-MNIST'>Artificial Neural Network </a> — <a href='http://yann.lecun.com/exdb/mnist/'>MNIST</a>",
     role: "ANN to recognize MNIST digits",
     date: "Spring 2019",
