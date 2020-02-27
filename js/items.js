@@ -385,6 +385,7 @@ items = [{
       "Achieved 94% accuracy with depth of 15 and built visual graph using Graphviz."
     ],
     index: [
+      'TensorFlow',
       "Python",
       'ML',
       'Machine Learning',
@@ -411,6 +412,7 @@ items = [{
     ],
     index: [
       "Python",
+      'TensorFlow',
       'ML',
       'Machine Learning',
       'Kaggle',
