@@ -107,38 +107,38 @@ items = [{
       "teaching",
     ]
   },
-  // {
-  //   category: "Experience",
-  //   workplace: "IT — <a class='unlvit' href='https://www.it.unlv.edu/'>UNLV OIT</a>",
-  //   role: "Field and Desktop Technician",
-  //   date: "Aug 2017 - May 2018",
-  //   objectives: [
-  //     "Worked with university faculty and staff to resolve computer, printer, and network issues.",
-  //     "Resolved common hardware issues, ordered and replaced hardware when needed.",
-  //     "Managed a service ticket queue of ten or more field requests."
-  //   ]
-  // },
-  // {
-  //   category: "Experience",
-  //   workplace: "IT — <a class='unlvit' href='https://www.it.unlv.edu/'>UNLV OIT</a>",
-  //   role: "Help Desk Technician",
-  //   date: "Aug 2016 - Aug 2017",
-  //   objectives: [
-  //     "Worked with students at the university to resolve common hardware and software issues.",
-  //     "Managed a queue of more than two-hundred at a time, quickly resolving issues.",
-  //     "Troubleshooted issues over the phone, through email, and in person."
-  //   ]
-  // },
-  // {
-  //   category: "Experience",
-  //   workplace: "IT — <a class='mesquite' href='https://www.mesquitenv.gov/'>City of Mesquite</a>",
-  //   role: "Technician Intern",
-  //   date: "May 2016 - Aug 2016",
-  //   objectives: [
-  //     "Assisted IT Technicians with day to day operations.",
-  //     "Documented tickets, service requests, and research."
-  //   ]
-  // },
+  {
+    category: "Experience",
+    workplace: "IT — <a class='unlvit' href='https://www.it.unlv.edu/'>UNLV OIT</a>",
+    role: "Field and Desktop Technician",
+    date: "Aug 2017 - May 2018",
+    objectives: [
+      "Worked with university faculty and staff to resolve computer, printer, and network issues.",
+      "Resolved common hardware issues, ordered and replaced hardware when needed.",
+      "Managed a service ticket queue of ten or more field requests."
+    ]
+  },
+  {
+    category: "Experience",
+    workplace: "IT — <a class='unlvit' href='https://www.it.unlv.edu/'>UNLV OIT</a>",
+    role: "Help Desk Technician",
+    date: "Aug 2016 - Aug 2017",
+    objectives: [
+      "Worked with students at the university to resolve common hardware and software issues.",
+      "Managed a queue of more than two-hundred at a time, quickly resolving issues.",
+      "Troubleshooted issues over the phone, through email, and in person."
+    ]
+  },
+  {
+    category: "Experience",
+    workplace: "IT — <a class='mesquite' href='https://www.mesquitenv.gov/'>City of Mesquite</a>",
+    role: "Technician Intern",
+    date: "May 2016 - Aug 2016",
+    objectives: [
+      "Assisted IT Technicians with day to day operations.",
+      "Documented tickets, service requests, and research."
+    ]
+  },
   {
     category: "Notable Projects",
     workplace: "<a href='https://github.com/dook-robotics'>Dook Robotics</a>",
@@ -520,13 +520,13 @@ items = [{
       'Backpropagation',
     ]
   },
-  // {
-  //   category: "Certifications",
-  //   workplace: "<a href='https://www.comptia.org/'>CompTIA A+</a>",
-  //   role: "Certified Technician",
-  //   date: "July 2017 - Present",
-  //   objectives: []
-  // },
+  {
+    category: "Certifications",
+    workplace: "<a href='https://www.comptia.org/'>CompTIA A+</a>",
+    role: "Certified Technician",
+    date: "July 2017 - Present",
+    objectives: []
+  },
   // {
   //   category: "Certifications",
   //   workplace: "<a href='https://www.redcross.org/'>BLS</a>",
