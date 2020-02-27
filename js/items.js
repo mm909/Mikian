@@ -382,7 +382,8 @@ items = [{
     objectives: [
       "Used Scikit-Learn's grid search to find optimal parameters for a decision tree classifier.",
       "Used an open source dataset from Kaggle.com to implement a decision tree classifier.",
-      "Achieved 94% accuracy with depth of 15 and built visual graph using Graphviz."
+      "Achieved 94% accuracy with depth of 15 and built visual graph using Graphviz.",
+      "Used Pandas explore the dataset, remove features, and find correlations.",
     ],
     index: [
       'TensorFlow',
@@ -408,7 +409,8 @@ items = [{
       "Used an open source dataset from Kaggle.com to implement a Random Forest Regressor.",
       "Used Scikit-Learn's grid search to find optimal parameters for a Random Forest Regressor.",
       "Used PCA and TSNE to visualize the data in a low dimensional space.",
-      "Used cross validation to train a Random Forest Regressor model able to predict at 94.24% accuracy."
+      "Used cross validation to train a Random Forest Regressor model able to predict at 94.24% accuracy.",
+      "Used Pandas explore the dataset, remove features, and find correlations.",
     ],
     index: [
       "Python",
@@ -425,6 +427,29 @@ items = [{
       'Tree',
       'Glass',
       'DTC'
+    ]
+  },
+  {
+    category: "Other Projects",
+    workplace: "<a href='https://github.com/mm909/Kaggle-Titanic'><span class=kaggle>Kaggle: </span> Titanic </a> — <a href='https://www.kaggle.com/c/titanic'>Data </a>",
+    role: "Used a simple ANN to predict if passangers would live or die on the Titanic.",
+    date: "Spring 2020",
+    objectives: [
+      "Used an open source dataset from Kaggle.com to implement a Keras sequential model.",
+      "Used Scikit-Learn's grid search and random search to find optimal parameters.",
+      "Used Pandas explore the dataset, remove features, and find correlations.",
+      "Used cross validation to train the model able to predict at ~75% accuracy.",
+    ],
+    index: [
+      "Python",
+      'TensorFlow',
+      'ML',
+      'Machine Learning',
+      'Kaggle',
+      'Open Source',
+      'Scikit-Learn',
+      'Keras',
+      'ANN'
     ]
   },
   {
