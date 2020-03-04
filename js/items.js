@@ -402,6 +402,25 @@ items = [{
   },
   {
     category: "Other Projects",
+    workplace: "<a href='https://www.kaggle.com/mikian/dog-poop'><span class=kaggle>Kaggle: </span> Dog Poop — Data </a>",
+    role: "Fake dog poop for object detection",
+    date: "Spring 2020",
+    objectives: [
+      "Added the dataset used for Dook Robotics to Kaggle."
+    ],
+    index: [
+      'TensorFlow',
+      "Python",
+      'ML',
+      'Machine Learning',
+      'Kaggle',
+      'Open Source',
+      'Dog',
+      'MSHIT'
+    ]
+  },
+  {
+    category: "Other Projects",
     workplace: "<a href='https://github.com/mm909/Kaggle-World-Happiness-Report'><span class=kaggle>Kaggle: </span> World Happiness Report </a> — <a href='https://www.kaggle.com/unsdsn/world-happiness'>Data </a>",
     role: "Used a Random Forest Regressor to predict happiness.",
     date: "Spring 2020",
