@@ -23,8 +23,18 @@ hr {
   margin-bottom: 5px
 }
 
+#clearLink {
+
+}
+
+#clearLink:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
 .currentProject {
-  color: #FF686D
+  color: #585DFF
 }
 
 .kaggle {
@@ -91,7 +101,9 @@ hr {
 
 .category-title {
   margin: 0px 0px 5px 0px;
-  color: #f4989c
+  /* color: #f4989c */
+  color: #FF686D
+
 }
 
 .Intellimind {

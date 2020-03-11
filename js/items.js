@@ -242,26 +242,55 @@ items = [{
       'CS783'
     ]
   },
+  // {
+  //   category: "Other Projects",
+  //   workplace: "<span class='currentProject'> Current Project:</span> <a href='https://github.com/mm909/lurd-pca'>Applied PCA to Speach Recognition</a>",
+  //   role: "Implemented PCA from scratch using SVD.",
+  //   date: "Spring 2020",
+  //   objectives: [
+  //     "Using PCA to transform and preserve the most important features of a waveform dataset.",
+  //     "Reducing features on waveform data from 8000 to 2000 using PCA.",
+  //     "Using sklearn to preform PCA on a custom dataset.",
+  //     // "Restored original data after reducing dimensions to see the amount of variance preserved."
+  //   ],
+  //   index: [
+  //     'ML',
+  //     'Machine Learning',
+  //     'Image Processing',
+  //     'PCA',
+  //     'Principal Component Analysis',
+  //     'linear algebra',
+  //     'eigen vectors',
+  //     'eigen values',
+  //   ]
+  // },
   {
     category: "Other Projects",
-    workplace: "<span class='currentProject'> Current Project:</span> <a href='https://github.com/mm909/lurd-pca'>Applied PCA to Speach Recognition</a>",
-    role: "Implemented PCA from scratch using SVD.",
+    workplace: "<span class='currentProject'> <i> Current Project </i> </span> — <a href='https://github.com/mm909/Kaggle-Autism'><span class=kaggle>Kaggle</span> Autism </a> — <a href='https://www.kaggle.com/gpiosenka/autistic-children-data-set-traintestvalidate'>Data </a>",
+    role: "Detect Autism Spectrum Disorder (ASD) in Children from their Facial Features",
     date: "Spring 2020",
     objectives: [
-      "Using PCA to transform and preserve the most important features of a waveform dataset.",
-      "Reducing features on waveform data from 8000 to 2000 using PCA.",
-      "Using sklearn to preform PCA on a custom dataset.",
-      // "Restored original data after reducing dimensions to see the amount of variance preserved."
+      'Built a model to detect ASD in children based on pictures of their face.',
+      'Used transfer learning with VGG-Face2 to initialize weights for the model.',
+      'Added to the Kaggle dataset and extracted faces from other images using MTCNN.'
     ],
     index: [
+      'TensorFlow',
+      "Python",
       'ML',
       'Machine Learning',
-      'Image Processing',
-      'PCA',
-      'Principal Component Analysis',
-      'linear algebra',
-      'eigen vectors',
-      'eigen values',
+      'Kaggle',
+      'Open Source',
+      'Transfer Learning',
+      'MTCNN',
+      'ASD',
+      'Autism',
+      'VGG',
+      'Face Detection',
+      'CS489',
+      'Face',
+      'senet50',
+      'resnet50',
     ]
   },
   {

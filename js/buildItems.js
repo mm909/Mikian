@@ -1,13 +1,31 @@
 let catListCount = []
 
+function checkClear() {
+  console.log(document.getElementById("searchBox").value);
+  if (document.getElementById("searchBox").value != '') {
+    $("#clearLink").css('display', 'inline')
+  } else {
+    $("#clearLink").css('display', 'none')
+  }
+}
+
 jQuery(document).ready(function() {
   buildItems("");
+  checkClear()
 
 
   $(".language").click(function() {
     buildItems($(this).text());
     document.getElementById("searchBox").value = $(this).text()
+    checkClear()
   });
+
+  $("#clearLink").click(function() {
+    document.getElementById("searchBox").value = ""
+    buildItems('');
+    checkClear()
+  });
+
 });
 
 function attachEvents() {
