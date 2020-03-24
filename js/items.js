@@ -141,6 +141,30 @@ items = [{
   // },
   {
     category: "Notable Projects",
+    workplace: "<span class='currentProject'> <i> Current Project </i> </span> — <a href='https://github.com/mm909/Predicting-Trump'>Predicting Trump</a>",
+    role: "Text prediction model trained exclusively on Trump's tweets and speeches.",
+    date: "Spring 2020",
+    objectives: [
+      "Used Selenium to scrape Trump speeches from various websites.",
+      "Used Flask to develop a website that allows frontend access to the best model.",
+      "Used LSTM and GRU networks to create a text prediction model with 60% accuracy."
+    ],
+    index: [
+      "Python",
+      'ML',
+      'RNN',
+      'Donald Trump',
+      'Tensorflow',
+      'Web development',
+      'Selenium',
+      'Web scraping',
+      'Text Prediction',
+      'Machine Learning',
+      'Neural Network',
+    ]
+  },
+  {
+    category: "Notable Projects",
     workplace: "<a href='https://github.com/dook-robotics'>Dook Robotics</a>",
     role: "Senior Design - Automatic Pooper Scooper",
     date: "Jul 2019 - Dec 2019",
@@ -223,7 +247,7 @@ items = [{
   {
     category: "Notable Projects",
     workplace: "<a href='https://github.com/mm909/Convolutional-Neural-Network-CIFAR10'>Convolutional Neural Network</a> — <a href='https://www.cs.toronto.edu/~kriz/cifar.html'>CIFAR-10</a>",
-    role: "CNN to recognize CIFAR-10 images",
+    role: "CNN to recognize CIFAR-10 images in C",
     date: "Spring 2019",
     objectives: [
       "Calculated the partial derivatives for backpropagation in a multi-layer CNN and implemented them in C.",
@@ -242,28 +266,6 @@ items = [{
       'CS783'
     ]
   },
-  // {
-  //   category: "Other Projects",
-  //   workplace: "<span class='currentProject'> Current Project:</span> <a href='https://github.com/mm909/lurd-pca'>Applied PCA to Speach Recognition</a>",
-  //   role: "Implemented PCA from scratch using SVD.",
-  //   date: "Spring 2020",
-  //   objectives: [
-  //     "Using PCA to transform and preserve the most important features of a waveform dataset.",
-  //     "Reducing features on waveform data from 8000 to 2000 using PCA.",
-  //     "Using sklearn to preform PCA on a custom dataset.",
-  //     // "Restored original data after reducing dimensions to see the amount of variance preserved."
-  //   ],
-  //   index: [
-  //     'ML',
-  //     'Machine Learning',
-  //     'Image Processing',
-  //     'PCA',
-  //     'Principal Component Analysis',
-  //     'linear algebra',
-  //     'eigen vectors',
-  //     'eigen values',
-  //   ]
-  // },
   {
     category: "Other Projects",
     workplace: "<span class='currentProject'> <i> Current Project </i> </span> — <a href='https://github.com/mm909/Kaggle-Autism'><span class=kaggle>Kaggle</span> Autism </a> — <a href='https://www.kaggle.com/gpiosenka/autistic-children-data-set-traintestvalidate'>Data </a>",
@@ -321,12 +323,13 @@ items = [{
   {
     category: "Other Projects",
     workplace: "<a href='https://github.com/mm909/Convolutional-Neural-Network-MNIST'>Convolutional Neural Network</a> — <a href='http://yann.lecun.com/exdb/mnist/'>MNIST</a>",
-    role: "CNN to recognize MNIST digits",
+    role: "CNN to recognize MNIST digits in C",
     date: "Spring 2019",
     objectives: [
       "Calculated the partial derivatives for backpropagation in a multi-layer CNN and implemented them in C.",
       "Achieved 99% accuracy on the MNIST dataset using this network written in C without any libraries.",
-      "Implemented backpropagation optimizers such as momentum gradient descent to converge quickly."
+      "Implemented backpropagation optimizers such as momentum gradient descent to converge quickly.",
+      "Built a GUI using C# to select digit and see predictions."
     ],
     index: [
       'ML',
@@ -334,6 +337,7 @@ items = [{
       'Image Processing',
       'C++',
       'C',
+      'C#',
       'Neural Network',
       'CNN',
       'CS783',
@@ -361,6 +365,28 @@ items = [{
       'Genetic Algorithm',
       'Game',
       'Fun',
+    ]
+  },
+  {
+    category: "Other Projects",
+    workplace: "<a href='https://github.com/mm909/lurd-pca'>Applied PCA to Speach Recognition</a>",
+    role: "Implemented PCA from scratch using SVD.",
+    date: "Spring 2020",
+    objectives: [
+      "Using PCA to transform and preserve the most important features of a waveform dataset.",
+      "Reducing features on waveform data from 8000 to 2000 using PCA.",
+      "Using sklearn to preform PCA on a custom dataset.",
+      "Restored original data after reducing dimensions to see the amount of variance preserved."
+    ],
+    index: [
+      'ML',
+      'Machine Learning',
+      'Image Processing',
+      'PCA',
+      'Principal Component Analysis',
+      'linear algebra',
+      'eigen vectors',
+      'eigen values',
     ]
   },
   {
@@ -503,7 +529,7 @@ items = [{
   {
     category: "Other Projects",
     workplace: "<a href='https://github.com/mm909/Artificial-Neural-Network-MNIST'>Artificial Neural Network </a> — <a href='http://yann.lecun.com/exdb/mnist/'>MNIST</a>",
-    role: "ANN to recognize MNIST digits",
+    role: "ANN to recognize MNIST digits in C",
     date: "Spring 2019",
     objectives: [
       "Calculated the partial derivatives for backpropagation in a multi-layer ANN and implemented them in C.",
@@ -626,7 +652,7 @@ items = [{
     role: "Families for Effective Autism Treatment - Peer mentor",
     date: "Aug 2018 - Present",
     objectives: [
-      "Spent one night each month watching children on the autism spectrum to give autism parents a night out."
+      "Spent one night each month working with children on the autism spectrum to give autism parents a night out."
     ]
   }
 ]
