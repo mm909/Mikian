@@ -1,3 +1,10 @@
+searchTerms = [
+  'Current Project',
+  'Kaggle',
+  'TensorFlow',
+  'Machine Learning'
+]
+
 items = [{
     category: "Education",
     workplace: "Computer Science, BS",
@@ -154,7 +161,8 @@ items = [{
       'ML',
       'RNN',
       'Donald Trump',
-      'Tensorflow',
+      'Current Project',
+      'TensorFlow',
       'Web development',
       'Selenium',
       'Web scraping',
@@ -170,7 +178,7 @@ items = [{
     date: "Jul 2019 - Dec 2019",
     objectives: [
       "Created, labeled, and cleaned a database of over 2300 images and 6000 objects used for object detection.",
-      "Used Tensorflow to train several different models based on the environment the robot is in.",
+      "Used TensorFlow to train several different models based on the environment the robot is in.",
       "Wrote scripts to automate nearly every part of the data processing pipeline.",
       "Discovered critical battery life issues with voltage detectors and matplotlib.",
       "Wrote scripts to interface with many hardware devices: motors, load cell, relay, voltage sensor",
@@ -268,7 +276,7 @@ items = [{
   },
   {
     category: "Other Projects",
-    workplace: "<span class='currentProject'> <i> Current Project </i> </span> — <a href='https://github.com/mm909/Kaggle-Autism'><span class=kaggle>Kaggle</span> Autism </a> — <a href='https://www.kaggle.com/gpiosenka/autistic-children-data-set-traintestvalidate'>Data </a>",
+    workplace: "<span class='currentProject'> <i> Current Project </i> </span> — <a href='https://github.com/mm909/Kaggle-Autism'><span class=kaggle>Kaggle: </span> Autism </a> — <a href='https://www.kaggle.com/gpiosenka/autistic-children-data-set-traintestvalidate'>Data </a>",
     role: "Detect Autism Spectrum Disorder (ASD) in Children from their Facial Features",
     date: "Spring 2020",
     objectives: [
@@ -281,6 +289,7 @@ items = [{
       "Python",
       'ML',
       'Machine Learning',
+      'Current Project',
       'Kaggle',
       'Open Source',
       'Transfer Learning',

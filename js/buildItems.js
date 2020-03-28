@@ -1,7 +1,7 @@
 let catListCount = []
 
 function checkClear() {
-  console.log(document.getElementById("searchBox").value);
+  // console.log(document.getElementById("searchBox").value);
   if (document.getElementById("searchBox").value != '') {
     $("#clearLink").css('display', 'inline')
   } else {
@@ -15,8 +15,8 @@ jQuery(document).ready(function() {
 
 
   $(".language").click(function() {
-    buildItems($(this).text());
-    document.getElementById("searchBox").value = $(this).text()
+    document.getElementById("searchBox").value = $(this).text().split('(')[0].substring(0, $(this).text().split('(')[0].length - 1)
+    buildItems(document.getElementById("searchBox").value);
     checkClear()
   });
 
@@ -38,6 +38,12 @@ function attachEvents() {
       $(".item" + this.id).css('display', 'none')
     }
   });
+
+  $(".language").click(function() {
+    document.getElementById("searchBox").value = $(this).text().split('(')[0].substring(0, $(this).text().split('(')[0].length - 1)
+    buildItems(document.getElementById("searchBox").value);
+    checkClear()
+  });
 }
 
 String.prototype.splice = function(idx, rem, str) {
@@ -50,6 +56,20 @@ function betterReplace(testStr, filter) {
     testStr = testStr.splice(testStr.toLowerCase().indexOf(filter.toLowerCase()) + filter.length, 0, "</u>")
   }
   return testStr
+}
+
+function buildSearchTerms(searchTermCounts) {
+  $(".projectCat").empty()
+  for (var i = 0; i < searchTerms.length; i++) {
+    if (searchTermCounts[i] <= 0) {
+      term = `<p class="searchTitle language ` + searchTerms[i].toLowerCase().replace(' ', '') + `"><i>` + searchTerms[i] + `</i><span class="searchCount ` + searchTerms[i].toLowerCase().replace(' ', '') + `Count"></span></p>`
+    } else {
+      term = `<p class="searchTitle language ` + searchTerms[i].toLowerCase().replace(' ', '') + `"><i>` + searchTerms[i] + `</i><span class="searchCount ` + searchTerms[i].toLowerCase().replace(' ', '') + `Count"> (` + searchTermCounts[i] + `)</span></p>`
+    }
+    $jterm = $(term)
+    $('.projectCat').append($jterm);
+  }
+
 }
 
 function buildItems(filter) {
@@ -132,6 +152,11 @@ function buildItems(filter) {
     $(".resumeBox").append($jcat);
   }
 
+  let searchTermCounts = []
+  for (var i = 0; i < searchTerms.length; i++) {
+    searchTermCounts.push(0)
+  }
+
   let currentPlacements = []
   currentPlacements = [0]
   for (var i = 0; i < canidates.length; i++) {
@@ -149,7 +174,6 @@ function buildItems(filter) {
     } else {
       currentPlacements[(categoryList.indexOf(canidates[i].category))] = 1
     }
-
     // Get most relevent objective and underline search term
     for (var j = 0; j < canidates[i].objectives.length; j++) {
       if (canidates[i].objectives[j].toLowerCase().includes(filter) && objCount < 3) {
@@ -171,6 +195,15 @@ function buildItems(filter) {
     if (objectives != "") {
       objectives = "<ul class='item-objective-list'> " + objectives + "</ul>"
     }
+
+    if (canidates[i].index) {
+      for (var j = 0; j < canidates[i].index.length; j++) {
+        if ((searchTerms.indexOf(canidates[i].index[j])) != -1) {
+          searchTermCounts[searchTerms.indexOf(canidates[i].index[j])]++
+        }
+      }
+    }
+
 
     workplaceStr = canidates[i].workplace
     if (!highlight) {
@@ -218,5 +251,12 @@ function buildItems(filter) {
     $jitem = $(item)
     $("#" + canidates[i].category.replace(" ", "-")).append($jitem);
   }
+  buildSearchTerms(searchTermCounts)
   attachEvents();
+  if (currentPlacements.length == 1 && currentPlacements[0] == 0) {
+    $(".empty").css("display", "block");
+    $('.emptySearchTerm').text(document.getElementById("searchBox").value)
+  } else {
+    $(".empty").css("display", "none");
+  }
 }

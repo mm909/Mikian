@@ -23,8 +23,27 @@ hr {
   margin-bottom: 5px
 }
 
-#clearLink {
+.empty{
+  margin-top: 10px;
+  text-align: center;
+  display: none;
+}
 
+.noSelect{
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.tensorflow{
+  color: #f89c00;
+}
+
+#clearLink {
+  margin-left: 5px;
 }
 
 #clearLink:hover {
@@ -33,7 +52,7 @@ hr {
 }
 
 
-.currentProject {
+.currentproject {
   color: #585DFF
 }
 
