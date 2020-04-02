@@ -1,8 +1,9 @@
 searchTerms = [
   'Current Project',
+  'Medium',
   'Kaggle',
   'TensorFlow',
-  'Machine Learning'
+  'Machine Learning',
 ]
 
 items = [{
@@ -148,21 +149,26 @@ items = [{
   // },
   {
     category: "Notable Projects",
-    workplace: "<span class='currentProject'> <i> Current Project </i> </span> — <a href='https://github.com/mm909/Predicting-Trump'>Predicting Trump</a>",
+    workplace: "<a href='https://medium.com/@mikianmusser/predicting-trump-tweets-with-a-rnn-95e7c398b18e'>Predicting Trump’s Tweets With RNN</a>",
     role: "Text prediction model trained exclusively on Trump's tweets and speeches.",
     date: "Spring 2020",
     objectives: [
+      "Used LSTM and GRU recurrent networks to create a text prediction model with 67% accuracy.",
       "Used Selenium to scrape Trump speeches from various websites.",
-      "Used Flask to develop a website that allows frontend access to the best model.",
-      "Used LSTM and GRU networks to create a text prediction model with 60% accuracy."
+      "Used Flask to develop a website for frontend access to the best model.",
+      "Wrote a Medium article titled: Predicting Trump’s Tweets With A Recurrent Neural Network.",
+      "Gathered speeches, interviews, and tweets for the neural network to learn from.",
     ],
     index: [
       "Python",
       'ML',
       'RNN',
+      'Medium',
       'Donald Trump',
-      'Current Project',
       'TensorFlow',
+      'Flask',
+      'Selenium',
+      'LSTM',
       'Web development',
       'Selenium',
       'Web scraping',

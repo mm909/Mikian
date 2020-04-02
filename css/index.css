@@ -38,6 +38,10 @@ hr {
   user-select: none;
 }
 
+.medium {
+  color: red;
+}
+
 .tensorflow{
   color: #f89c00;
 }
