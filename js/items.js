@@ -9,7 +9,7 @@ searchTerms = [
 items = [{
     category: "Education",
     workplace: "Computer Science, BS",
-    role: "<a href='https://www.unlv.edu/'>University of Nevada, Las Vegas</a>",
+    role: "<a href='https://www.unlv.edu/'>University of Nevada: Las Vegas</a>",
     date: "Aug 2016 - Present",
     objectives: ["Computer science senior | Expected graduation - May 2020 | GPA: 3.93"]
   },
@@ -26,9 +26,9 @@ items = [{
     role: "Las Vegas - Software Developer",
     date: "Oct 2019 - Jan 2020",
     objectives: [
-      "Reduced downtime on Node.js server by 93% by cashing redundant data calculations.",
+      "Reduced downtime on Node.js server by 93% by caching redundant data and operations.",
       "Queried Twitter API and stored tweet/user/influencer data in a mySQL database.",
-      "Deployed software using custom installers made by innosetup and Amazon S3 Buckets.",
+      "Deployed text sentiment analysis software to Amazon S3 Buckets.",
       "Designed a real time Twitter analytics dashboard using data from Twitter API.",
       "Provided text sentiment analytics of tweets using ML5.js, a machine learning libary in js.",
       "Generated and designed client side views with ejs with live data from a mySQL database ",
@@ -153,8 +153,8 @@ items = [{
     role: "Text prediction model trained exclusively on Trump's tweets and speeches.",
     date: "Spring 2020",
     objectives: [
-      "Used LSTM and GRU recurrent networks to create a text prediction model with 67% accuracy.",
-      "Used Selenium to scrape Trump speeches from various websites.",
+      "Used a LSTM RNN to create a character level text prediction model with 68% accuracy.",
+      "Used Selenium to scrape Trump speeches and interviews from various websites.",
       "Used Flask to develop a website for frontend access to the best model.",
       "Wrote a Medium article titled: Predicting Trump’s Tweets With A Recurrent Neural Network.",
       "Gathered speeches, interviews, and tweets for the neural network to learn from.",
