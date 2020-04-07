@@ -27,12 +27,12 @@ items = [{
     date: "Oct 2019 - Jan 2020",
     objectives: [
       "Reduced load time on Node.js server by 93% by caching redundant data and operations.",
-      "Queried Twitter API and stored tweet/user/influencer data in a mySQL database.",
+      "Queried Twitter API and stored tweet/user/influencer data in a MySQL database.",
       "Deployed text sentiment analysis software to Amazon S3 Buckets.",
-      "Designed a real time Twitter analytics dashboard using data from Twitter API.",
-      "Provided text sentiment analytics of tweets using ML5.js, a machine learning libary in js.",
-      "Generated and designed client side views with ejs with live data from a mySQL database ",
-      "Analyzed meta data from tweets and displayed important company metrics in a Twitter dashboard."
+      "Designed a real-time Twitter analytics dashboard using data from Twitter API.",
+      "Provided text sentiment analytics of tweets using ML5.js, a machine learning library in js.",
+      "Generated and designed client-side views with ejs with live data from a MySQL database ",
+      "Analyzed metadata from tweets and displayed important company metrics in a Twitter dashboard."
     ],
     index: [
       'Machine Learning',
