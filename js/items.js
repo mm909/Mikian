@@ -26,7 +26,7 @@ items = [{
     role: "Las Vegas - Software Developer",
     date: "Oct 2019 - Jan 2020",
     objectives: [
-      "Reduced downtime on Node.js server by 93% by caching redundant data and operations.",
+      "Reduced load time on Node.js server by 93% by caching redundant data and operations.",
       "Queried Twitter API and stored tweet/user/influencer data in a mySQL database.",
       "Deployed text sentiment analysis software to Amazon S3 Buckets.",
       "Designed a real time Twitter analytics dashboard using data from Twitter API.",
@@ -134,7 +134,7 @@ items = [{
   //   objectives: [
   //     "Worked with students at the university to resolve common hardware and software issues.",
   //     "Managed a queue of more than two-hundred at a time, quickly resolving issues.",
-  //     "Troubleshooted issues over the phone, through email, and in person."
+  //     "Troubleshot issues over the phone, through email, and in-person."
   //   ]
   // },
   // {
@@ -144,7 +144,8 @@ items = [{
   //   date: "May 2016 - Aug 2016",
   //   objectives: [
   //     "Assisted IT Technicians with day to day operations.",
-  //     "Documented tickets, service requests, and research."
+  //     "Documented tickets, service requests, and research.",
+  //     "Created and ran patch cables through buildings."
   //   ]
   // },
   {
@@ -187,7 +188,7 @@ items = [{
       "Used TensorFlow to train several different models based on the environment the robot is in.",
       "Wrote scripts to automate nearly every part of the data processing pipeline.",
       "Discovered critical battery life issues with voltage detectors and matplotlib.",
-      "Wrote scripts to interface with many hardware devices: motors, load cell, relay, voltage sensor",
+      "Wrote scripts to interface with many hardware devices: motors, load cell, relay, voltage sensor.",
     ],
     index: [
       'TensorFlow',
