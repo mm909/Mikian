@@ -12,14 +12,7 @@ function checkClear() {
 jQuery(document).ready(function() {
   buildItems("");
   checkClear()
-
-
-  $(".language").click(function() {
-    document.getElementById("searchBox").value = $(this).text().split('(')[0].substring(0, $(this).text().split('(')[0].length - 1)
-    buildItems(document.getElementById("searchBox").value);
-    checkClear()
-  });
-
+  attachEvents()
   $("#clearLink").click(function() {
     document.getElementById("searchBox").value = ""
     buildItems('');
@@ -39,8 +32,13 @@ function attachEvents() {
     }
   });
 
+  $(".language").off()
   $(".language").click(function() {
-    document.getElementById("searchBox").value = $(this).text().split('(')[0].substring(0, $(this).text().split('(')[0].length - 1)
+    if ($(this).text().includes('(')) {
+      document.getElementById("searchBox").value = $(this).text().split('(')[0].substring(0, $(this).text().split('(')[0].length - 1)
+    } else {
+      document.getElementById("searchBox").value = $(this).text()
+    }
     buildItems(document.getElementById("searchBox").value);
     checkClear()
   });
