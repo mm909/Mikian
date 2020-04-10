@@ -11,8 +11,6 @@ function checkClear() {
 
 jQuery(document).ready(function() {
   buildItems("");
-  checkClear()
-  attachEvents()
   $("#clearLink").click(function() {
     document.getElementById("searchBox").value = ""
     buildItems('');
@@ -22,6 +20,7 @@ jQuery(document).ready(function() {
 });
 
 function attachEvents() {
+
   $(".showMore").click(function() {
     if ($("#" + this.id).text().toLowerCase().includes("more")) {
       $("#" + this.id).text("- Show Less")
@@ -31,8 +30,8 @@ function attachEvents() {
       $(".item" + this.id).css('display', 'none')
     }
   });
-
   $(".language").off()
+
   $(".language").click(function() {
     if ($(this).text().includes('(')) {
       document.getElementById("searchBox").value = $(this).text().split('(')[0].substring(0, $(this).text().split('(')[0].length - 1)
