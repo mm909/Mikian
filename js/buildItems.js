@@ -11,6 +11,7 @@ function checkClear() {
 
 jQuery(document).ready(function() {
   buildItems("");
+  checkClear()
   $("#clearLink").click(function() {
     document.getElementById("searchBox").value = ""
     buildItems('');
