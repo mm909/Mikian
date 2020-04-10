@@ -6,6 +6,8 @@ searchTerms = [
   'Machine Learning',
 ]
 
+// <span class='currentProject'> <i> Current Project </i> </span> —
+
 items = [{
     category: "Education",
     workplace: "Computer Science, BS",
@@ -212,6 +214,36 @@ items = [{
   },
   {
     category: "Notable Projects",
+    workplace: "<a href='https://github.com/mm909/Kaggle-Autism'><span class=kaggle>Kaggle: </span> Autism </a> — <a href='https://www.kaggle.com/gpiosenka/autistic-children-data-set-traintestvalidate'>Data </a>",
+    role: "Detect Autism Spectrum Disorder (ASD) in Children from their Facial Features",
+    date: "Spring 2020",
+    objectives: [
+      'Built a model to detect ASD in children based on pictures of their face.',
+      'Used transfer learning with VGG-Face2 to initialize weights for the model.',
+      'Added to the Kaggle dataset and extracted faces from other images using MTCNN.'
+    ],
+    index: [
+      'TensorFlow',
+      "Python",
+      'ML',
+      'Machine Learning',
+      'Current Project',
+      'Kaggle',
+      'Open Source',
+      'Transfer Learning',
+      'MTCNN',
+      'ASD',
+      'Autism',
+      'VGG',
+      'Face Detection',
+      'CS489',
+      'Face',
+      'senet50',
+      'resnet50',
+    ]
+  },
+  {
+    category: "Notable Projects",
     workplace: "<a href='https://mm909.github.io/NeuralNet-Tester/'>Neural Network White Box</a> — <a href='http://yann.lecun.com/exdb/mnist/'>MNIST</a>",
     role: "Application to visualize ANN predictions",
     date: "Spring 2019",
@@ -260,58 +292,6 @@ items = [{
     ]
   },
   {
-    category: "Notable Projects",
-    workplace: "<a href='https://github.com/mm909/Convolutional-Neural-Network-CIFAR10'>Convolutional Neural Network</a> — <a href='https://www.cs.toronto.edu/~kriz/cifar.html'>CIFAR-10</a>",
-    role: "CNN to recognize CIFAR-10 images in C",
-    date: "Spring 2019",
-    objectives: [
-      "Calculated the partial derivatives for backpropagation in a multi-layer CNN and implemented them in C.",
-      "Achieved 70% accuracy on the CIFAR-10 dataset using this network written in C without any libraries.",
-      "Implemented backpropagation optimizers such as momentum gradient descent to converge quickly."
-    ],
-    index: [
-      "Python",
-      'ML',
-      'Machine Learning',
-      'Image Processing',
-      'C++',
-      'C',
-      'Neural Network',
-      'CNN',
-      'CS783'
-    ]
-  },
-  {
-    category: "Other Projects",
-    workplace: "<span class='currentProject'> <i> Current Project </i> </span> — <a href='https://github.com/mm909/Kaggle-Autism'><span class=kaggle>Kaggle: </span> Autism </a> — <a href='https://www.kaggle.com/gpiosenka/autistic-children-data-set-traintestvalidate'>Data </a>",
-    role: "Detect Autism Spectrum Disorder (ASD) in Children from their Facial Features",
-    date: "Spring 2020",
-    objectives: [
-      'Built a model to detect ASD in children based on pictures of their face.',
-      'Used transfer learning with VGG-Face2 to initialize weights for the model.',
-      'Added to the Kaggle dataset and extracted faces from other images using MTCNN.'
-    ],
-    index: [
-      'TensorFlow',
-      "Python",
-      'ML',
-      'Machine Learning',
-      'Current Project',
-      'Kaggle',
-      'Open Source',
-      'Transfer Learning',
-      'MTCNN',
-      'ASD',
-      'Autism',
-      'VGG',
-      'Face Detection',
-      'CS489',
-      'Face',
-      'senet50',
-      'resnet50',
-    ]
-  },
-  {
     category: "Other Projects",
     workplace: "<a href='https://victortaksheyev.github.io/portfolio/pages/segDisplay.html'>Seven Segment Neural Network </a> — <a href='http://yann.lecun.com/exdb/mnist/'>MNIST</a>",
     role: "Neural network predictions displayed on seven segment display",
@@ -338,6 +318,30 @@ items = [{
   },
   {
     category: "Other Projects",
+    workplace: "<a href='https://github.com/mm909/Flappy-Bird-NNV'>Flappy Bird — Neuroevolution</a>",
+    role: "Evolution of neural network",
+    date: "Summer 2018",
+    objectives: [
+      "Created the game 'Flappy Bird' using p5.js.",
+      "Allowed hundreds of AI birds to play the level using their own 'brain' to control their decisions.",
+      "Used a genetic algorithm to pass on successful weights and biases based on how well each bird did.",
+      "Designed a way to 'white box' how information is passing through the birds' brains."
+    ],
+    index: [
+      'ML',
+      'Machine Learning',
+      'Neural Network',
+      'Web Development',
+      'js',
+      'p5.js',
+      'ANN',
+      'Genetic Algorithm',
+      'Game',
+      'Fun',
+    ]
+  },
+  {
+    category: "Other Projects",
     workplace: "<a href='https://github.com/mm909/Convolutional-Neural-Network-MNIST'>Convolutional Neural Network</a> — <a href='http://yann.lecun.com/exdb/mnist/'>MNIST</a>",
     role: "CNN to recognize MNIST digits in C",
     date: "Spring 2019",
@@ -359,28 +363,27 @@ items = [{
       'CS783',
     ]
   },
+
   {
     category: "Other Projects",
-    workplace: "<a href='https://github.com/mm909/Flappy-Bird-NNV'>Flappy Bird — Neuroevolution</a>",
-    role: "Evolution of neural network",
-    date: "Summer 2018",
+    workplace: "<a href='https://github.com/mm909/Convolutional-Neural-Network-CIFAR10'>Convolutional Neural Network</a> — <a href='https://www.cs.toronto.edu/~kriz/cifar.html'>CIFAR-10</a>",
+    role: "CNN to recognize CIFAR-10 images in C",
+    date: "Spring 2019",
     objectives: [
-      "Created the game 'Flappy Bird' using p5.js.",
-      "Allowed hundreds of AI birds to play the level using their own 'brain' to control their decisions.",
-      "Used a genetic algorithm to pass on successful weights and biases based on how well each bird did.",
-      "Designed a way to 'white box' how information is passing through the birds' brains."
+      "Calculated the partial derivatives for backpropagation in a multi-layer CNN and implemented them in C.",
+      "Achieved 70% accuracy on the CIFAR-10 dataset using this network written in C without any libraries.",
+      "Implemented backpropagation optimizers such as momentum gradient descent to converge quickly."
     ],
     index: [
+      "Python",
       'ML',
       'Machine Learning',
+      'Image Processing',
+      'C++',
+      'C',
       'Neural Network',
-      'Web Development',
-      'js',
-      'p5.js',
-      'ANN',
-      'Genetic Algorithm',
-      'Game',
-      'Fun',
+      'CNN',
+      'CS783'
     ]
   },
   {
