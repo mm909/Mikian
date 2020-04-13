@@ -1,5 +1,5 @@
 searchTerms = [
-  'Current Project',
+  // 'Current Project',
   'Medium',
   'Kaggle',
   'TensorFlow',
@@ -214,20 +214,21 @@ items = [{
   },
   {
     category: "Notable Projects",
-    workplace: "<a href='https://github.com/mm909/Kaggle-Autism'><span class=kaggle>Kaggle: </span> Autism </a> — <a href='https://www.kaggle.com/gpiosenka/autistic-children-data-set-traintestvalidate'>Data </a>",
+    workplace: "<a href='https://towardsdatascience.com/detecting-autism-spectrum-disorder-in-children-with-computer-vision-8abd7fc9b40a'><span class=kaggle>Kaggle: </span> Autism </a> — <a href='https://www.kaggle.com/gpiosenka/autistic-children-data-set-traintestvalidate'>Data </a>",
     role: "Detect Autism Spectrum Disorder (ASD) in Children from their Facial Features",
     date: "Spring 2020",
     objectives: [
       'Built a model to detect ASD in children based on pictures of their face.',
       'Used transfer learning with VGG-Face2 to initialize weights for the model.',
-      'Added to the Kaggle dataset and extracted faces from other images using MTCNN.'
+      'Added to the Kaggle dataset and extracted faces from other images using MTCNN.',
+      "Wrote a Medium article titled: Detecting Autism Spectrum Disorder in Children With Computer Vision.",
     ],
     index: [
       'TensorFlow',
       "Python",
       'ML',
       'Machine Learning',
-      'Current Project',
+      'Medium',
       'Kaggle',
       'Open Source',
       'Transfer Learning',
