@@ -8,7 +8,7 @@ searchTerms = [
 
 limits = [{
   workplace: "Developer — <a class='Intellimind' href='https://www.intellimind.com/en'>Intellimind</a>",
-  itemlimit: 4
+  objectiveLimit: 3
 }]
 
 // <span class='currentProject'> <i> Current Project </i> </span> —

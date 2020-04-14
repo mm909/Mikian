@@ -1,5 +1,10 @@
 let catListCount = []
 
+Start = new Date();
+End = new Date();
+StartTime = Start.getTime();
+EndTime = End.getTime();
+
 function checkClear() {
   // console.log(document.getElementById("searchBox").value);
   if (document.getElementById("searchBox").value != '') {
@@ -71,6 +76,7 @@ function buildSearchTerms(searchTermCounts) {
 }
 
 function buildItems(filter) {
+  StartTime = Start.getTime();
   let itemLimit = 3
   let objectiveLimit = 3
 
@@ -133,14 +139,31 @@ function buildItems(filter) {
     }
   }
 
+  let tempObjectiveLimit = objectiveLimit
+  let tempItemLimit = itemLimit
+  let showall = false
+  if (categoryList.length == 1) {
+    showall = true
+  }
+
   // Build categories
   for (var i = 0; i < categoryList.length; i++) {
+    for (var j = 0; j < limits.length; j++) {
+      if (limits[j].workplace == canidates[i].workplace) {
+        tempObjectiveLimit = limits[j].objectiveLimit
+      }
+    }
+
+    if (showall) {
+      tempObjectiveLimit = canidates[i].objectives.length
+      tempItemLimit = canidates.length
+    }
     let cat = `
     <div class="category">
       <h4 class="category-title"><u><i>` + categoryList[i] + `</i></u></h4>
       <div id=` + categoryList[i].replace(" ", "-") + `> </div>`
-    if (catListCount[i] > itemLimit) {
-      cat += `<p class="showMore" id="sm` + i + `"> + Show More (` + Math.abs(itemLimit - catListCount[i]) + `) </p> <hr></div>`
+    if (catListCount[i] > tempItemLimit) {
+      cat += `<p class="showMore" id="sm` + i + `"> + Show More (` + Math.abs(tempItemLimit - catListCount[i]) + `) </p> <hr></div>`
     } else {
       cat += `
       <hr class='emptyhr'>
@@ -152,11 +175,13 @@ function buildItems(filter) {
     $(".resumeBox").append($jcat);
   }
 
+
   let searchTermCounts = []
   for (var i = 0; i < searchTerms.length; i++) {
     searchTermCounts.push(0)
   }
 
+  let itemCount = 0
   let currentPlacements = []
   currentPlacements = [0]
   for (var i = 0; i < canidates.length; i++) {
@@ -166,22 +191,15 @@ function buildItems(filter) {
     let highlight = false
     let more = false
 
-    let tempObjectiveLimit = objectiveLimit
-    for (var j = 0; j < limits.length; j++) {
-      if (limits[j].workplace == canidates[i].workplace) {
-        tempObjectiveLimit = limits[j].itemlimit
-        console.log('here');
-      }
-    }
-
     if (currentPlacements[(categoryList.indexOf(canidates[i].category))]) {
       currentPlacements[(categoryList.indexOf(canidates[i].category))]++
-      if (currentPlacements[(categoryList.indexOf(canidates[i].category))] > itemLimit) {
+      if (currentPlacements[(categoryList.indexOf(canidates[i].category))] > tempItemLimit) {
         more = true
       }
     } else {
       currentPlacements[(categoryList.indexOf(canidates[i].category))] = 1
     }
+
     // Get most relevent objective and underline search term
     for (var j = 0; j < canidates[i].objectives.length; j++) {
 
@@ -220,7 +238,6 @@ function buildItems(filter) {
         for (var j = 0; j < canidates[i].index.length; j++) {
           key = canidates[i].index[j].toLowerCase();
           if (key.includes(filter) && !canidates[i].role.includes(filter)) {
-            // if (key == filter) {
             workplaceStr += " <span class='indexValue'>(" + canidates[i].index[j] + ")</span>"
             break
           }
@@ -257,6 +274,7 @@ function buildItems(filter) {
       item = `<span class='showmore itemsm` + (categoryList.indexOf(canidates[i].category)) + `'> ` + item + ' </span>'
     }
 
+    itemCount++
     $jitem = $(item)
     $("#" + canidates[i].category.replace(" ", "-")).append($jitem);
   }
@@ -268,4 +286,11 @@ function buildItems(filter) {
   } else {
     $(".empty").css("display", "none");
   }
+
+  EndTime = End.getTime();
+  console.log('');
+  console.log('Search Term:', ogFilter);
+  console.log('\tBuilt page in:', StartTime - EndTime, 'seconds');
+  console.log('\tCategories   :', categoryList.length);
+  console.log('\tItems        :', itemCount);
 }

@@ -48,6 +48,7 @@ hr {
 
 #clearLink {
   margin-left: 5px;
+  display: none
 }
 
 #clearLink:hover {
