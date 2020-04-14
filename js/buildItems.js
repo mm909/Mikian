@@ -71,6 +71,8 @@ function buildSearchTerms(searchTermCounts) {
 }
 
 function buildItems(filter) {
+  let itemLimit = 4
+  let objectiveLimit = 3
 
   // CLear out div
   $(".resumeBox").empty()
@@ -137,8 +139,8 @@ function buildItems(filter) {
     <div class="category">
       <h4 class="category-title"><u><i>` + categoryList[i] + `</i></u></h4>
       <div id=` + categoryList[i].replace(" ", "-") + `> </div>`
-    if (catListCount[i] > 3) {
-      cat += `<p class="showMore" id="sm` + i + `"> + Show More (` + Math.abs(3 - catListCount[i]) + `) </p> <hr></div>`
+    if (catListCount[i] > itemLimit) {
+      cat += `<p class="showMore" id="sm` + i + `"> + Show More (` + Math.abs(itemLimit - catListCount[i]) + `) </p> <hr></div>`
     } else {
       cat += `
       <hr class='emptyhr'>
@@ -164,9 +166,10 @@ function buildItems(filter) {
     let highlight = false
     let more = false
 
+
     if (currentPlacements[(categoryList.indexOf(canidates[i].category))]) {
       currentPlacements[(categoryList.indexOf(canidates[i].category))]++
-      if (currentPlacements[(categoryList.indexOf(canidates[i].category))] > 3) {
+      if (currentPlacements[(categoryList.indexOf(canidates[i].category))] > itemLimit) {
         more = true
       }
     } else {
@@ -174,7 +177,7 @@ function buildItems(filter) {
     }
     // Get most relevent objective and underline search term
     for (var j = 0; j < canidates[i].objectives.length; j++) {
-      if (canidates[i].objectives[j].toLowerCase().includes(filter) && objCount < 3) {
+      if (canidates[i].objectives[j].toLowerCase().includes(filter) && objCount < objectiveLimit) {
         objIndexes.push(j)
         objectives += "<li class='objective'>" + betterReplace(canidates[i].objectives[j], filter) + "</li>"
         objCount++
@@ -182,7 +185,7 @@ function buildItems(filter) {
       }
     }
 
-    for (var j = 0; j < canidates[i].objectives.length && objCount < 3; j++) {
+    for (var j = 0; j < canidates[i].objectives.length && objCount < objectiveLimit; j++) {
       if (!objIndexes.includes(j)) {
         objIndexes.push(j)
         objectives += "<li class='objective'>" + canidates[i].objectives[j] + "</li>"
