@@ -6,6 +6,11 @@ searchTerms = [
   'Machine Learning',
 ]
 
+limits = [{
+  workplace: "Developer — <a class='Intellimind' href='https://www.intellimind.com/en'>Intellimind</a>",
+  itemlimit: 4
+}]
+
 // <span class='currentProject'> <i> Current Project </i> </span> —
 
 items = [{

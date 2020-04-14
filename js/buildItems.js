@@ -71,7 +71,7 @@ function buildSearchTerms(searchTermCounts) {
 }
 
 function buildItems(filter) {
-  let itemLimit = 4
+  let itemLimit = 3
   let objectiveLimit = 3
 
   // CLear out div
@@ -166,6 +166,13 @@ function buildItems(filter) {
     let highlight = false
     let more = false
 
+    let tempObjectiveLimit = objectiveLimit
+    for (var j = 0; j < limits.length; j++) {
+      if (limits[j].workplace == canidates[i].workplace) {
+        tempObjectiveLimit = limits[j].itemlimit
+        console.log('here');
+      }
+    }
 
     if (currentPlacements[(categoryList.indexOf(canidates[i].category))]) {
       currentPlacements[(categoryList.indexOf(canidates[i].category))]++
@@ -177,7 +184,8 @@ function buildItems(filter) {
     }
     // Get most relevent objective and underline search term
     for (var j = 0; j < canidates[i].objectives.length; j++) {
-      if (canidates[i].objectives[j].toLowerCase().includes(filter) && objCount < objectiveLimit) {
+
+      if (canidates[i].objectives[j].toLowerCase().includes(filter) && objCount < tempObjectiveLimit) {
         objIndexes.push(j)
         objectives += "<li class='objective'>" + betterReplace(canidates[i].objectives[j], filter) + "</li>"
         objCount++
@@ -185,7 +193,7 @@ function buildItems(filter) {
       }
     }
 
-    for (var j = 0; j < canidates[i].objectives.length && objCount < objectiveLimit; j++) {
+    for (var j = 0; j < canidates[i].objectives.length && objCount < tempObjectiveLimit; j++) {
       if (!objIndexes.includes(j)) {
         objIndexes.push(j)
         objectives += "<li class='objective'>" + canidates[i].objectives[j] + "</li>"
