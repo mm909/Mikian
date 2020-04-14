@@ -157,21 +157,21 @@ items = [{
   // },
   {
     category: "Notable Projects",
-    workplace: "<a href='https://medium.com/@mikianmusser/predicting-trump-tweets-with-a-rnn-95e7c398b18e'>Predicting Trump’s Tweets With RNN</a>",
+    workplace: "<a href='https://towardsdatascience.com/predicting-trump-tweets-with-a-rnn-95e7c398b18e'>Predicting Trump’s Tweets With RNN</a>",
     role: "Text prediction model trained exclusively on Trump's tweets and speeches.",
     date: "Spring 2020",
     objectives: [
       "Used a LSTM RNN to create a character level text prediction model with 68% accuracy.",
       "Used Selenium to scrape Trump speeches and interviews from various websites.",
       "Used Flask to develop a website for frontend access to the best model.",
-      "Wrote a Medium article titled: Predicting Trump’s Tweets With A Recurrent Neural Network.",
+      // "Wrote a Medium article titled: Predicting Trump’s Tweets With A Recurrent Neural Network.",
       "Gathered speeches, interviews, and tweets for the neural network to learn from.",
     ],
     index: [
       "Python",
       'ML',
       'RNN',
-      'Medium',
+      // 'Medium',
       'Donald Trump',
       'TensorFlow',
       'Flask',
@@ -226,14 +226,14 @@ items = [{
       'Built a model to detect ASD in children based on pictures of their face.',
       'Used transfer learning with VGG-Face2 to initialize weights for the model.',
       'Added to the Kaggle dataset and extracted faces from other images using MTCNN.',
-      "Wrote a Medium article titled: Detecting Autism Spectrum Disorder in Children With Computer Vision.",
+      // "Wrote a Medium article titled: Detecting Autism Spectrum Disorder in Children With Computer Vision.",
     ],
     index: [
       'TensorFlow',
       "Python",
       'ML',
       'Machine Learning',
-      'Medium',
+      // 'Medium',
       'Kaggle',
       'Open Source',
       'Transfer Learning',
@@ -296,6 +296,22 @@ items = [{
       "responsive",
       'Web Development',
     ]
+  },
+  {
+    category: "Publications",
+    workplace: "<a href='https://towardsdatascience.com/predicting-trump-tweets-with-a-rnn-95e7c398b18e'>Predicting Trump’s Tweets With A Recurrent Neural Network</a><p class='subtitle'>Generating author and task-specific text with a LSTM RNN</p>",
+    role: "<a href='https://towardsdatascience.com/'><svg viewBox='0 0 45 45' class='mediumIcon' width='25' height='25'><path d='M5 40V5h35v35H5zm8.56-12.627c0 .555-.027.687-.318 1.03l-2.457 2.985v.396h6.974v-.396l-2.456-2.985c-.291-.343-.344-.502-.344-1.03V18.42l6.127 13.364h.714l5.256-13.364v10.644c0 .29 0 .342-.185.528l-1.848 1.796v.396h9.19v-.396l-1.822-1.796c-.184-.186-.21-.238-.21-.528V15.937c0-.291.026-.344.21-.528l1.823-1.797v-.396h-6.471l-4.622 11.542-5.203-11.542h-6.79v.396l2.14 2.64c.239.292.291.37.291.768v10.353z'></path></svg></a><span class='towardsdatascience'>Towards Data Science — Machine Learning, Data Science, Programming</span>",
+    date: "April 2020",
+    objectives: [],
+    index: ['Medium']
+  },
+  {
+    category: "Publications",
+    workplace: "<a href='https://towardsdatascience.com/detecting-autism-spectrum-disorder-in-children-with-computer-vision-8abd7fc9b40a'>Detecting Autism Spectrum Disorder in Children With Computer Vision</a><p class='subtitle'>Adapting facial recognition models to detect Autism Spectrum Disorder</p>",
+    role: "<a href='https://towardsdatascience.com/'><svg viewBox='0 0 45 45' class='mediumIcon' width='25' height='25'><path d='M5 40V5h35v35H5zm8.56-12.627c0 .555-.027.687-.318 1.03l-2.457 2.985v.396h6.974v-.396l-2.456-2.985c-.291-.343-.344-.502-.344-1.03V18.42l6.127 13.364h.714l5.256-13.364v10.644c0 .29 0 .342-.185.528l-1.848 1.796v.396h9.19v-.396l-1.822-1.796c-.184-.186-.21-.238-.21-.528V15.937c0-.291.026-.344.21-.528l1.823-1.797v-.396h-6.471l-4.622 11.542-5.203-11.542h-6.79v.396l2.14 2.64c.239.292.291.37.291.768v10.353z'></path></svg></a><span class='towardsdatascience'>Towards Data Science — Machine Learning, Data Science</span>",
+    date: "April 2020",
+    objectives: [],
+    index: ['Medium']
   },
   {
     category: "Other Projects",

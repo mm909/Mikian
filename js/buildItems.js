@@ -43,6 +43,7 @@ function attachEvents() {
 }
 
 // Build search terms at the top of the page and attach the language events to them.
+// All this needs to do is update counts... needs to be updated
 function buildSearchTerms(searchTermCounts) {
   $(".projectCat").empty()
   for (var i = 0; i < searchTerms.length; i++) {

@@ -23,6 +23,30 @@ hr {
   margin-bottom: 5px
 }
 
+.role{
+}
+
+.mediumIcon{
+  fill: #365875;
+  line-height: 25px;
+  vertical-align: middle;
+}
+
+.towardsdatascience {
+  vertical-align: middle;
+  color:#365875;
+}
+
+.towardsdatascience:hover{
+  color: #365875 !important;
+}
+
+.subtitle{
+  font-size: 14px;
+  margin-bottom: 0px
+
+}
+
 .empty{
   margin-top: 10px;
   text-align: center;
