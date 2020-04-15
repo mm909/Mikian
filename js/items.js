@@ -6,19 +6,32 @@ searchTerms = [
   'Machine Learning',
 ]
 
-limits = [{
-  workplace: "Developer — <a class='Intellimind' href='https://www.intellimind.com/en'>Intellimind</a>",
-  objectiveLimit: 3
-}]
-
 // <span class='currentProject'> <i> Current Project </i> </span> —
+
+// item = {
+//   category,
+//   workplace,
+//   role,
+//   date,
+//   objectiveLimit,
+//   objectives[],
+//   indexShow,
+//   index[],
+// }
 
 items = [{
     category: "Education",
-    workplace: "Computer Science, BS",
+    workplace: "Masters of Science, CS",
     role: "<a href='https://www.unlv.edu/'>University of Nevada: Las Vegas</a>",
-    date: "Aug 2016 - Present",
-    objectives: ["Computer science senior | Expected graduation - May 2020 | GPA: 3.93"]
+    date: "May 2020 - Present",
+    objectives: ["Expected graduation - May 2022"]
+  },
+  {
+    category: "Education",
+    workplace: "Bachelors of Science, CS — GPA: 3.93",
+    role: "<a href='https://www.unlv.edu/'>University of Nevada: Las Vegas</a>",
+    date: "Aug 2016 - May 2020 ",
+    objectives: []
   },
   // {
   //   category: "Education",
@@ -32,6 +45,7 @@ items = [{
     workplace: "Developer — <a class='Intellimind' href='https://www.intellimind.com/en'>Intellimind</a>",
     role: "Las Vegas - Software Developer",
     date: "Oct 2019 - Jan 2020",
+    objectiveLimit: 3,
     objectives: [
       "Reduced load time on Node.js server by 93% by caching redundant data and operations.",
       "Queried Twitter API and stored tweet/user/influencer data in a MySQL database.",
@@ -248,63 +262,54 @@ items = [{
       'resnet50',
     ]
   },
-  {
-    category: "Notable Projects",
-    workplace: "<a href='https://mm909.github.io/NeuralNet-Tester/'>Neural Network White Box</a> — <a href='http://yann.lecun.com/exdb/mnist/'>MNIST</a>",
-    role: "Application to visualize ANN predictions",
-    date: "Spring 2019",
-    objectives: [
-      "Developed an application that allows users to draw images on the screen on, send that image through the network, and display the network's predictions.",
-      "Created a sandbox to understand how well the neural network was learning.",
-      "Wrote documentation showing what the hidden layer of the network is seeing."
-    ],
-    index: [
-      'ML',
-      'Machine Learning',
-      'Image Processing',
-      'C++',
-      'C',
-      'Neural Network',
-      'CS783',
-      'Web Development',
-      'js',
-      'p5.js',
-      'ANN',
-    ]
-  },
-  {
-    category: "Notable Projects",
-    workplace: "<a href='http://MikianMusser.com'>MikianMusser.com</a>",
-    role: "Personal web site - html/css/js/pug/sass ",
-    date: "Aug 2018 - Present",
-    objectives: [
-      "Iteratively designed and programmed a personal website to showcase projects and experience.",
-      "Used CSS and HTML preprocessors such as SASS and PUG to increase productivity.",
-      "Taught myself the web programming languages through self guided intuition."
-    ],
-    index: [
-      "js",
-      "javascript",
-      "html",
-      "css",
-      "bootstrap",
-      "p5.js",
-      "animation",
-      "Webhosting",
-      "ftps",
-      "dynamic design",
-      "responsive",
-      'Web Development',
-    ]
-  },
+  // {
+  //   category: "Notable Projects",
+  //   workplace: "<a href='http://MikianMusser.com'>MikianMusser.com</a>",
+  //   role: "Personal web site - html/css/js/pug/sass ",
+  //   date: "Aug 2018 - Present",
+  //   objectives: [
+  //     "Iteratively designed and programmed a personal website to showcase projects and experience.",
+  //     "Used CSS and HTML preprocessors such as SASS and PUG to increase productivity.",
+  //     "Taught myself the web programming languages through self guided intuition."
+  //   ],
+  //   index: [
+  //     "js",
+  //     "javascript",
+  //     "html",
+  //     "css",
+  //     "bootstrap",
+  //     "p5.js",
+  //     "animation",
+  //     "Webhosting",
+  //     "ftps",
+  //     "dynamic design",
+  //     "responsive",
+  //     'Web Development',
+  //   ]
+  // },
   {
     category: "Publications",
     workplace: "<a href='https://towardsdatascience.com/predicting-trump-tweets-with-a-rnn-95e7c398b18e'>Predicting Trump’s Tweets With A Recurrent Neural Network</a><p class='subtitle'>Generating author and task-specific text with a LSTM RNN</p>",
     role: "<a href='https://towardsdatascience.com/'><svg viewBox='0 0 45 45' class='mediumIcon' width='25' height='25'><path d='M5 40V5h35v35H5zm8.56-12.627c0 .555-.027.687-.318 1.03l-2.457 2.985v.396h6.974v-.396l-2.456-2.985c-.291-.343-.344-.502-.344-1.03V18.42l6.127 13.364h.714l5.256-13.364v10.644c0 .29 0 .342-.185.528l-1.848 1.796v.396h9.19v-.396l-1.822-1.796c-.184-.186-.21-.238-.21-.528V15.937c0-.291.026-.344.21-.528l1.823-1.797v-.396h-6.471l-4.622 11.542-5.203-11.542h-6.79v.396l2.14 2.64c.239.292.291.37.291.768v10.353z'></path></svg></a><span class='towardsdatascience'>Towards Data Science — Machine Learning, Data Science, Programming</span>",
     date: "April 2020",
     objectives: [],
+    indexShow: false,
     index: [
       'Medium',
+      'TensorFlow',
+      'RNN',
+      "Python",
+      'ML',
+      'Donald Trump',
+      'Flask',
+      'Selenium',
+      'LSTM',
+      'Web development',
+      'Selenium',
+      'Web scraping',
+      'Text Prediction',
+      'Machine Learning',
+      'Neural Network',
     ]
   },
   {
@@ -313,8 +318,25 @@ items = [{
     role: "<a href='https://towardsdatascience.com/'><svg viewBox='0 0 45 45' class='mediumIcon' width='25' height='25'><path d='M5 40V5h35v35H5zm8.56-12.627c0 .555-.027.687-.318 1.03l-2.457 2.985v.396h6.974v-.396l-2.456-2.985c-.291-.343-.344-.502-.344-1.03V18.42l6.127 13.364h.714l5.256-13.364v10.644c0 .29 0 .342-.185.528l-1.848 1.796v.396h9.19v-.396l-1.822-1.796c-.184-.186-.21-.238-.21-.528V15.937c0-.291.026-.344.21-.528l1.823-1.797v-.396h-6.471l-4.622 11.542-5.203-11.542h-6.79v.396l2.14 2.64c.239.292.291.37.291.768v10.353z'></path></svg></a><span class='towardsdatascience'>Towards Data Science — Machine Learning, Data Science</span>",
     date: "April 2020",
     objectives: [],
+    indexShow: false,
     index: [
-      'Medium'
+      'Medium',
+      'TensorFlow',
+      "Python",
+      'ML',
+      'Machine Learning',
+      'Kaggle',
+      'Open Source',
+      'Transfer Learning',
+      'MTCNN',
+      'ASD',
+      'Autism',
+      'VGG',
+      'Face Detection',
+      'CS489',
+      'Face',
+      'senet50',
+      'resnet50',
     ]
   },
   {
@@ -323,8 +345,12 @@ items = [{
     role: "<a href='https://towardsdatascience.com/'><svg viewBox='0 0 45 45' class='mediumIcon' width='25' height='25'><path d='M5 40V5h35v35H5zm8.56-12.627c0 .555-.027.687-.318 1.03l-2.457 2.985v.396h6.974v-.396l-2.456-2.985c-.291-.343-.344-.502-.344-1.03V18.42l6.127 13.364h.714l5.256-13.364v10.644c0 .29 0 .342-.185.528l-1.848 1.796v.396h9.19v-.396l-1.822-1.796c-.184-.186-.21-.238-.21-.528V15.937c0-.291.026-.344.21-.528l1.823-1.797v-.396h-6.471l-4.622 11.542-5.203-11.542h-6.79v.396l2.14 2.64c.239.292.291.37.291.768v10.353z'></path></svg></a><span class='towardsdatascience'>(Awaiting Publication) Towards Data Science</span>",
     date: "April 2020",
     objectives: [],
+    indexShow: false,
     index: [
-      'Medium'
+      'Medium',
+      'Machine Learning Yearning',
+      'Bias',
+      'Variance',
     ]
   },
   {
@@ -350,6 +376,30 @@ items = [{
       'Servos',
       'Arduino',
       'Raspberry Pi'
+    ]
+  },
+  {
+    category: "Other Projects",
+    workplace: "<a href='https://mm909.github.io/NeuralNet-Tester/'>Neural Network White Box</a> — <a href='http://yann.lecun.com/exdb/mnist/'>MNIST</a>",
+    role: "Application to visualize ANN predictions",
+    date: "Spring 2019",
+    objectives: [
+      "Developed an application that allows users to draw images on the screen on, send that image through the network, and display the network's predictions.",
+      "Created a sandbox to understand how well the neural network was learning.",
+      "Wrote documentation showing what the hidden layer of the network is seeing."
+    ],
+    index: [
+      'ML',
+      'Machine Learning',
+      'Image Processing',
+      'C++',
+      'C',
+      'Neural Network',
+      'CS783',
+      'Web Development',
+      'js',
+      'p5.js',
+      'ANN',
     ]
   },
   {

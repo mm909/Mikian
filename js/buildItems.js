@@ -175,10 +175,8 @@ function buildItems(filter) {
   for (var i = 0; i < canidates.length; i++) {
 
     // If there is a objectlimit set for this item, override ObjectiveLimit
-    for (var j = 0; j < limits.length; j++) {
-      if (limits[j].workplace == canidates[i].workplace) {
-        tempObjectiveLimit = limits[j].objectiveLimit
-      }
+    if (canidates[i].objectiveLimit) {
+      tempObjectiveLimit = canidates[i].objectiveLimit
     }
 
     // If showall, set limits to max
@@ -234,17 +232,20 @@ function buildItems(filter) {
 
     // If index value was used to inclde it in the search add it to the workplace string
     workplaceStr = canidates[i].workplace
-    if (!highlight) {
-      if (canidates[i].index) {
-        for (var j = 0; j < canidates[i].index.length; j++) {
-          key = canidates[i].index[j].toLowerCase();
-          if (key.includes(filter) && !canidates[i].role.includes(filter)) {
-            workplaceStr += " <span class='indexValue'>(" + canidates[i].index[j] + ")</span>"
-            break
+    if (canidates[i].indexShow != false) {
+      if (!highlight) {
+        if (canidates[i].index) {
+          for (var j = 0; j < canidates[i].index.length; j++) {
+            key = canidates[i].index[j].toLowerCase();
+            if (key.includes(filter) && !canidates[i].role.includes(filter)) {
+              workplaceStr += " <span class='indexValue'>(" + canidates[i].index[j] + ")</span>"
+              break
+            }
           }
         }
       }
     }
+
 
     // Build item html
     itemCount++
