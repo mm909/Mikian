@@ -26,6 +26,10 @@ hr {
 .role{
 }
 
+.EAS {
+  color: #ff272e !important;
+}
+
 .mediumIcon{
   fill: #365875;
   line-height: 25px;

@@ -28,9 +28,9 @@ items = [{
   },
   {
     category: "Education",
-    workplace: "Bachelors of Science, CS — GPA: 3.93",
+    workplace: "Bachelors of Science, CS — GPA: 3.91",
     role: "<a href='https://www.unlv.edu/'>University of Nevada: Las Vegas</a>",
-    date: "Aug 2016 - May 2020 ",
+    date: "Aug 2016 - May 2020",
     objectives: []
   },
   // {
@@ -42,8 +42,26 @@ items = [{
   // },
   {
     category: "Experience",
+    workplace: "Data Scientist  — <a class='EAS' href='https://www.unlv.edu/units/enterprise-application-services'>Enterprise Application Services</a>",
+    role: "UNLV - Graduate Assistant",
+    date: "May 2020 - Present",
+    objectiveLimit: 3,
+    objectives: [
+      'Used SAS software suite and architecture to generate meaningful reports about a wide variety of data.'
+    ],
+    index: [
+      'Machine Learning',
+      'Data Scientist',
+      'SAS',
+      'UNLV',
+      'Data',
+      'Big Data',
+    ]
+  },
+  {
+    category: "Experience",
     workplace: "Developer — <a class='Intellimind' href='https://www.intellimind.com/en'>Intellimind</a>",
-    role: "Las Vegas - Software Developer",
+    role: "Las Vegas - Machine Learning Intern",
     date: "Oct 2019 - Jan 2020",
     objectiveLimit: 3,
     objectives: [
@@ -80,7 +98,7 @@ items = [{
     category: "Experience",
     workplace: "Teaching — <a class='unlvASC' href='https://www.unlv.edu/asc/'>Academic Success Center</a>",
     role: "<a href='https://www.unlv.edu/'>UNLV</a> - Computer Science Tutor",
-    date: "Aug 2019 - Present",
+    date: "Aug 2019 - May 2020",
     objectives: [
       "Tutored twenty-four core computer science, computer engineering, statistics, and math classes.",
       "Measurably improved students' performance in class, on assignments, and during exams.",
