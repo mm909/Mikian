@@ -29,7 +29,7 @@ items = [{
   {
     category: "Education",
     workplace: "Bachelors of Science, CS — GPA: 3.91",
-    role: "<a href='https://www.unlv.edu/'>University of Nevada: Las Vegas</a>",
+    role: "<a href='https://www.unlv.edu/'>University of Nevada: Las Vegas</a> - Magna Cum Laude",
     date: "Aug 2016 - May 2020",
     objectives: []
   },
@@ -305,6 +305,30 @@ items = [{
   //     'Web Development',
   //   ]
   // },
+  {
+    category: "Publications",
+    workplace: "<a href='https://towardsdatascience.com/what-is-machine-learning-doing-for-autism-6e86daa3b12a'>Machine Learning & Autism</a><p class='subtitle'>A brief literature review of how machine learning contributes to autism diagnosis and treatment.</p>",
+    role: "<a href='https://towardsdatascience.com/'><svg viewBox='0 0 45 45' class='mediumIcon' width='25' height='25'><path d='M5 40V5h35v35H5zm8.56-12.627c0 .555-.027.687-.318 1.03l-2.457 2.985v.396h6.974v-.396l-2.456-2.985c-.291-.343-.344-.502-.344-1.03V18.42l6.127 13.364h.714l5.256-13.364v10.644c0 .29 0 .342-.185.528l-1.848 1.796v.396h9.19v-.396l-1.822-1.796c-.184-.186-.21-.238-.21-.528V15.937c0-.291.026-.344.21-.528l1.823-1.797v-.396h-6.471l-4.622 11.542-5.203-11.542h-6.79v.396l2.14 2.64c.239.292.291.37.291.768v10.353z'></path></svg></a><span class='towardsdatascience'>Towards Data Science — Machine Learning, Artificial Intelligence</span>",
+    date: "August 2020",
+    objectives: [],
+    indexShow: false,
+    index: [
+      'Medium',
+      'Machine Learning',
+      'Towards Data Science',
+      'Autism',
+      'Papers',
+      'Eye Tracking',
+      'Facial Movements',
+      'Robotics',
+      'T-SNE',
+      'TSNE',
+      'Computer Vision',
+      'CV',
+      'ADTree',
+      'Published',
+    ]
+  },
   {
     category: "Publications",
     workplace: "<a href='https://towardsdatascience.com/predicting-trump-tweets-with-a-rnn-95e7c398b18e'>Predicting Trump’s Tweets With A Recurrent Neural Network</a><p class='subtitle'>Generating author and task-specific text with a LSTM RNN</p>",

@@ -139,6 +139,19 @@ hr {
 
 }
 
+.empty{
+  width: 50%;
+  margin: auto;
+}
+
+.empty p {
+  margin-bottom: 5px;
+}
+
+.papers{
+  text-align: center;
+}
+
 .resume {
   width: 50%;
   margin: auto;
