@@ -23,6 +23,12 @@ hr {
   margin-bottom: 5px
 }
 
+.paperLink:hover{
+  text-decoration: underline !important;
+  color: #1e1e24;
+  
+}
+
 .role{
 }
 

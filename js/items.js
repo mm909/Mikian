@@ -251,7 +251,7 @@ items = [{
   },
   {
     category: "Notable Projects",
-    workplace: "<a href='https://towardsdatascience.com/detecting-autism-spectrum-disorder-in-children-with-computer-vision-8abd7fc9b40a'><span class=kaggle>Kaggle: </span> Autism </a> — <a href='https://www.kaggle.com/gpiosenka/autistic-children-data-set-traintestvalidate'>Data </a>",
+    workplace: "<a href='https://towardsdatascience.com/detecting-autism-spectrum-disorder-in-children-with-computer-vision-8abd7fc9b40a'><span class=kaggle>Kaggle: </span> Detecting ASD With Portraits </a> — <a href='https://www.kaggle.com/gpiosenka/autistic-children-data-set-traintestvalidate'>Data </a>",
     role: "Detect Autism Spectrum Disorder (ASD) in Children from their Facial Features",
     date: "Spring 2020",
     objectives: [
@@ -806,4 +806,26 @@ items = [{
       "Spent one night each month working with children on the autism spectrum to give autism parents a night out."
     ]
   }
+]
+
+papers = [{
+    title: 'Identifying children with autism spectrum disorder based on their face processing abnormality: A machine learning framework',
+    date: '8/2020',
+    link: 'https://www.researchgate.net/publication/299585544_Identifying_children_with_autism_spectrum_disorder_based_on_their_face_processing_abnormality_A_machine_learning_framework'
+  },
+  {
+    title: 'Use of machine learning to shorten observation-based screening and diagnosis of autism',
+    date: '8/2020',
+    link: 'https://www.nature.com/articles/tp201210.pdf'
+  },
+  {
+    title: 'Computer Vision Tools for Low-Cost and Noninvasive Measurement of Autism-Related Behaviors in Infants',
+    date: '8/2020',
+    link: 'http://downloads.hindawi.com/journals/aurt/2014/935686.pdf'
+  },
+  {
+    title: 'Personalized machine learning for robot perception of affect and engagement in autism therapy',
+    date: '8/2020',
+    link: 'https://robotics.sciencemag.org/content/robotics/3/19/eaao6760.full.pdf'
+  },
 ]
