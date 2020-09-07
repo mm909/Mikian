@@ -47,7 +47,8 @@ items = [{
     date: "May 2020 - Present",
     objectiveLimit: 3,
     objectives: [
-      'Used SAS software suite and architecture to generate meaningful reports about a wide variety of data.'
+      'Used the SAS software suite and architecture to generate meaningful reports about a wide variety of data.',
+      'Analyzed admissions data to find how COVID-19 is impacting the university.',
     ],
     index: [
       'Machine Learning',
@@ -298,13 +299,65 @@ items = [{
   //     "bootstrap",
   //     "p5.js",
   //     "animation",
-  //     "Webhosting",
+  //     "Web hosting",
   //     "ftps",
   //     "dynamic design",
   //     "responsive",
   //     'Web Development',
   //   ]
   // },
+  {
+    category: "Publications",
+    workplace: "<a href='https://towardsdatascience.com/machine-learning-image-to-audio-captioning-964dc0f63df9'>Machine Learning & Image to Audio Captioning</a><p class='subtitle'>A brief literature review of how machine learning is used to translate images directly into speech.</p>",
+    role: "<a href='https://towardsdatascience.com/'><svg viewBox='0 0 45 45' class='mediumIcon' width='25' height='25'><path d='M5 40V5h35v35H5zm8.56-12.627c0 .555-.027.687-.318 1.03l-2.457 2.985v.396h6.974v-.396l-2.456-2.985c-.291-.343-.344-.502-.344-1.03V18.42l6.127 13.364h.714l5.256-13.364v10.644c0 .29 0 .342-.185.528l-1.848 1.796v.396h9.19v-.396l-1.822-1.796c-.184-.186-.21-.238-.21-.528V15.937c0-.291.026-.344.21-.528l1.823-1.797v-.396h-6.471l-4.622 11.542-5.203-11.542h-6.79v.396l2.14 2.64c.239.292.291.37.291.768v10.353z'></path></svg></a><span class='towardsdatascience'>Towards Data Science — Machine Learning</span>",
+    date: "September 2020",
+    objectives: [],
+    indexShow: false,
+    index: [
+      'Medium',
+      'Machine Learning',
+      'Towards Data Science',
+      'Papers',
+      'Computer Vision',
+      'CV',
+      'Published',
+      'VGG16',
+      'LSTM',
+      'MSCOCO',
+      'COCO',
+      'Big Data',
+      'Image Processing',
+      'I2T',
+      'Image to Text',
+      'I2S',
+      'Image to Speech'
+    ]
+  },
+  {
+    category: "Publications",
+    workplace: "<a href='https://towardsdatascience.com/machine-learning-hearing-loss-d60dab084e3f'>Machine Learning & Hearing Loss</a><p class='subtitle'>A brief literature review of how machine learning benefits individuals with hearing loss.</p>",
+    role: "<a href='https://towardsdatascience.com/'><svg viewBox='0 0 45 45' class='mediumIcon' width='25' height='25'><path d='M5 40V5h35v35H5zm8.56-12.627c0 .555-.027.687-.318 1.03l-2.457 2.985v.396h6.974v-.396l-2.456-2.985c-.291-.343-.344-.502-.344-1.03V18.42l6.127 13.364h.714l5.256-13.364v10.644c0 .29 0 .342-.185.528l-1.848 1.796v.396h9.19v-.396l-1.822-1.796c-.184-.186-.21-.238-.21-.528V15.937c0-.291.026-.344.21-.528l1.823-1.797v-.396h-6.471l-4.622 11.542-5.203-11.542h-6.79v.396l2.14 2.64c.239.292.291.37.291.768v10.353z'></path></svg></a><span class='towardsdatascience'>Towards Data Science — Machine Learning</span>",
+    date: "August 2020",
+    objectives: [],
+    indexShow: false,
+    index: [
+      'Medium',
+      'Machine Learning',
+      'Towards Data Science',
+      'Papers',
+      'Computer Vision',
+      'CV',
+      'Published',
+      'Robotics',
+      'CNN',
+      'RNN',
+      'Facial Expressions',
+      'Neural Networks',
+      'ASL',
+      'Deeplearning',
+      'Transfer Learning'
+    ]
+  },
   {
     category: "Publications",
     workplace: "<a href='https://towardsdatascience.com/what-is-machine-learning-doing-for-autism-6e86daa3b12a'>Machine Learning & Autism</a><p class='subtitle'>A brief literature review of how machine learning contributes to autism diagnosis and treatment.</p>",
@@ -520,7 +573,7 @@ items = [{
   },
   {
     category: "Other Projects",
-    workplace: "<a href='https://github.com/mm909/lurd-pca'>Applied PCA to Speach Recognition</a>",
+    workplace: "<a href='https://github.com/mm909/lurd-pca'>Applied PCA to Speech Recognition</a>",
     role: "Implemented PCA from scratch using SVD.",
     date: "Spring 2020",
     objectives: [
@@ -566,7 +619,7 @@ items = [{
     date: "Spring 2020",
     objectives: [
       "Implemented a nonlinear kernel trick to make XOR linearly separable by a plane.",
-      "Preformed dimension manipulation to add a dimension to XOR data."
+      "Performed dimension manipulation to add a dimension to XOR data."
     ],
     index: [
       "Python",
@@ -657,7 +710,7 @@ items = [{
   {
     category: "Other Projects",
     workplace: "<a href='https://github.com/mm909/Kaggle-Titanic'><span class=kaggle>Kaggle: </span> Titanic </a> — <a href='https://www.kaggle.com/c/titanic'>Data </a>",
-    role: "Used a simple ANN to predict if passangers would live or die on the Titanic.",
+    role: "Used a simple ANN to predict if passengers would live or die on the Titanic.",
     date: "Spring 2020",
     objectives: [
       "Used an open source dataset from Kaggle.com to implement a Keras sequential model.",
@@ -805,7 +858,14 @@ items = [{
     objectives: [
       "Spent one night each month working with children on the autism spectrum to give autism parents a night out."
     ]
-  }
+  },
+  {
+    category: "Languages",
+    workplace: "English and American Sign Language (ASL)",
+    role: "",
+    date: "",
+    objectives: []
+  },
 ]
 
 papers = [{

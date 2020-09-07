@@ -15,6 +15,7 @@ a {
 }
 
 a:hover {
+  color: #1e1e24;
   text-decoration: underline !important;
 }
 
@@ -26,7 +27,7 @@ hr {
 .paperLink:hover{
   text-decoration: underline !important;
   color: #1e1e24;
-  
+
 }
 
 .role{

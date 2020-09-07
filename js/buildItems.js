@@ -23,7 +23,7 @@ function attachEvents() {
       $("#" + this.id).text("- Show Less")
       $(".item" + this.id).css('display', 'block')
     } else {
-      $("#" + this.id).text("+ Show More (" + Math.abs(3 - catListCount[this.id.split('sm')[1]]) + ")") // This math can be moved elsewhere
+      $("#" + this.id).text("+ Show More (" + Math.abs(itemLimit - catListCount[this.id.split('sm')[1]]) + ")") // This math can be moved elsewhere
       $(".item" + this.id).css('display', 'none')
     }
   });
@@ -57,6 +57,8 @@ function buildSearchTerms(searchTermCounts) {
   }
 }
 
+let itemLimit = 2
+
 function buildItems(filter) {
 
   // Start timer
@@ -66,7 +68,6 @@ function buildItems(filter) {
   $(".resumeBox").empty()
 
   // Set standard limits
-  let itemLimit = 3
   let objectiveLimit = 3
 
   // Grab filter
