@@ -871,7 +871,10 @@ items = [{
 papers = [{
     title: 'Identifying children with autism spectrum disorder based on their face processing abnormality: A machine learning framework',
     date: '8/2020',
-    link: 'https://www.researchgate.net/publication/299585544_Identifying_children_with_autism_spectrum_disorder_based_on_their_face_processing_abnormality_A_machine_learning_framework'
+    link: 'https://www.researchgate.net/publication/299585544_Identifying_children_with_autism_spectrum_disorder_based_on_their_face_processing_abnormality_A_machine_learning_framework',
+    index: '',
+    ranking: '',
+
   },
   {
     title: 'Use of machine learning to shorten observation-based screening and diagnosis of autism',
