@@ -5,6 +5,19 @@ body {
   color: #2d3047;
 }
 
+.shortlist a{
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.shortlist li{
+  font-size: 17px;
+}
+
+.papDes{
+  margin-left: 25px;
+}
+
 li {
   font-size: 15px
 }

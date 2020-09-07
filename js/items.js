@@ -868,27 +868,104 @@ items = [{
   },
 ]
 
+
+// {
+//   title: '',
+//   date: '',
+//   link: '',
+//   index: [''],
+//   ranking: '',
+//   shortlist: false,
+//   desc: ''
+// },
+
 papers = [{
+    title: 'Video Description: A Survey of Methods, Datasets and Evaluation Metrics',
+    date: '9/2020',
+    link: 'https://arxiv.org/pdf/1806.00186.pdf',
+    index: [''],
+    ranking: '',
+    shortlist: true,
+    desc: `<i>Nayyer Aafaq, Ajmal Mian, Wei Liu, Syed Zulqarnain Gilani, and Mubarak Shah, “Video Description: A Survey of Methods, Datasets and Evaluation Metrics” (2018) https://arxiv.org/pdf/1806.00186.pdf</i>`
+  },
+  {
+    title: 'Image2speech: Automatically generating audio descriptions of images',
+    date: '9/2020',
+    link: 'http://www.cs.cmu.edu/~awb/papers/hasegawajohnson17icnlssp.pdf',
+    index: [''],
+    ranking: '',
+    shortlist: true,
+    desc: `<i>Mark Hasegawa-Johnson, Alan Black, Lucas Ondel, Odette Scharenborg, Francesco Ciannella, “Image2speech: Automatically generating audio descriptions of images” in Interspeach (2020) http://www.cs.cmu.edu/~awb/papers/hasegawajohnson17icnlssp.pdf</i>`
+  },
+  {
+    title: 'AudioVision: Sound Detection for the Deaf and Hard-of-hearing',
+    date: '8/2020',
+    link: 'https://courses.cs.washington.edu/courses/cse481h/12wi/projects/accessible-sound/docs/paper.pdf',
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    desc: ''
+  },
+  {
+    title: 'A Machine Learning Approach to Fitting Prescription for Hearing Aids',
+    date: '8/2020',
+    link: 'https://www.mdpi.com/2079-9292/8/7/736',
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    desc: ''
+  },
+  {
+    title: 'Grammatical Facial Expressions Recognition with Machine Learning',
+    date: '8/2020',
+    link: 'https://www.researchgate.net/publication/262838423_Grammatical_Facial_Expressions_Recognition_with_Machine_Learning',
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    desc: ''
+  }, {
+    title: 'Technology for the deaf',
+    date: '8/2020',
+    link: 'https://dl.acm.org/doi/abs/10.1145/3283224',
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    desc: ''
+  },
+  {
     title: 'Identifying children with autism spectrum disorder based on their face processing abnormality: A machine learning framework',
     date: '8/2020',
     link: 'https://www.researchgate.net/publication/299585544_Identifying_children_with_autism_spectrum_disorder_based_on_their_face_processing_abnormality_A_machine_learning_framework',
-    index: '',
+    index: [''],
     ranking: '',
-
+    shortlist: false,
+    desc: ''
   },
   {
     title: 'Use of machine learning to shorten observation-based screening and diagnosis of autism',
     date: '8/2020',
-    link: 'https://www.nature.com/articles/tp201210.pdf'
+    link: 'https://www.nature.com/articles/tp201210.pdf',
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    desc: ''
   },
   {
     title: 'Computer Vision Tools for Low-Cost and Noninvasive Measurement of Autism-Related Behaviors in Infants',
     date: '8/2020',
-    link: 'http://downloads.hindawi.com/journals/aurt/2014/935686.pdf'
+    link: 'http://downloads.hindawi.com/journals/aurt/2014/935686.pdf',
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    desc: ''
   },
   {
     title: 'Personalized machine learning for robot perception of affect and engagement in autism therapy',
     date: '8/2020',
-    link: 'https://robotics.sciencemag.org/content/robotics/3/19/eaao6760.full.pdf'
+    link: 'https://robotics.sciencemag.org/content/robotics/3/19/eaao6760.full.pdf',
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    desc: ''
   },
 ]
