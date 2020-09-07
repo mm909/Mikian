@@ -11,7 +11,7 @@ function buildPapers() {
   for (var i = 0; i < papers.length; i++) {
     if (papers[i].shortlist) {
       if (!showShortList) {
-        let head = `<h4 class="category-title"><u><i>Short List</i></u></h4>`
+        let head = `<h4 class="category-title"><u><i>Suggested Papers</i></u></h4>`
         $jhead = $(head)
         $(".paperRow").append($jhead);
         showShortList = true
@@ -26,7 +26,9 @@ function buildPapers() {
     $jp = $(shortp + `</ol><hr>`)
     $(".paperRow").append($jp);
   }
-
+  let head = `<h4 class="category-title"><u><i>Literature Review</i></u></h4>`
+  $jhead = $(head)
+  $(".paperRow").append($jhead);
   let placed = 0;
   for (var i = 0; i < papers.length; i++) {
     if (!papers[i].shortlist) {
