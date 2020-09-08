@@ -5,13 +5,18 @@ body {
   color: #2d3047;
 }
 
+.papersDesc{
+    margin-bottom: 0px;
+    font-style: italic;
+}
+
 .shortlist a{
   font-size: 17px;
   font-weight: bold;
 }
 
 .shortlist li{
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .papDes{
@@ -37,10 +42,19 @@ hr {
   margin-bottom: 5px
 }
 
+.paperLink{
+}
+.paperHolder{
+  margin-left: 25px;
+}
+
+.QPList {
+  margin-bottom: 5px;
+}
+
 .paperLink:hover{
   text-decoration: underline !important;
   color: #1e1e24;
-
 }
 
 .role{

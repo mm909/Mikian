@@ -880,12 +880,83 @@ items = [{
 // },
 
 papers = [{
+    title: 'LSTM Neural Networks for Language Modeling (2010)',
+    date: 'TBA',
+    link: 'http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.248.4448&rep=rep1&type=pdf',
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: true,
+    desc: ''
+  },
+  {
+    title: 'GloVe: Global Vectors for Word Representation (2014)',
+    date: 'TBA',
+    link: 'https://www.aclweb.org/anthology/D14-1162.pdf',
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: true,
+    desc: ''
+  },
+  {
+    title: 'Every Picture Tells a Story: Generating Sentences from Images',
+    date: '9/2020',
+    link: 'https://www.cs.cmu.edu/~afarhadi/papers/sentence.pdf',
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: false,
+    desc: ''
+  },
+  {
+    title: 'Improving LSTM-based Video Description with Linguistic Knowledge Mined from Text',
+    date: '9/2020',
+    link: 'https://arxiv.org/pdf/1604.01729.pdf',
+    index: [''],
+    ranking: '',
+    shortlist: true,
+    toRead: false,
+    desc: `
+    <i>Subhashini Venugopalan, Lisa Anne Hendricks, Raymond Mooney, Kate Saenko, "Improving LSTM-based Video Description with Linguistic Knowledge Mined from Text" (2016) https://arxiv.org/pdf/1604.01729.pdf</i>
+    <br>
+    <b>Quick Points:</b>
+    <ul class='QPList'>
+      <li> Linguistic knowledge mined from large text corpora can aid the generation of natural language descriptions of videos. </li>
+      <li> "Deep Fusion" Train one LSTM on a large text corpora, another on just contextual text data, let the model learn how to combine these two models. </li>
+      <li> Set the state of the art METEOR score at (31.4) on the Youtube dataset (2016)</li>
+      <li> Improvements in video/image description can be made in both NLP and CV.</li>
+    </ul>
+    `
+  },
+  {
+    title: 'A Survey on Automatic Image Captioning',
+    date: '9/2020',
+    link: 'https://link.springer.com/chapter/10.1007/978-981-13-0023-3_8',
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: false,
+    desc: ''
+  },
+  {
+    title: 'Image to Speech Conversion for Visually Impaired',
+    date: '9/2020',
+    link: 'http://www.ijlret.com/Papers/Vol-3-issue-6/2-B2017160.pdf',
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: false,
+    desc: ''
+  },
+  {
     title: 'Video Description: A Survey of Methods, Datasets and Evaluation Metrics',
     date: '9/2020',
     link: 'https://arxiv.org/pdf/1806.00186.pdf',
     index: [''],
     ranking: '',
     shortlist: true,
+    toRead: false,
     desc: `<i>Nayyer Aafaq, Ajmal Mian, Wei Liu, Syed Zulqarnain Gilani, and Mubarak Shah, “Video Description: A Survey of Methods, Datasets and Evaluation Metrics” (2018) https://arxiv.org/pdf/1806.00186.pdf</i>`
   },
   {
@@ -895,6 +966,7 @@ papers = [{
     index: [''],
     ranking: '',
     shortlist: true,
+    toRead: false,
     desc: `<i>Mark Hasegawa-Johnson, Alan Black, Lucas Ondel, Odette Scharenborg, Francesco Ciannella, “Image2speech: Automatically generating audio descriptions of images” in Interspeach (2020) http://www.cs.cmu.edu/~awb/papers/hasegawajohnson17icnlssp.pdf</i>`
   },
   {
@@ -904,6 +976,7 @@ papers = [{
     index: [''],
     ranking: '',
     shortlist: false,
+    toRead: false,
     desc: ''
   },
   {
@@ -913,6 +986,7 @@ papers = [{
     index: [''],
     ranking: '',
     shortlist: false,
+    toRead: false,
     desc: ''
   },
   {
@@ -922,6 +996,7 @@ papers = [{
     index: [''],
     ranking: '',
     shortlist: false,
+    toRead: false,
     desc: ''
   }, {
     title: 'Technology for the deaf',
@@ -930,6 +1005,7 @@ papers = [{
     index: [''],
     ranking: '',
     shortlist: false,
+    toRead: false,
     desc: ''
   },
   {
@@ -939,6 +1015,7 @@ papers = [{
     index: [''],
     ranking: '',
     shortlist: false,
+    toRead: false,
     desc: ''
   },
   {
@@ -948,6 +1025,7 @@ papers = [{
     index: [''],
     ranking: '',
     shortlist: false,
+    toRead: false,
     desc: ''
   },
   {
@@ -957,6 +1035,7 @@ papers = [{
     index: [''],
     ranking: '',
     shortlist: false,
+    toRead: false,
     desc: ''
   },
   {
@@ -966,6 +1045,7 @@ papers = [{
     index: [''],
     ranking: '',
     shortlist: false,
+    toRead: false,
     desc: ''
   },
 ]

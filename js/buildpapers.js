@@ -11,7 +11,7 @@ function buildPapers() {
   for (var i = 0; i < papers.length; i++) {
     if (papers[i].shortlist) {
       if (!showShortList) {
-        let head = `<h4 class="category-title"><u><i>Suggested Papers</i></u></h4>`
+        let head = `<h4 class="category-title"><u><i>Suggested Papers</i></u></h4><p class='papersDesc'>You should read these papers:</p>`
         $jhead = $(head)
         $(".paperRow").append($jhead);
         showShortList = true
@@ -26,26 +26,43 @@ function buildPapers() {
     $jp = $(shortp + `</ol><hr>`)
     $(".paperRow").append($jp);
   }
-  let head = `<h4 class="category-title"><u><i>Literature Review</i></u></h4>`
-  $jhead = $(head)
-  $(".paperRow").append($jhead);
+
+  showtoReadList = false
+  shortp = `<div class='paperHolder'>`
+  for (var i = 0; i < papers.length; i++) {
+    if (papers[i].toRead) {
+      if (!showtoReadList) {
+        let head = `<h4 class="category-title"><u><i>Current Reading List</i></u></h4><p class='papersDesc'>Papers that I want to read next:</p>`
+        $jhead = $(head)
+        $(".paperRow").append($jhead);
+        showtoReadList = true
+      }
+
+      shortp += `<a class='paperLink' href="` + papers[i].link + `">(` + papers[i].date + `) ` + papers[i].title + ` </a>`
+      shortp += `<div class="papDes">` + papers[i].desc + `</div>`
+    }
+  }
+  $jp = $(shortp)
+  $(".paperRow").append($jp);
+
+  if (showtoReadList) {
+    $jp = $('<hr>')
+    $(".paperRow").append($jp);
+  }
+
+  let head = `<h4 class="category-title"><u><i>Literature Review</i></u></h4><p class='papersDesc'>Other papers that I have read:</p> <div class='paperHolder'> `
   let placed = 0;
   for (var i = 0; i < papers.length; i++) {
-    if (!papers[i].shortlist) {
-      let p = `
-      <a class='paperLink' href="` + papers[i].link + `">(` + papers[i].date + `) ` + papers[i].title + ` </a>
-      `
+    if (!papers[i].shortlist && !papers[i].toRead) {
+      head += `<a class='paperLink' href="` + papers[i].link + `">(` + papers[i].date + `) ` + papers[i].title + ` </a>`
       if (papers[i].desc) {
-        p += `<div class="papDes">` + papers[i].desc + `</div>`
+        head += `<div class="papDes">` + papers[i].desc + `</div>`
+      } else {
+        head += "<br> "
       }
-
-      if (placed > 0) {
-        p = "<br>" + p
-      }
-
-      $jp = $(p)
-      $(".paperRow").append($jp);
       placed += 1
     }
   }
+  $jp = $(head)
+  $(".paperRow").append($jp);
 }
