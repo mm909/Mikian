@@ -6,6 +6,16 @@ function buildPapers() {
   // CLear all items
   $(".paperRow").empty()
 
+  let fhead = `<h4 class="category-title"><u><i>Research Topics</i></u></h4><p class='papersDesc'>I am most interested in:</p>`
+  $jhead = $(fhead)
+  $(".paperRow").append($jhead);
+  let temp = `<div class="papDes">`
+  for (var i = 0; i < topics.length; i++) {
+    temp += `<li>` + topics[i].topic + `</li>`
+  }
+  $jhead = $(temp)
+  $(".paperRow").append($jhead);
+
   showShortList = false
   let shortp = `<ol class='shortlist'>`
   for (var i = 0; i < papers.length; i++) {

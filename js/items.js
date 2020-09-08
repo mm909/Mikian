@@ -579,7 +579,7 @@ items = [{
     objectives: [
       "Using PCA to transform and preserve the most important features of a waveform dataset.",
       "Reducing features on waveform data from 8000 to 2000 using PCA.",
-      "Using sklearn to preform PCA on a custom dataset.",
+      "Using sklearn to perform PCA on a custom dataset.",
       "Restored original data after reducing dimensions to see the amount of variance preserved."
     ],
     index: [
@@ -761,7 +761,7 @@ items = [{
     role: "Used PCA to visualize MNIST data in low dimensions.",
     date: "Spring 2020",
     objectives: [
-      "Used sklearn and matplotlib to preform PCA on MNIST data.",
+      "Used sklearn and matplotlib to perform PCA on MNIST data.",
       "Used PCA to reduce dimensions in MNIST data.",
       "Restored the original MNIST images after reducing dimensions to show the level of variance preserved."
     ],
@@ -879,7 +879,84 @@ items = [{
 //   desc: ''
 // },
 
+topics = [{
+    topic: "Computer Vision (CV)"
+  },
+  {
+    topic: "Natrual Language Processing (NLP)"
+  },
+  {
+    topic: "Image/Video to text (I2T, V2T)"
+  },
+  {
+    topic: "Image/Video audio descriptions"
+  },
+]
+
 papers = [{
+    title: 'Collecting Highly Parallel Data for Paraphrase Evaluation (2011)',
+    date: 'TBA',
+    link: 'https://www.aclweb.org/anthology/P11-1020.pdf',
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: true,
+    number: 20,
+    desc: `- Youtube or MSVD dataset`
+  },
+  {
+    title: 'From Word Embeddings To Document Distances (2015)',
+    date: 'TBA',
+    link: 'http://proceedings.mlr.press/v37/kusnerb15.pdf',
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: true,
+    number: 19,
+    desc: ``
+  },
+  {
+    title: 'Sequence to Sequence – Video to Text (2015)',
+    date: '9/2020',
+    link: 'https://arxiv.org/pdf/1505.00487.pdf',
+    index: [''],
+    ranking: '',
+    shortlist: true,
+    toRead: false,
+    number: 18,
+    desc: `
+    <b>Citation:</b> <br>
+    <div class="papDes">
+      <i>Venugopalan, Subhashini & Rohrbach, Marcus & Donahue, Jeff & Mooney, Raymond & Darrell, Trevor & Saenko, Kate. (2015). Sequence to Sequence -- Video to Text. 10.1109/ICCV.2015.515. https://arxiv.org/pdf/1505.00487.pdf </i>
+    </div>
+    <b>Quick Points:</b>
+    <ul class='QPList'>
+      <li> Used stacked LSTMs to turn sequenced frames to sequenced words. </li>
+      <li> Used VGG to create a feature vector and AlexNet to create optical flow vectors. </li>
+      <li> Both the feature vector and the optical flow vector were used as inputs into the LSTM </li>
+      <li> Achieved state of the art performance on MSVD(Youtube) dataset: METEOR 29.8 (2015) </li>
+    </ul>
+    `
+  },
+  {
+    title: 'Baby talk: Understanding and generating simple image descriptions',
+    date: '9/2020',
+    link: 'https://ieeexplore.ieee.org/document/5995466',
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: false,
+    number: 17,
+    desc: `
+    <b>Quick Points:</b>
+    <ul class='QPList'>
+      <li> Generated sentences with Conditional Random Field (CRF) built from detected Objects, Modifiers, and Spatial Relationships. </li>
+      <li> Did not care about subject, verb, object (SVO) tuples. </li>
+      <li> "There are two aeroplanes. The first shiny aeroplane is near the second shiny aeroplane." </li>
+    </ul>
+    `
+  },
+  {
     title: 'LSTM Neural Networks for Language Modeling (2010)',
     date: 'TBA',
     link: 'http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.248.4448&rep=rep1&type=pdf',
@@ -887,6 +964,7 @@ papers = [{
     ranking: '',
     shortlist: false,
     toRead: true,
+    number: 16,
     desc: ''
   },
   {
@@ -897,6 +975,7 @@ papers = [{
     ranking: '',
     shortlist: false,
     toRead: true,
+    number: 15,
     desc: ''
   },
   {
@@ -907,6 +986,7 @@ papers = [{
     ranking: '',
     shortlist: false,
     toRead: false,
+    number: 14,
     desc: ''
   },
   {
@@ -917,14 +997,17 @@ papers = [{
     ranking: '',
     shortlist: true,
     toRead: false,
+    number: 13,
     desc: `
-    <i>Subhashini Venugopalan, Lisa Anne Hendricks, Raymond Mooney, Kate Saenko, "Improving LSTM-based Video Description with Linguistic Knowledge Mined from Text" (2016) https://arxiv.org/pdf/1604.01729.pdf</i>
-    <br>
+    <b>Citation:</b> <br>
+    <div class="papDes">
+      <i>Subhashini Venugopalan, Lisa Anne Hendricks, Raymond Mooney, Kate Saenko, "Improving LSTM-based Video Description with Linguistic Knowledge Mined from Text" (2016) https://arxiv.org/pdf/1604.01729.pdf</i>
+    </div>
     <b>Quick Points:</b>
     <ul class='QPList'>
       <li> Linguistic knowledge mined from large text corpora can aid the generation of natural language descriptions of videos. </li>
       <li> "Deep Fusion" Train one LSTM on a large text corpora, another on just contextual text data, let the model learn how to combine these two models. </li>
-      <li> Set the state of the art METEOR score at (31.4) on the Youtube dataset (2016)</li>
+      <li> Set the state of the art METEOR score (31.4) on the Youtube dataset (2016)</li>
       <li> Improvements in video/image description can be made in both NLP and CV.</li>
     </ul>
     `
@@ -937,6 +1020,7 @@ papers = [{
     ranking: '',
     shortlist: false,
     toRead: false,
+    number: 12,
     desc: ''
   },
   {
@@ -947,6 +1031,7 @@ papers = [{
     ranking: '',
     shortlist: false,
     toRead: false,
+    number: 11,
     desc: ''
   },
   {
@@ -957,7 +1042,13 @@ papers = [{
     ranking: '',
     shortlist: true,
     toRead: false,
-    desc: `<i>Nayyer Aafaq, Ajmal Mian, Wei Liu, Syed Zulqarnain Gilani, and Mubarak Shah, “Video Description: A Survey of Methods, Datasets and Evaluation Metrics” (2018) https://arxiv.org/pdf/1806.00186.pdf</i>`
+    number: 10,
+    desc: `
+    <b>Citation:</b> <br>
+    <div class="papDes">
+      <i>Nayyer Aafaq, Ajmal Mian, Wei Liu, Syed Zulqarnain Gilani, and Mubarak Shah, “Video Description: A Survey of Methods, Datasets and Evaluation Metrics” (2018) https://arxiv.org/pdf/1806.00186.pdf</i>
+    </div>
+    `
   },
   {
     title: 'Image2speech: Automatically generating audio descriptions of images',
@@ -967,7 +1058,13 @@ papers = [{
     ranking: '',
     shortlist: true,
     toRead: false,
-    desc: `<i>Mark Hasegawa-Johnson, Alan Black, Lucas Ondel, Odette Scharenborg, Francesco Ciannella, “Image2speech: Automatically generating audio descriptions of images” in Interspeach (2020) http://www.cs.cmu.edu/~awb/papers/hasegawajohnson17icnlssp.pdf</i>`
+    number: 9,
+    desc: `
+    <b>Citation:</b> <br>
+    <div class="papDes">
+      <i>Mark Hasegawa-Johnson, Alan Black, Lucas Ondel, Odette Scharenborg, Francesco Ciannella, “Image2speech: Automatically generating audio descriptions of images” in Interspeach (2020) http://www.cs.cmu.edu/~awb/papers/hasegawajohnson17icnlssp.pdf</i>
+    </div>
+    `
   },
   {
     title: 'AudioVision: Sound Detection for the Deaf and Hard-of-hearing',
@@ -977,6 +1074,7 @@ papers = [{
     ranking: '',
     shortlist: false,
     toRead: false,
+    number: 8,
     desc: ''
   },
   {
@@ -987,6 +1085,7 @@ papers = [{
     ranking: '',
     shortlist: false,
     toRead: false,
+    number: 7,
     desc: ''
   },
   {
@@ -997,6 +1096,7 @@ papers = [{
     ranking: '',
     shortlist: false,
     toRead: false,
+    number: 6,
     desc: ''
   }, {
     title: 'Technology for the deaf',
@@ -1006,6 +1106,7 @@ papers = [{
     ranking: '',
     shortlist: false,
     toRead: false,
+    number: 5,
     desc: ''
   },
   {
@@ -1016,6 +1117,7 @@ papers = [{
     ranking: '',
     shortlist: false,
     toRead: false,
+    number: 4,
     desc: ''
   },
   {
@@ -1026,6 +1128,7 @@ papers = [{
     ranking: '',
     shortlist: false,
     toRead: false,
+    number: 3,
     desc: ''
   },
   {
@@ -1036,6 +1139,7 @@ papers = [{
     ranking: '',
     shortlist: false,
     toRead: false,
+    number: 2,
     desc: ''
   },
   {
@@ -1046,6 +1150,7 @@ papers = [{
     ranking: '',
     shortlist: false,
     toRead: false,
+    number: 1,
     desc: ''
   },
 ]
