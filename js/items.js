@@ -893,7 +893,112 @@ topics = [{
   },
 ]
 
-papers = [{
+papers = [
+  {
+    number: 28,
+    title: 'Controllable Text-to-Image Generation (2019)',
+    date: 'TBA',
+    link: 'http://papers.nips.cc/paper/8480-controllable-text-to-image-generation.pdf',
+    citation: ``,
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: true,
+    quickPoints: ['', ],
+    desc: ``
+  },
+  {
+    number: 27,
+    title: 'MirrorGAN: Learning Text-to-image Generation by Redescription (2019)',
+    date: 'TBA',
+    link: 'https://openaccess.thecvf.com/content_CVPR_2019/papers/Qiao_MirrorGAN_Learning_Text-To-Image_Generation_by_Redescription_CVPR_2019_paper.pdf',
+    citation: ``,
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: true,
+    quickPoints: ['', ],
+    desc: ``
+  },
+  {
+    number: 26,
+    title: 'A TEXT-GUIDED GRAPH STRUCTURE FOR IMAGE CAPTIONING (2020)',
+    date: 'TBA',
+    link: 'https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9106007',
+    citation: ``,
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: true,
+    quickPoints: ['', ],
+    desc: ``
+  },
+  {
+    number: 25,
+    title: 'On Diversity in Image Captioning: Metrics and Methods (2020)',
+    date: 'TBA',
+    link: 'https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9158555',
+    citation: ``,
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: true,
+    quickPoints: ['', ],
+    desc: ``
+  },
+  {
+    number: 24,
+    title: 'METEOR: An Automatic Metric for MT Evaluation with Improved Correlation with Human Judgments (2005)',
+    date: 'TBA',
+    link: 'https://www.aclweb.org/anthology/W05-0909.pdf',
+    citation: ``,
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: true,
+    quickPoints: ['', ],
+    desc: ``
+  },
+  {
+    number: 23,
+    title: 'Generative Adversarial Nets (2014)',
+    date: 'TBA',
+    link: 'http://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf',
+    citation: ``,
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: true,
+    quickPoints: ['', ],
+    desc: ``
+  },
+  {
+    number: 22,
+    title: 'Microsoft COCO: Common Objects in Context',
+    date: 'TBA',
+    link: 'https://arxiv.org/pdf/1405.0312.pdf',
+    citation: ``,
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: true,
+    quickPoints: ['', ],
+    desc: `- MSCOCO dataset`
+  },
+  {
+    number: 21,
+    title: 'Spatio-Temporal Dynamics and Semantic Attribute Enriched Visual Encoding for Video Captioning (2019)',
+    date: 'TBA',
+    link: 'https://openaccess.thecvf.com/content_CVPR_2019/papers/Aafaq_Spatio-Temporal_Dynamics_and_Semantic_Attribute_Enriched_Visual_Encoding_for_Video_CVPR_2019_paper.pdf',
+    citation: `Nayyer Aafaq, Naveed Akhtar, Wei Liu, Syed Zulqarnain Gilani, Ajmal Mian; Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2019, pp. 12487-12496`,
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: true,
+    quickPoints: ['', ],
+    desc: `- State of the art 2019 video to text (METEOR: 35.0 MSVD and 38.3 MSR-VTT)`
+  },
+  {
     number: 20,
     title: 'Collecting Highly Parallel Data for Paraphrase Evaluation (2011)',
     date: 'TBA',
@@ -1047,7 +1152,13 @@ papers = [{
     ranking: '',
     shortlist: true,
     toRead: false,
-    quickPoints: ['', ],
+    quickPoints: [
+      'Evaluations: SPICE, CIDEr, ROUGE, BLUE, METEOR, WMD',
+      'Datasets: MP-II Cooking, You Cook, TACoS, YouCook II, MPII-MD, M-VAD, VideoStory',
+      'Areas: Visual Description, Video Captioning, Video Description, Dense Video Captioning',
+      'SVO -> Stats -> Deep Learning',
+      'METEOR preferred evaluation metric'
+    ],
     desc: ``
   },
   {
@@ -1060,7 +1171,13 @@ papers = [{
     ranking: '',
     shortlist: true,
     toRead: false,
-    quickPoints: ['', ],
+    quickPoints: [
+      'Defines <i>new</i> problem in ML/AI: image2speech',
+      'Skips Image2Text step. Generates speech directly from image.',
+      'This approach works on languages that do not have a written form.',
+      'Uses: Vgg16, XNMT, Clustergen, Kaldi, Eesen',
+      'XNMT: Used to convert CNN features into phones (Speach Units)'
+     ],
     desc: ``
   },
   {

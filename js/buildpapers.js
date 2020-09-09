@@ -81,22 +81,23 @@ function buildPapers(filter) {
     if (papers[i].toRead) {
       rlp += `<a class='paperLink' href="` + papers[i].link + `">(` + papers[i].date + `) ` + papers[i].title + ` </a> <br><div class="papDes">`
 
-      // QPs
-      if (papers[i].quickPoints[0] != '') {
-        let qpl = ''
-        for (var j = 0; j < papers[i].quickPoints.length; j++) {
-          qpl += `<li>` + papers[i].quickPoints[j] + `</li>`
-        }
-        var qp = `<b>Quick Points:</b> <ul class='QPList'>` + qpl + `</ul>`
-        rlp += qp
-      }
+      // // QPs
+      // if (papers[i].quickPoints[0] != '') {
+      //   let qpl = ''
+      //   for (var j = 0; j < papers[i].quickPoints.length; j++) {
+      //     qpl += `<li>` + papers[i].quickPoints[j] + `</li>`
+      //   }
+      //   var qp = `<b>Quick Points:</b> <ul class='QPList'>` + qpl + `</ul>`
+      //   rlp += qp
+      // }
+      //
+      // // Citation
+      // if (papers[i].citation) {
+      //   rlp += `  <b>Citation:</b> <br><div class="papDes">` + papers[i].citation + `</div>`
+      // }
 
-      // Citation
-      if (papers[i].citation) {
-        rlp += `  <b>Citation:</b> <br><div class="papDes">` + papers[i].citation + `</div>`
-      }
-
-      rlp += `<div class="">` + papers[i].desc + `</div> </div>`
+      // rlp += `<div class="">` + papers[i].desc + `</div> </div>`
+      rlp += `</div>`
     }
   }
   $jrlp = $(rlp)
