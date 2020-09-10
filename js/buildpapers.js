@@ -69,6 +69,43 @@ function buildPapers(filter) {
   $jslp = $(slp + `</ol><hr>`)
   $(".paperRow").append($jslp);
 
+  // Create General Lit review section
+  // Create general lit header
+  let glh = `<h4 class="category-title"><u><i>Literature Review</i></u></h4><p class='papersDesc'>Other papers that I have read:</p>`
+  $jglh = $(glh)
+  $(".paperRow").append($jglh);
+
+  // Create general lit papers list
+  let glp = `<div class='paperHolder'> `
+  for (var i = 0; i < papers.length; i++) {
+    if (!papers[i].shortlist && !papers[i].toRead) {
+      glp += `<a class='paperLink' href="` + papers[i].link + `">(` + papers[i].date + `) ` + papers[i].title + ` </a>`
+      glp += `<br> <div class="papDes">`
+      // QPs
+      if (papers[i].quickPoints[0] != '') {
+        let qpl = ''
+        for (var j = 0; j < papers[i].quickPoints.length; j++) {
+          qpl += `<li>` + papers[i].quickPoints[j] + `</li>`
+        }
+        var qp = `<b>Quick Points:</b> <ul class='QPList'>` + qpl + `</ul>`
+        glp += qp
+      }
+
+      // Citation
+      if (papers[i].citation) {
+        glp += `  <b>Citation:</b> <br><div class="papDes">` + papers[i].citation + `</div>`
+      }
+
+      glp += `<div class="">` + papers[i].desc + `</div></div>`
+    }
+  }
+  $jglp = $(glp)
+  $(".paperRow").append($jglp);
+
+  // Insert Divider
+  $jp = $('<hr>')
+  $(".paperRow").append($jp);
+
   // Create Reading List Section
   // Create Reading list header
   let rl = `<h4 class="category-title"><u><i>Current Reading List</i></u></h4><p class='papersDesc'>Papers that I want to read next:</p>`
@@ -102,42 +139,5 @@ function buildPapers(filter) {
   }
   $jrlp = $(rlp)
   $(".paperRow").append($jrlp);
-
-  // Insert Divider
-  $jp = $('<hr>')
-  $(".paperRow").append($jp);
-
-  // Create General Lit review section
-  // Create general lit header
-  let glh = `<h4 class="category-title"><u><i>Literature Review</i></u></h4><p class='papersDesc'>Other papers that I have read:</p>`
-  $jglh = $(glh)
-  $(".paperRow").append($jglh);
-
-  // Create general lit papers list
-  let glp = `<div class='paperHolder'> `
-  for (var i = 0; i < papers.length; i++) {
-    if (!papers[i].shortlist && !papers[i].toRead) {
-      glp += `<a class='paperLink' href="` + papers[i].link + `">(` + papers[i].date + `) ` + papers[i].title + ` </a>`
-      glp += `<br> <div class="papDes">`
-      // QPs
-      if (papers[i].quickPoints[0] != '') {
-        let qpl = ''
-        for (var j = 0; j < papers[i].quickPoints.length; j++) {
-          qpl += `<li>` + papers[i].quickPoints[j] + `</li>`
-        }
-        var qp = `<b>Quick Points:</b> <ul class='QPList'>` + qpl + `</ul>`
-        glp += qp
-      }
-
-      // Citation
-      if (papers[i].citation) {
-        glp += `  <b>Citation:</b> <br><div class="papDes">` + papers[i].citation + `</div>`
-      }
-
-      glp += `<div class="">` + papers[i].desc + `</div></div>`
-    }
-  }
-  $jglp = $(glp)
-  $(".paperRow").append($jglp);
 
 }

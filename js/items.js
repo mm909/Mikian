@@ -895,6 +895,101 @@ topics = [{
 
 papers = [
   {
+    number: 34,
+    title: 'Multi-Attention Generative Adversarial Network for image captioning (2020)',
+    date: 'TBA',
+    link: 'https://www.sciencedirect.com/science/article/pii/S0925231219317825',
+    citation: ``,
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: true,
+    quickPoints: ['', ],
+    desc: ``
+  },
+  {
+    number: 33,
+    title: 'Image Caption Combined with GAN Training Method (2020)',
+    date: 'TBA',
+    link: 'https://arxiv.org/pdf/2003.09971.pdf',
+    citation: ``,
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: true,
+    quickPoints: ['', ],
+    desc: ``
+  },
+  {
+    number: 32,
+    title: 'A Better Variant of Self-Critical Sequence Training (2020)',
+    date: '9/2020',
+    link: 'https://arxiv.org/pdf/2003.09971.pdf',
+    citation: ``,
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: false,
+    quickPoints: [
+      'SCST is used to train sequence generation models.',
+      'SCST adopts REINFORCE with a Self-Critical baseline is used',
+      'This baseline is greedy and slow.',
+      'The author’s proposed solution is to average K expected rewards and use that as the baseline for SCST.',
+      'This is faster and produces better results.'
+     ],
+    desc: ``
+  },
+  {
+    number: 31,
+    title: 'Improve Image Captioning by Self-attention (2019)',
+    date: 'TBA',
+    link: 'https://link.springer.com/content/pdf/10.1007%2F978-3-030-36802-9.pdf',
+    citation: ``,
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: true,
+    quickPoints: ['', ],
+    desc: ``
+  },
+  {
+    number: 30,
+    title: 'COOPERATIVE IMAGE CAPTIONING (2019)',
+    date: 'TBA',
+    link: 'https://arxiv.org/pdf/1907.11565.pdf',
+    citation: ``,
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: true,
+    quickPoints: ['', ],
+    desc: ``
+  },
+  {
+    number: 29,
+    title: 'Improving Image Captioning with Conditional Generative Adversarial Nets (2018)',
+    date: '9/2020',
+    link: 'https://arxiv.org/abs/1805.07112',
+    citation: `Chen, Chen et al. “Improving Image Captioning with Conditional Generative Adversarial Nets.” Proceedings of the AAAI Conference on Artificial Intelligence 33 (2019): 8142–8150. Crossref. Web.`,
+    index: [''],
+    ranking: '',
+    shortlist: true,
+    toRead: false,
+    quickPoints: [
+      'Used CGAN and reinforcement-learning to improve image captioning.',
+      'Authors try to maximize the diversity of descriptions without sacrificing the fidelity.',
+      'The discriminator is able to be used as a future evaluations metric.',
+      'CNN used as encoder and RNN or CNN used as a decoder.',
+      'The discriminator(evaluation metric) is able to learn with the generator. This is better than a fixed evaluation metric.',
+      'Used one-hot word encoding -> This could be improved with Word Movers Distance.',
+      'Keywords to research/lookup: Max-over-time pooling, high-way architecture, horizontal concatenation, attention mechanisms, more reinforcement learning, beam search, top-down attention models, Karpathy splits, pre-training for gans',
+      'Gave three pairs of image and captions (Real, Fake, Mismatched) to the discriminator.',
+      'SPICE is slow',
+      'An ensemble of CNN-GANs and RNN-GANs gave the best results.'
+    ],
+    desc: ``
+  },
+  {
     number: 28,
     title: 'Controllable Text-to-Image Generation (2019)',
     date: 'TBA',
