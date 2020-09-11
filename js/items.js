@@ -889,7 +889,7 @@ topics = [{
     topic: "Image/Video to text (I2T, V2T)"
   },
   {
-    topic: "Image/Video audio descriptions"
+    topic: "GAN Image Captioning"
   },
 ]
 
