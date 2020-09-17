@@ -889,11 +889,57 @@ topics = [{
     topic: "Image/Video to text (I2T, V2T)"
   },
   {
-    topic: "Image/Video audio descriptions"
+    topic: "GAN Image Captioning"
   },
 ]
 
-papers = [
+papers = [{
+    number: 36,
+    title: 'Diverse Video Captioning Through Latent Variable Expansion with Conditional GAN (March 2020)',
+    date: '9/2020',
+    link: 'https://people.cs.umass.edu/~emery/misc/how-to.pdf',
+    citation: `Huanhou Xiao, Jinglun Shi "Diverse Video Captioning Through Latent Variable Expansion with Conditional GAN", https://arxiv.org/abs/1910.12019`,
+    index: [''],
+    ranking: '',
+    shortlist: false,
+    toRead: false,
+    quickPoints: [
+      'Uses latent variables for both CNN and discriminatior to generate sentences.',
+      'Propose Diverse Captioning Model (DCM).',
+      'Proposes a diverse captioning evaluation metric (DCE): Combines both Jaccard Similarity and BERT.',
+    ],
+    desc: ``
+  },
+  {
+    number: 35,
+    title: 'How to do Research At the MIT AI Lab',
+    date: '9/2020',
+    link: 'https://people.cs.umass.edu/~emery/misc/how-to.pdf',
+    citation: ``,
+    index: [''],
+    ranking: '',
+    shortlist: true,
+    toRead: false,
+    quickPoints: [
+      'Keep a research notebook.',
+      'Most researchers spend 1/2 of their time reading.',
+      'You can\'t read every paper that you find',
+      'You sometimes need \'a gun at your head in the form of a course\' to learn things.',
+      '"If I only knew X then Y would be easy" is a trap. Start implementation, learn along the way.',
+      'Write often, read more.',
+      'Writing is hard, you need practice.',
+      'Accepted papers (1) have something to say and (2) are not broken in some way.',
+      'Understanding someone else\'s code is time consuming.',
+      'Choosing your advisor is the most important decision you\'ll make.',
+      'A thesis is practice for a dissertation.',
+      'A thesis: (1) demonstrates literally mastery of the state of the art in a subfield. (2) Does not need to extend state of the art.',
+      'Your thesis is a conversation with the literature.',
+      'All research involves risk. If your project can not fail, it\'s development, not research.',
+      'Make research part of your everyday life. Research is a learned skill. Practice it.',
+      'Your goal is to contribute your bit to a corner of a subfield.',
+    ],
+    desc: ``
+  },
   {
     number: 34,
     title: 'Multi-Attention Generative Adversarial Network for image captioning (2020)',
@@ -936,7 +982,7 @@ papers = [
       'This baseline is greedy and slow.',
       'The author’s proposed solution is to average K expected rewards and use that as the baseline for SCST.',
       'This is faster and produces better results.'
-     ],
+    ],
     desc: ``
   },
   {
@@ -985,7 +1031,8 @@ papers = [
       'Keywords to research/lookup: Max-over-time pooling, high-way architecture, horizontal concatenation, attention mechanisms, more reinforcement learning, beam search, top-down attention models, Karpathy splits, pre-training for gans',
       'Gave three pairs of image and captions (Real, Fake, Mismatched) to the discriminator.',
       'SPICE is slow',
-      'An ensemble of CNN-GANs and RNN-GANs gave the best results.'
+      'An ensemble of CNN-GANs and RNN-GANs gave the best results.',
+      'Authors did not use a latent space vector in the cGAN.'
     ],
     desc: ``
   },
@@ -1264,7 +1311,7 @@ papers = [
     index: [''],
     citation: `Mark Hasegawa-Johnson, Alan Black, Lucas Ondel, Odette Scharenborg, Francesco Ciannella, “Image2speech: Automatically generating audio descriptions of images” in Interspeach (2020) http://www.cs.cmu.edu/~awb/papers/hasegawajohnson17icnlssp.pdf`,
     ranking: '',
-    shortlist: true,
+    shortlist: false,
     toRead: false,
     quickPoints: [
       'Defines <i>new</i> problem in ML/AI: image2speech',
@@ -1272,7 +1319,7 @@ papers = [
       'This approach works on languages that do not have a written form.',
       'Uses: Vgg16, XNMT, Clustergen, Kaldi, Eesen',
       'XNMT: Used to convert CNN features into phones (Speach Units)'
-     ],
+    ],
     desc: ``
   },
   {
