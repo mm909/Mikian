@@ -24,7 +24,7 @@ items = [{
     workplace: "Masters of Science, CS",
     role: "<a href='https://www.unlv.edu/'>University of Nevada: Las Vegas</a>",
     date: "May 2020 - Present",
-    objectives: ["Expected graduation - May 2022"]
+    objectives: ["Expected graduation - Fall 2021"]
   },
   {
     category: "Education",
