@@ -1,0 +1,192 @@
+{
+  "main": {
+    "id": "111995a345f02269",
+    "type": "split",
+    "children": [
+      {
+        "id": "2aa58949c4ce002e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9917acff013189b2",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "UI Reference/ColorPallets/ColorPallet1.png"
+              }
+            }
+          },
+          {
+            "id": "3174aa853884f4af",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/General.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fad84ff05c4f8156",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UI Reference/Ideas.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "23c8073b84f35256",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.3"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bd91bbe0bc081ab6",
+    "type": "split",
+    "children": [
+      {
+        "id": "f5c8556a44e0854e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a70943fa234ab9d6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7fc2bf5e185435ae",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ebc14c4f0fad3467",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "7f5fb0549dc9fdb8",
+    "type": "split",
+    "children": [
+      {
+        "id": "d51091f51d3a421c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2516adbbc6cf34c4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "UI Reference/Ideas.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7fba29b2f78c7fa2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "UI Reference/Ideas.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "70d64b2d1d527514",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "3230518918b4ecd9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "UI Reference/Ideas.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "23c8073b84f35256",
+  "lastOpenFiles": [
+    "Untitled.md",
+    "UI Reference/Ideas.md",
+    "Notes/General.md",
+    "UI Reference/ColorPallets/ColorPallet1.png",
+    "Notes",
+    "UI Reference/ColorPallets",
+    "UI Reference"
+  ]
+}

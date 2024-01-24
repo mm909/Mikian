@@ -10,8 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "d3": "^7.8.5",
+    "data.js": "^0.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
