@@ -51,7 +51,8 @@ export default ScratchMap;
 
 // set bounds on zoom and pan
 // Need to be able to say 'zoom to this feature'
-// need a way to color/hide things
+// need a way to color/hide things -> change stroke and fill
+// need a good 'show one country' function
 
 // This might be app based
 // Need to know what country mouse is over
