@@ -8,12 +8,9 @@ body {
     color: #333;
   }
   
-  #content .info {
-    height: 20px;
-  }
-  
-  #content .map path {
-    fill: none;
-    stroke: #333;
+  #map-container .map path {
+    fill: #545454;
+    stroke: none;
+    stroke-width: .01px;
   }
   

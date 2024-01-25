@@ -1,73 +1,59 @@
 
-import React from 'react';
+import { useEffect } from 'react';
 import * as d3 from 'd3';
 
-import { useEffect, useState } from 'react';
+function ScratchMap({ handlers, geoJsonData}){
 
-function ScratchMap() {
+  const {
+    handleMouseIn,
+    handleMouseover,
+    handleMouseout,
+    handleClick,
+    handleZoom,
+  } = handlers;
 
-  const [geoJsonData, setGeoJsonData] = useState(null);
-  let radius = 250;
-
-  function handleZoom(e) {
-    console.log('test')
-    d3.select('#content g.map')
-      .attr('transform', e.transform);
-  }
-  
-  let zoom = d3.zoom()
-  .on('zoom', handleZoom);
-
-  // geoOrthographic geoMercator
-  let projection = d3.geoMercator()
-    .scale(radius)
-    .translate([radius, radius])
-    .clipAngle(90)
-    .center([0, 0])
-
-  let geoGenerator = d3.geoPath()
-    .projection(projection);
-  
-    useEffect(() => {
-      d3.json('/countries.geojson').then(geoJson => {
-        setGeoJsonData(geoJson);
-      });
-    }, []);
+  const projection = d3.geoEquirectangular()
+  const geoGenerator = d3.geoPath().projection(projection);
     
-    useEffect(() => {
-      if (geoJsonData) {
-        let svg = d3.select('#content g.map')
-          .selectAll('path')
-          .data(geoJsonData.features)
-          .join('path')
-          .attr('d', geoGenerator);
-        console.log(svg)
+  const zoom = d3.zoom().on('zoom', handleZoom);
 
-        let svg2 = d3.select('#content g.map')
+  useEffect(() => {
+    if (geoJsonData) {
+      d3.select('#map-container g.map')
+        .selectAll('path')
+        .data(geoJsonData.features)
+        .join('path')
+        .attr('d', geoGenerator)
+        .on('mouseenter', handleMouseIn)
+        .on('mouseover', handleMouseover)
+        .on('mouseout', handleMouseout)
+        .on('click', handleClick)
 
-        d3.select('svg')
-        .on("mousedown", function() { mousedown(svg2); })
-        .on("mousemove", function() { mousemove(svg2); })
-        .on("mouseup", function() { mouseup(); })
-          .call(zoom);
-
+      d3.select('svg').call(zoom);
     }
-    }, [geoJsonData]);
+  }, [geoJsonData]);
 
   return (
     <>
-        <div className='flex flex-row justify-center items-center w-full h-screen'>
-          <div id="content" className='w-[500px] h-[500px] border-[1px] border-black'>
-            {
-              geoJsonData == null ? <></> :
-              <svg viewBox='-200 -200 2000 2000 '>
-                <g className="map" transform=""></g>
-              </svg>
-            }
-          </div>
-        </div>
+      <div id="map-container" className='w-full h-full'>
+        {
+          geoJsonData == null ? <></> :
+          <svg viewBox={`0 0 500 500`} height="100%" width='100%'>
+            <g className="map" transform=""></g>
+          </svg>
+        }
+      </div>
     </>
   );
 }
   
 export default ScratchMap;
+
+// set bounds on zoom and pan
+// Need to be able to say 'zoom to this feature'
+// need a way to color/hide things
+
+// This might be app based
+// Need to know what country mouse is over
+// need a popup function or something to support pop up info ie. flag, name, etc.
+

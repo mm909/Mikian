@@ -326,3 +326,133 @@ function ScratchMap() {
 }
   
 export default ScratchMap;
+
+
+import React from 'react';
+import * as d3 from 'd3';
+
+import { useEffect, useState } from 'react';
+
+
+function ScratchMap() {
+
+  function handleMouseover(e, d) {
+    console.log(d.properties)
+    console.log(d.properties.ADMIN)
+
+    // change the color of the country
+    d3.select(this)
+      .style('fill', '#999');
+  }
+
+  function handleMouseout(e, d) {
+    d3.select(this)
+      .style('fill', '#545454');
+  }
+
+  function handleClick(e, d) {
+    console.log(d.properties)
+    console.log(d.properties.ADMIN)
+    // change the color of the country
+    d3.select(this)
+      .style('fill', 'Yellow');
+  
+  }
+
+  const [geoJsonData, setGeoJsonData] = useState(null);
+
+  function handleZoom(e) {
+    console.log('test')
+    d3.select('#content g.map')
+      .attr('transform', e.transform);
+  }
+  
+  let zoom = d3.zoom()
+  .on('zoom', handleZoom);
+
+  // geoOrthographic geoMercator geoEquirectangular
+  let projection = d3.geoEquirectangular()
+    // .scale(radius)
+    // .translate([radius, radius])
+    // .clipAngle(90)
+    // .center([0, 0])
+
+  // let file = '/countries.geojson'
+  let file = '/Temp/countries.json'
+  // let file = '/Temp/world.json'
+
+  let geoGenerator = d3.geoPath()
+    .projection(projection);
+  
+    useEffect(() => {
+      d3.json(file).then(geoJson => {
+        setGeoJsonData(geoJson);
+      });
+    }, []);
+    
+    useEffect(() => {
+      if (geoJsonData) {
+        let svg = d3.select('#content g.map')
+          .selectAll('path')
+          .data(geoJsonData.features)
+          .join('path')
+          .attr('d', geoGenerator)
+          .on('mouseover', handleMouseover)
+          .on('mouseout', handleMouseout)
+          .on('click', handleClick)
+
+        d3.select('svg').call(zoom);
+
+    }
+    }, [geoJsonData]);
+
+  return (
+    <>
+        <div className='flex flex-row justify-center items-center w-full h-full'>
+          <div id="content" className='w-full h-full flex items-center justify-center'>
+            {
+              geoJsonData == null ? <></> :
+              <svg viewBox='0 0 500 500' height="500" width='500'>
+                <g className="map" transform=""></g>
+              </svg>
+            }
+          </div>
+        </div>
+    </>
+  );
+}
+  
+export default ScratchMap;
+
+// Fill whole box
+// Zoom in to area
+// On click/enter/exit functions
+
+
+
+// With view box dynamic resizing
+
+
+// Zoom to area
+const handleClick = (e, d) => {
+  console.log('Click')
+  // zoom to country
+  console.log(d3.geoPath())
+  console.log(d3.geoPath().projection())
+  const projection = d3.geoEquirectangular();
+  const pathGenerator = d3.geoPath().projection(projection);
+const zoom = d3.zoom().on('zoom', handleZoom);
+const [[x0, y0], [x1, y1]] = pathGenerator.bounds(d);
+  e.stopPropagation();
+  d3.select('svg')
+      .transition()
+      .duration(750)
+      .call(
+          zoom.transform,
+          d3.zoomIdentity
+              .translate(500 / 2, 500 / 2)
+              .scale(Math.min(8, 0.9 / Math.max((x1 - x0) / 500, (y1 - y0) / 500)))
+              .translate(-(x0 + x1) / 2, -(y0 + y1) / 2),
+          d3.pointer(e, d3.select('#map-container').node())
+      );
+}
