@@ -19,6 +19,34 @@
             "Neil Armstrong"
         ],   
         "Description": "A never delivered speech written by Bill Safire for President Richard Nixon in the event that the Apollo 11 astronauts were stranded on the moon.",
-        "Link": "https://www.archives.gov/files/presidential-libraries/events/centennials/nixon/images/exhibit/rn100-6-1-2.pdf",
+        "Link": "https://www.archives.gov/files/presidential-libraries/events/centennials/nixon/images/exhibit/rn100-6-1-2.pdf"
+    },
+    {
+        "Title": "Letter from Birmingham Jail",
+        "Date": "4-16-1963",
+        "Writer": "Dr. Martin Luther King Jr.",
+        "Speaker": "Dr. Martin Luther King Jr.",
+        "Location": "Birmingham, Alabama, USA",
+        "Quotes": [
+            "We started having workshops on nonviolence and repeatedly asked ourselves the questions, 'Are you able to accept blows without retaliating?' and 'Are you able to endure the ordeals of jail?'",
+            "I have almost reached the regrettable conclusion that the Negro's great stumbling block in the stride toward freedom is not the White Citizens Councillor or the Ku Klux Klanner but the white moderate who is more devoted to order than to justice",
+            "You warmly commended the Birmingham police force for keeping 'order' and 'preventing violence.' I don't believe you would have so warmly commended the police force if you had seen its angry violent dogs literally biting six unarmed, nonviolent Negroes"
+        ],
+        "Context": [
+            "Rev. Ralph Abernathy",
+            "Eugene 'Bull' Connor",
+            "Albert Boutwell",
+            "Marching without a permit",
+            "Brown v. Board Of Education",
+            "Civil Rights Movement"
+        ],
+        "Description": "",
+        "Link": "https://www.csuchico.edu/iege/_assets/documents/susi-letter-from-birmingham-jail.pdf"
+    },
+    {
+        "This is a great day in irqs history"
+        "the tryant is a prisioner"
+        // https://usinfo.org/wf-archive/2003/031215/epf104.htm
+        // https://www.americanrhetoric.com/21stcenturyspeeches.htm
     }
 ]
