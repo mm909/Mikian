@@ -6,10 +6,14 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'mono': ['"Courier New"', 'monospace'],
+      },
       colors: {
-        "bg": "#282828", //"#fbf1c7",//fbf1c7
-        "bg2": "#32302f",
-        "text1": "#0F0F0F", //0F0F0F
+        "primary": "#E0E0E6",
+        "secondary": "#31473E",
+        "text-white": "#0F0F0F",
+        "text-black": "#F5F5F5",
       },
     },
   },

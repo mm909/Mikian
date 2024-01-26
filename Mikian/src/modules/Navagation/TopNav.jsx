@@ -11,9 +11,9 @@ function TopNav() {
       <div className="
           flex
           flex-row
-          //min-h-[50px]
-          //border-b-[1px]
-          //border-black
+          min-h-[50px]
+          bg-secondary
+
       ">
             <TopNavLeft />
             <TopNavMiddle />

@@ -9,9 +9,11 @@ function TopNavMiddle() {
             items-center
             justify-center
 
-            text-text1
+            font-mono
+
             text-2xl
-            font-bold
+            text-white
+
           ">
           </div>
         </>
