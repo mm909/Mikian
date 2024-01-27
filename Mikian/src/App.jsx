@@ -10,7 +10,7 @@ import MapApp from './modules/apps/MapApp.jsx'
 function App() {
   return (
     <>  
-      <div className='bg-bg min-h-[100vh] bg-primary'>
+      <div className='bg-bg min-h-[100vh]  bg-primary'>
         <Routes>
             <Route path="/" element={<Navagation />}>
               {/* <Route path="/" element={<TestApp />} /> */}

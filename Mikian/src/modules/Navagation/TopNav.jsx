@@ -5,7 +5,7 @@ import TopNavLeft from './TopNavLeft.jsx';
 import TopNavMiddle from './TopNavMiddle.jsx';
 import TopNavRight from './TopNavRight.jsx';
 
-function TopNav() {
+function TopNav({sideNavOpen, setSideNavOpen}) {
   return (
     <>
       <div className="
@@ -13,9 +13,8 @@ function TopNav() {
           flex-row
           min-h-[50px]
           bg-secondary
-
       ">
-            <TopNavLeft />
+            <TopNavLeft sideNavOpen={sideNavOpen} setSideNavOpen={setSideNavOpen} />
             <TopNavMiddle />
             <TopNavRight />
       </div>

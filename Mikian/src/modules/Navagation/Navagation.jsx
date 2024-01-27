@@ -5,12 +5,15 @@ import TopNav from './TopNav.jsx';
 import SideNav from './SideNav.jsx';
 
 function Navagation() {
+
+  const [sideNavOpen, setSideNavOpen] = React.useState(false);
+
   return (
     <>
       <div className='flex flex-col min-h-screen'>
-        <TopNav />
+        <TopNav sideNavOpen={sideNavOpen} setSideNavOpen={setSideNavOpen} />
         <div className='flex flex-row flex-grow'> 
-          <SideNav />
+          <SideNav sideNavOpen={sideNavOpen} setSideNavOpen={setSideNavOpen} />
           <div className='flex-grow'>
             <Outlet />
           </div>

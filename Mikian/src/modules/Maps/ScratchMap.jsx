@@ -12,7 +12,7 @@ function ScratchMap({ handlers, geoJsonData}){
     handleZoom,
   } = handlers;
 
-  const projection = d3.geoEquirectangular()
+  const projection = d3.geoOrthographic()
   const geoGenerator = d3.geoPath().projection(projection);
     
   const zoom = d3.zoom().on('zoom', handleZoom);

@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-function TopNavLeft() {
+function TopNavLeft({sideNavOpen, setSideNavOpen}) {
     return (
         <>
         <div className='flex items-center justify-center pl-[10px]'>
@@ -11,7 +11,9 @@ function TopNavLeft() {
                 h-[25px]
                 bg-primary
                 rounded-[4px]
-            '/>
+            '
+            onClick={() => setSideNavOpen(!sideNavOpen)} 
+            />
         </div>
         <div className="
             flex

@@ -53,7 +53,7 @@ function MapApp() {
     return (
         <>
             <div className='w-full h-screen flex flex-row items-center justify-center'>
-                <div className='w-4/5 h-4/5 border-[1px] border-[#111]/20'>
+                <div className='w-full h-full border-[0px] border-[#111]/20'>
                     <ScratchMap handlers={handlers} geoJsonData={geoJsonData}/>
                 </div>
             </div>
