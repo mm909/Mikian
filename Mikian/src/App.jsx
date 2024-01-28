@@ -2,25 +2,22 @@ import { Routes, Route } from 'react-router-dom'
 
 import './App.css'
 
-import Navagation from './modules/Navagation/Navagation.jsx'
-import NotFound from './modules/NotFound/NotFound.jsx'
-import FromWho from './modules/apps/FromWho.jsx'
-import MapApp from './modules/apps/MapApp.jsx'
+import { GeoContextProvider } from '@/Geo/Engine/GeoContext.jsx'
+
+import Navagation from '@/Navagation/Navagation.jsx'
+import GeoQuest from '@/Geo/Apps/GeoQuest.jsx'
 
 function App() {
   return (
     <>  
-      <div className='bg-bg min-h-[100vh]  bg-primary'>
+      <GeoContextProvider>
         <Routes>
-            <Route path="/" element={<Navagation />}>
-              {/* <Route path="/" element={<TestApp />} /> */}
-              <Route path="/fromwho" element={<FromWho />} />
-              <Route path="/map" element={<MapApp />} />
-              {/* <Route path="MatchHistory" element={<MatchHistory />} /> */}
-              <Route path="*" element={<NotFound />} /> 
-            </Route>
-          </Routes>
-      </div>
+          <Route path="/" element={<Navagation />}>
+              <Route path="/GeoQuest" element={<GeoQuest />} />
+              {/* <Route path="*" element={<NotFound />} />  */}
+          </Route>
+        </Routes>
+      </GeoContextProvider>
     </>
   )
 }

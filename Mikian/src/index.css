@@ -1,15 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body {
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 14px;
-  }
-  
-  #map-container .map path {
-    fill: #407753;
-    stroke: none;
-    stroke-width: .01px;
-  }
-  
