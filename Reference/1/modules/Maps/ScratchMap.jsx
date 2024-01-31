@@ -30,7 +30,8 @@ function ScratchMap({ handlers, geoJsonData}){
         .on('click', handleClick)
 
       d3.select('svg').call(zoom);
-    }
+
+
   }, [geoJsonData]);
 
   return (

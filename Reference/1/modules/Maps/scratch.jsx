@@ -354,8 +354,7 @@ function ScratchMap() {
     console.log(d.properties)
     console.log(d.properties.ADMIN)
     // change the color of the country
-    d3.select(this)
-      .style('fill', 'Yellow');
+    d3.select(this).style('fill', 'Yellow');
   
   }
 
