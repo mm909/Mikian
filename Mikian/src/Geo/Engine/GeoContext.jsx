@@ -1,56 +1,50 @@
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect, useMemo } from 'react';
 
 import * as d3 from 'd3';
 
+export function useFeatureList(geoData) {
+    return useMemo(() => {
+        return geoData?.features.map((item, index) => item.properties.ADMIN) ?? [];
+    }, [geoData]);
+}
+
 export const GeoContext = createContext();
+
 export const GeoContextProvider = ({ children }) => {
 
-    const [geoJsonFile, setGeoJsonFile] = useState('/countries.json');
-    const [geoJsonData, setGeoJsonData] = useState(null);
+    const [geoFileName, setGeoFileName] = useState('/countries.json');
+    const [geoData, setGeoData] = useState(null);
+    const [geoProperties, setGeoProperties] = useState({});
 
+    useEffect(() => {
+        if (!geoFileName) return;
+        d3.json(geoFileName).then(geoData => {
+            setGeoData(geoData);
+        }).catch(error => console.error(error));
+    }, [geoFileName]);
+
+    const customColors = ['#222222', '#212121', '#202020', '#1f1f1f'];
     const defaultProperties = {
         display: true,
+        fill: '#222222',
     };
 
     useEffect(() => {
-        d3.json(geoJsonFile).then(geoJson => {
-            // Add default properties to each feature
-            geoJson.features.forEach(feature => {
-                feature.properties = { ...defaultProperties, ...feature.properties };
-            });
-            // set display to false for all but 'Sudan'
-            geoJson.features = geoJson.features.map(feature => {
-                feature.properties.display = feature.properties.ADMIN === 'Sudan';
-                return feature;
-            }
-            );
-            console.log(geoJson)
-            setGeoJsonData(geoJson);
-        }).catch(error => console.error(error));
-    }, [geoJsonFile]);
-
-    function hideAllCountries() {
-        setGeoJsonData({
-            ...geoJsonData,
-            features: geoJsonData.features.map(feature => {
-                feature.properties.display = false;
-                return feature;
-            }),
-        });
-    }
-
-    function onlyShowCountry(country) {
-        setGeoJsonData({
-            ...geoJsonData,
-            features: geoJsonData.features.map(feature => {
-                feature.properties.display = feature.properties.ADMIN === country;
-                return feature;
-            }),
-        });
-    }
+        if (!geoData) return;
+        setGeoProperties(
+            geoData.features.reduce((acc, feature, index) => {
+                const country = feature.properties.ADMIN;
+                acc[country] = {
+                    ...defaultProperties,
+                    fill: customColors[index % customColors.length],
+                };
+                return acc;
+            }, {})
+        );
+    }, [geoData]);
 
     return (
-        <GeoContext.Provider value={{ geoJsonFile, setGeoJsonFile, geoJsonData, onlyShowCountry }}>
+        <GeoContext.Provider value={{ geoData, geoProperties, setGeoProperties }}>
             {children}
         </GeoContext.Provider>
     );

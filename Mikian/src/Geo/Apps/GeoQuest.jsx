@@ -1,16 +1,15 @@
-
 import { useContext, useState, useEffect, useMemo } from 'react'
 import { GeoContext } from '@/Geo/Engine/GeoContext.jsx'
 import GeoEngine from '@/Geo/Engine/GeoEngine.jsx'
 
 function GeoQuest() {
-    const { geoJsonData, onlyShowCountry } = useContext(GeoContext)
+    const { geoData, geoProperties, setGeoProperties } = useContext(GeoContext)
+    const [chosenItem, setChosenItem] = useState("")
 
     const items = useMemo(() => {
-        return geoJsonData?.features.map((item, index) => item.properties.ADMIN) ?? [];
-    }, [geoJsonData]);
+        return geoData?.features.map((item, index) => item.properties.ADMIN) ?? [];
+    }, [geoData]);
 
-    const [chosenItem, setChosenItem] = useState("")
     useEffect(() => {
         if (items.length > 0) {
             setChosenItem(items[Math.floor(Math.random() * items.length)]);
@@ -23,7 +22,6 @@ function GeoQuest() {
 
     const onClick = (e, d) => {
         console.log('Clicked on: ' + d.properties.ADMIN)
-        console.log('Chosen: ' + chosenItem)
             if (d.properties.ADMIN == chosenItem) {
             console.log('Correct!')
             randomChosenItem()
@@ -33,10 +31,6 @@ function GeoQuest() {
     const GeoEngineProps = {
         onClick: onClick,
     }
-
-    // useEffect(() => {
-    //     onlyShowCountry(chosenItem);
-    // }, [chosenItem]);
 
     return (
         <>
