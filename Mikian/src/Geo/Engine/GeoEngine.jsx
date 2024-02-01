@@ -19,6 +19,14 @@ function GeoEngine({GeoEngineProps}) {
         d3.select('#GeoEngine g.map')
             .selectAll('path')
             .on('click', onClick)
+            // on mouse enter, bounce up and down
+            .on('mouseenter', (e, d) => {
+                // translate up
+                d3.select(e.target).transition().duration(100).attr('transform', 'translate(0, -5)');
+            })
+            .on('mouseleave', (e, d) => {
+                d3.select(e.target).transition().duration(100).attr('transform', 'scale(1)');
+            });
     }, [GeoEngineProps]);
 
     useEffect(() => {
@@ -48,8 +56,13 @@ function GeoEngine({GeoEngineProps}) {
                 return geoProperties[country]?.display ? geoProperties[country].fill : 'transparent';
             })
             .attr('stroke', d => {
-                return geoProperties[d.properties.ADMIN]?.display ? '' : 'transparent';
-            });
+                const country = d.properties.ADMIN;
+                return geoProperties[country]?.display ? geoProperties[country].stroke : 'transparent';
+            })
+            .attr('stroke-width', d => {
+                const country = d.properties.ADMIN;
+                return geoProperties[country]?.display ? geoProperties[country].strokeWidth : 0;
+            })
     }, [geoProperties]);
 
     return (

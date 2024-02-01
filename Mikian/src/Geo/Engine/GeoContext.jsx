@@ -27,6 +27,8 @@ export const GeoContextProvider = ({ children }) => {
     const defaultProperties = {
         display: true,
         fill: '#222222',
+        stroke: '#fff',
+        strokeWidth: 0.05,
     };
 
     useEffect(() => {

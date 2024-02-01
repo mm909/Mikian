@@ -1,35 +1,31 @@
-import { useContext, useState, useEffect, useMemo } from 'react'
-import { GeoContext } from '@/Geo/Engine/GeoContext.jsx'
+import { useContext, useState, useEffect } from 'react'
+import { GeoContext, useFeatureList } from '@/Geo/Engine/GeoContext.jsx'
 import GeoEngine from '@/Geo/Engine/GeoEngine.jsx'
 
 function GeoQuest() {
-    const { geoData, geoProperties, setGeoProperties } = useContext(GeoContext)
+    const { geoData } = useContext(GeoContext)
     const [chosenItem, setChosenItem] = useState("")
 
-    const items = useMemo(() => {
-        return geoData?.features.map((item, index) => item.properties.ADMIN) ?? [];
-    }, [geoData]);
+    const featureList = useFeatureList(geoData)
 
     useEffect(() => {
-        if (items.length > 0) {
-            setChosenItem(items[Math.floor(Math.random() * items.length)]);
+        if (featureList.length > 0) {
+            randomChosenItem()
         }
-    }, [items]);
+    }, [featureList]);
 
     function randomChosenItem() {
-        setChosenItem(items[Math.floor(Math.random() * items.length)]);
-    }
-
-    const onClick = (e, d) => {
-        console.log('Clicked on: ' + d.properties.ADMIN)
-            if (d.properties.ADMIN == chosenItem) {
-            console.log('Correct!')
-            randomChosenItem()
-        } 
+        setChosenItem(featureList[Math.floor(Math.random() * featureList.length)]);
     }
 
     const GeoEngineProps = {
-        onClick: onClick,
+        onClick: (e, d) => {
+            console.log('Clicked on: ' + d.properties.ADMIN)
+                if (d.properties.ADMIN == chosenItem) {
+                console.log('Correct!')
+                randomChosenItem()
+            } 
+        },
     }
 
     return (

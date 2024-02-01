@@ -1,9 +1,9 @@
-svg  {
-    fill: #222222;   /* base country color */
-    stroke: #E5C163; /* base country border color */
-    stroke-width: .05; /* base country border width */
-}
+/* svg  {
+    fill: #222222;   
+    stroke: #E5C163; 
+    stroke-width: .05; 
+} */
 
 body {
-    background-color: #282828;
+    background-color: #111111;
 }
