@@ -12,6 +12,7 @@ export const GeoContext = createContext();
 
 export const GeoContextProvider = ({ children }) => {
 
+    // const [geoFileName, setGeoFileName] = useState('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
     const [geoFileName, setGeoFileName] = useState('/countries.json');
     const [geoData, setGeoData] = useState(null);
     const [geoProperties, setGeoProperties] = useState({});
@@ -23,12 +24,12 @@ export const GeoContextProvider = ({ children }) => {
         }).catch(error => console.error(error));
     }, [geoFileName]);
 
-    const customColors = ['#222222', '#212121', '#202020', '#1f1f1f'];
+    const customColors = ['#FABD2F', '#FB4934', '#B8BB26', '#83A598'];
     const defaultProperties = {
         display: true,
         fill: '#222222',
         stroke: '#fff',
-        strokeWidth: 0.05,
+        strokeWidth: 0.00,
     };
 
     useEffect(() => {

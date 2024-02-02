@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import './App.css'
 
 import { GeoContextProvider } from '@/Geo/Engine/GeoContext.jsx'
+import { MousePositionProvider } from '@/Utilities/MousePositionContext.jsx'
 
 import Navagation from '@/Navagation/Navagation.jsx'
 import GeoQuest from '@/Geo/Apps/GeoQuest.jsx'
@@ -10,14 +11,16 @@ import GeoQuest from '@/Geo/Apps/GeoQuest.jsx'
 function App() {
   return (
     <>  
-      <GeoContextProvider>
-        <Routes>
-          <Route path="/" element={<Navagation />}>
-              <Route path="/GeoQuest" element={<GeoQuest />} />
-              {/* <Route path="*" element={<NotFound />} />  */}
-          </Route>
-        </Routes>
-      </GeoContextProvider>
+      <MousePositionProvider>
+        <GeoContextProvider>
+            <Routes>
+              <Route path="/" element={<Navagation />}>
+                  <Route path="/GeoQuest" element={<GeoQuest />} />
+                  {/* <Route path="*" element={<NotFound />} />  */}
+              </Route>
+            </Routes>
+          </GeoContextProvider>
+      </MousePositionProvider>
     </>
   )
 }

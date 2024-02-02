@@ -1,6 +1,7 @@
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState, useMemo } from 'react'
 
 import * as d3 from 'd3'
+import { v4 as uuidv4 } from 'uuid'
 
 import { GeoContext } from '@/Geo/Engine/GeoContext.jsx'
 import EmptyMap from '@/Geo/Engine/EmptyMap.jsx'
@@ -8,48 +9,49 @@ import EmptyMap from '@/Geo/Engine/EmptyMap.jsx'
 function GeoEngine({GeoEngineProps}) {
     const { geoData, geoProperties }  = useContext(GeoContext)
 
-    const projection = d3.geoEquirectangular() // geoEquirectangular geoOrthographic
-    const geoGenerator = d3.geoPath().projection(projection);
+    const [geoEngineId, setGeoEngineId] = useState('geoEngine-' + uuidv4());
+
+    const projection = useMemo(() => d3.geoEquirectangular(), []); // geoEquirectangular geoOrthographic
+    const geoGenerator = useMemo(() => d3.geoPath().projection(projection), [projection]);
 
     const {
-        onClick,
+        onClick = (e, d) => {},
+        onMouseEnter = (e, d) => {},
+        onMouseLeave = (e, d) => {}
     } = GeoEngineProps
 
     useEffect(() => {
-        d3.select('#GeoEngine g.map')
+        d3.select(`#${geoEngineId} g.map`)
             .selectAll('path')
             .on('click', onClick)
-            // on mouse enter, bounce up and down
-            .on('mouseenter', (e, d) => {
-                // translate up
-                d3.select(e.target).transition().duration(100).attr('transform', 'translate(0, -5)');
-            })
-            .on('mouseleave', (e, d) => {
-                d3.select(e.target).transition().duration(100).attr('transform', 'scale(1)');
-            });
+            .on('mouseenter', onMouseEnter)
+            .on('mouseleave', onMouseLeave);
     }, [GeoEngineProps]);
 
     useEffect(() => {
         if (!geoData) return;
 
-        d3.select('#GeoEngine g.map')
+        d3.select(`#${geoEngineId} g.map`)
             .selectAll('path')
             .data(geoData.features)
             .join('path')
             .attr('d', geoGenerator)
+            .attr('fill', 'transparent')
+            .attr('stroke', 'transparent')
+            .attr('stroke-width', 0)
 
         const zoom = d3.zoom()
             .on('zoom', (e) => {
-                d3.select('svg g').attr('transform', e.transform);
+                d3.select(`#${geoEngineId} svg g`).attr('transform', e.transform);
             });
 
-        d3.select('svg')
+        d3.select(`#${geoEngineId} svg`)
             .call(zoom);
     }, [geoData]);
 
     useEffect(() => {
-        if (!geoProperties) return;
-        d3.select('#GeoEngine g.map')
+        if (Object.keys(geoProperties).length === 0) return;
+        d3.select(`#${geoEngineId} g.map`)
             .selectAll('path')
             .attr('fill', d => {
                 const country = d.properties.ADMIN;
@@ -67,10 +69,10 @@ function GeoEngine({GeoEngineProps}) {
 
     return (
         <>
-            <div id="GeoEngine" className='w-full h-full'>
+            <div id={geoEngineId} className='w-full h-full'>
                 {
-                    geoData == null ? <EmptyMap /> :
-                    <svg viewBox={`0 0 250 250`} className='' height="100%" width='100%'>
+                    geoData === null ? <EmptyMap /> :
+                    <svg viewBox={`0 0 250 250`} className='' height="100%" width='100%' >
                         <g className="map" transform=""></g>
                     </svg>
                 }
