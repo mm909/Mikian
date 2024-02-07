@@ -23,3 +23,19 @@ setGeoProperties({
         strokeWidth: 0,
     }
 })
+
+
+// Div to show pop up on country hover
+           {/* <div className='absolute text-3xl text-red-500'>
+                {chosenFeature}
+            </div> */}
+            {/* <div
+                style={{
+                    position: 'absolute',
+                    left: `${mousePosition.x}px`,
+                    top: `${mousePosition.y}px`,
+                }}
+                className='text-red-500 pointer-events-none'
+            >
+                {hoveredFeature}
+            </div> */}

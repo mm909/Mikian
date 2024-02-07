@@ -3,11 +3,22 @@ import { useContext, useEffect, useState, useMemo } from 'react'
 import * as d3 from 'd3'
 import { v4 as uuidv4 } from 'uuid'
 
+import * as topojson from 'topojson-client'
+
 import { GeoContext } from '@/Geo/Engine/GeoContext.jsx'
 import EmptyMap from '@/Geo/Engine/EmptyMap.jsx'
 
-function GeoEngine({GeoEngineProps}) {
-    const { geoData, geoProperties }  = useContext(GeoContext)
+const GeoEngine = ({ 
+    GeoEngineProps = {
+      onClick: (e, d) => {},
+      onMouseEnter: (e, d) => {
+        console.log('Hovered over: ')
+        console.log(d)
+      },
+      onMouseLeave: (e, d) => {}
+    } 
+  }) => {
+    const { geoData }  = useContext(GeoContext)
 
     const [geoEngineId, setGeoEngineId] = useState('geoEngine-' + uuidv4());
 
@@ -15,12 +26,13 @@ function GeoEngine({GeoEngineProps}) {
     const geoGenerator = useMemo(() => d3.geoPath().projection(projection), [projection]);
 
     const {
-        onClick = (e, d) => {},
-        onMouseEnter = (e, d) => {},
-        onMouseLeave = (e, d) => {}
+        onClick,
+        onMouseEnter,
+        onMouseLeave
     } = GeoEngineProps
 
     useEffect(() => {
+        console.log('Test')
         d3.select(`#${geoEngineId} g.map`)
             .selectAll('path')
             .on('click', onClick)
@@ -29,16 +41,16 @@ function GeoEngine({GeoEngineProps}) {
     }, [GeoEngineProps]);
 
     useEffect(() => {
-        if (!geoData) return;
+        if (geoData === null) return;
 
         d3.select(`#${geoEngineId} g.map`)
             .selectAll('path')
-            .data(geoData.features)
+            .data(topojson.feature(geoData, geoData.objects.countries).features)
             .join('path')
             .attr('d', geoGenerator)
             .attr('fill', 'transparent')
-            .attr('stroke', 'transparent')
-            .attr('stroke-width', 0)
+            .attr('stroke', '#fff')
+            .attr('stroke-width', .01)
 
         const zoom = d3.zoom()
             .on('zoom', (e) => {
@@ -49,23 +61,23 @@ function GeoEngine({GeoEngineProps}) {
             .call(zoom);
     }, [geoData]);
 
-    useEffect(() => {
-        if (Object.keys(geoProperties).length === 0) return;
-        d3.select(`#${geoEngineId} g.map`)
-            .selectAll('path')
-            .attr('fill', d => {
-                const country = d.properties.ADMIN;
-                return geoProperties[country]?.display ? geoProperties[country].fill : 'transparent';
-            })
-            .attr('stroke', d => {
-                const country = d.properties.ADMIN;
-                return geoProperties[country]?.display ? geoProperties[country].stroke : 'transparent';
-            })
-            .attr('stroke-width', d => {
-                const country = d.properties.ADMIN;
-                return geoProperties[country]?.display ? geoProperties[country].strokeWidth : 0;
-            })
-    }, [geoProperties]);
+    // useEffect(() => {
+    //     if (Object.keys(geoProperties).length === 0) return;
+    //     d3.select(`#${geoEngineId} g.map`)
+    //         .selectAll('path')
+    //         .attr('fill', d => {
+    //             const country = d.properties.ADMIN;
+    //             return geoProperties[country]?.display ? geoProperties[country].fill : 'transparent';
+    //         })
+    //         .attr('stroke', d => {
+    //             const country = d.properties.ADMIN;
+    //             return geoProperties[country]?.display ? geoProperties[country].stroke : 'transparent';
+    //         })
+    //         .attr('stroke-width', d => {
+    //             const country = d.properties.ADMIN;
+    //             return geoProperties[country]?.display ? geoProperties[country].strokeWidth : 0;
+    //         })
+    // }, [geoProperties]);
 
     return (
         <>
