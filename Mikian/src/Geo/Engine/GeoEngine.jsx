@@ -43,14 +43,17 @@ const GeoEngine = ({
     useEffect(() => {
         if (geoData === null) return;
 
-        d3.select(`#${geoEngineId} g.map`)
-            .selectAll('path')
-            .data(topojson.feature(geoData, geoData.objects.countries).features)
-            .join('path')
-            .attr('d', geoGenerator)
-            .attr('fill', 'transparent')
-            .attr('stroke', '#fff')
-            .attr('stroke-width', .01)
+        Object.keys(geoData.objects).forEach((key, index) => {
+            d3.select(`#${geoEngineId} g.map`)
+                .selectAll(`path.${key}`)
+                .data(topojson.feature(geoData, geoData.objects[key]).features)
+                .join('path')
+                .attr('class', key)
+                .attr('d', geoGenerator)
+                .attr('fill', 'transparent')
+                .attr('stroke', '#fff')
+                .attr('stroke-width', .01);
+        });
 
         const zoom = d3.zoom()
             .on('zoom', (e) => {
@@ -60,24 +63,6 @@ const GeoEngine = ({
         d3.select(`#${geoEngineId} svg`)
             .call(zoom);
     }, [geoData]);
-
-    // useEffect(() => {
-    //     if (Object.keys(geoProperties).length === 0) return;
-    //     d3.select(`#${geoEngineId} g.map`)
-    //         .selectAll('path')
-    //         .attr('fill', d => {
-    //             const country = d.properties.ADMIN;
-    //             return geoProperties[country]?.display ? geoProperties[country].fill : 'transparent';
-    //         })
-    //         .attr('stroke', d => {
-    //             const country = d.properties.ADMIN;
-    //             return geoProperties[country]?.display ? geoProperties[country].stroke : 'transparent';
-    //         })
-    //         .attr('stroke-width', d => {
-    //             const country = d.properties.ADMIN;
-    //             return geoProperties[country]?.display ? geoProperties[country].strokeWidth : 0;
-    //         })
-    // }, [geoProperties]);
 
     return (
         <>

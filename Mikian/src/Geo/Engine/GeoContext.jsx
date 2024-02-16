@@ -6,14 +6,16 @@ export const GeoContext = createContext();
 
 export const GeoContextProvider = ({ children }) => {
 
-    const [geoFileName, setGeoFileName] = useState('/topoCountries.json');
+    // const [geoFileName, setGeoFileName] = useState('/topoCountries.json');
+    // const [geoFileName, setGeoFileName] = useState('/USA_adm.json');
+    const [geoFileName, setGeoFileName] = useState('/USA_adm (1).json');
     const [geoData, setGeoData] = useState(null);
 
     useEffect(() => {
         if (!geoFileName) return;
         d3.json(geoFileName).then(geoData => {
             console.log(geoData)
-            geoData.objects.countries.geometries = geoData.objects.countries.geometries.filter(d => d.properties.name !== 'Maldives');
+            // geoData.objects.countries.geometries = geoData.objects.countries.geometries.filter(d => d.properties.name !== 'Maldives');
             setGeoData(geoData);
         }).catch(error => console.error(error));
     }, [geoFileName]);
