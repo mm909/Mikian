@@ -8,6 +8,8 @@ import * as topojson from 'topojson-client'
 import { GeoContext } from '@/Geo/Engine/GeoContext.jsx'
 import EmptyMap from '@/Geo/Engine/EmptyMap.jsx'
 
+import { hideAll, showLevel } from './GeoEngineUtils'
+
 const GeoEngine = ({ 
     GeoEngineProps = {
       onClick: (e, d) => {
@@ -15,30 +17,12 @@ const GeoEngine = ({
       },
       onMouseEnter: (e, d) => {
         console.log("Mouse entered: ", d.properties.id)
-        
-        // color d white
-        d3.select(`#object-${d.properties.id}`)
-            .attr('fill', '#fff1')
-            .attr('stroke-width', .05);
-
-        // color country white
-        let country_id = d.properties.id.split('-')[0];
-        d3.select(`#object-${country_id}`)
-            .attr('stroke-width', .1);
-        
-
       },
       onMouseLeave: (e, d) => {
         console.log("Mouse left: ", d.properties.id)
-
-        // back to normal
-        d3.select(`#object-${d.properties.id}`)
-            .attr('fill', 'transparent')
-            .attr('stroke-width', .01);
-
-        let country_id = d.properties.id.split('-')[0];
-        d3.select(`#object-${country_id}`)
-            .attr('stroke-width', .01);
+      },
+      onLoad: (e, d) => {
+        hideAll()
       }
     } 
   }) => {
@@ -52,7 +36,8 @@ const GeoEngine = ({
     const {
         onClick,
         onMouseEnter,
-        onMouseLeave
+        onMouseLeave,
+        onLoad
     } = GeoEngineProps
 
     const prevGeoData = useRef();
@@ -75,6 +60,8 @@ const GeoEngine = ({
                     .attr('stroke', '#fff')
                     .attr('stroke-width', .01);
             });
+
+            // onLoad();
 
             const zoom = d3.zoom()
                 .on('zoom', (e) => {
