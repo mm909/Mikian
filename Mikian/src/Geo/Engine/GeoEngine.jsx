@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState, useMemo } from 'react'
+import { useContext, useEffect, useState, useMemo, useRef } from 'react'
 
 import * as d3 from 'd3'
 import { v4 as uuidv4 } from 'uuid'
@@ -10,12 +10,36 @@ import EmptyMap from '@/Geo/Engine/EmptyMap.jsx'
 
 const GeoEngine = ({ 
     GeoEngineProps = {
-      onClick: (e, d) => {},
-      onMouseEnter: (e, d) => {
-        console.log('Hovered over: ')
+      onClick: (e, d) => {
         console.log(d)
       },
-      onMouseLeave: (e, d) => {}
+      onMouseEnter: (e, d) => {
+        console.log("Mouse entered: ", d.properties.id)
+        
+        // color d white
+        d3.select(`#object-${d.properties.id}`)
+            .attr('fill', '#fff1')
+            .attr('stroke-width', .05);
+
+        // color country white
+        let country_id = d.properties.id.split('-')[0];
+        d3.select(`#object-${country_id}`)
+            .attr('stroke-width', .1);
+        
+
+      },
+      onMouseLeave: (e, d) => {
+        console.log("Mouse left: ", d.properties.id)
+
+        // back to normal
+        d3.select(`#object-${d.properties.id}`)
+            .attr('fill', 'transparent')
+            .attr('stroke-width', .01);
+
+        let country_id = d.properties.id.split('-')[0];
+        d3.select(`#object-${country_id}`)
+            .attr('stroke-width', .01);
+      }
     } 
   }) => {
     const { geoData }  = useContext(GeoContext)
@@ -31,38 +55,51 @@ const GeoEngine = ({
         onMouseLeave
     } = GeoEngineProps
 
-    useEffect(() => {
-        console.log('Test')
-        d3.select(`#${geoEngineId} g.map`)
-            .selectAll('path')
-            .on('click', onClick)
-            .on('mouseenter', onMouseEnter)
-            .on('mouseleave', onMouseLeave);
-    }, [GeoEngineProps]);
+    const prevGeoData = useRef();
 
     useEffect(() => {
         if (geoData === null) return;
 
-        Object.keys(geoData.objects).forEach((key, index) => {
-            d3.select(`#${geoEngineId} g.map`)
-                .selectAll(`path.${key}`)
-                .data(topojson.feature(geoData, geoData.objects[key]).features)
-                .join('path')
-                .attr('class', key)
-                .attr('d', geoGenerator)
-                .attr('fill', 'transparent')
-                .attr('stroke', '#fff')
-                .attr('stroke-width', .01);
-        });
+        if (prevGeoData.current !== geoData) {
+            d3.select(`#${geoEngineId} g.map`).selectAll('*').remove();
 
-        const zoom = d3.zoom()
-            .on('zoom', (e) => {
-                d3.select(`#${geoEngineId} svg g`).attr('transform', e.transform);
+            Object.keys(geoData.objects).forEach((key, index) => {
+                d3.select(`#${geoEngineId} g.map`)
+                    .selectAll(`path.${key}`)
+                    .data(topojson.feature(geoData, geoData.objects[key]).features)
+                    .join('path')
+                    .attr('id', (d, i) => `object-${d.properties.id}`)
+                    .attr('class', (d, i) => `object-${d.properties.id}`)
+                    .attr('d', geoGenerator)
+                    .attr('fill', 'transparent')
+                    .attr('stroke', '#fff')
+                    .attr('stroke-width', .01);
             });
 
-        d3.select(`#${geoEngineId} svg`)
-            .call(zoom);
-    }, [geoData]);
+            const zoom = d3.zoom()
+                .on('zoom', (e) => {
+                    d3.select(`#${geoEngineId} svg g`).attr('transform', e.transform);
+                });
+
+            d3.select(`#${geoEngineId} svg`)
+                .call(zoom);
+        }
+
+        prevGeoData.current = geoData;
+
+        const geo_listeners = d3.select(`#${geoEngineId} g.map`)
+            .selectAll('path')
+            .on('click', onClick)
+            .on('mouseenter', onMouseEnter)
+            .on('mouseleave', onMouseLeave);
+        
+        return () => {
+            geo_listeners.on('click', null)
+                .on('mouseenter', null)
+                .on('mouseleave', null);
+        };
+
+    }, [geoData, GeoEngineProps]);
 
     return (
         <>
