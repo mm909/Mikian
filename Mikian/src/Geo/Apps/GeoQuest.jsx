@@ -18,7 +18,6 @@ function GeoQuest() {
             unhighlightGeometry(d)
         },
         onLoad: (e, d) => {
-            showLevel(0)
         }
     }), []);
 

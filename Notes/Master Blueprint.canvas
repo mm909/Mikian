@@ -1,0 +1,29 @@
+{
+	"nodes":[
+		{"id":"8eda3174ed656887","type":"group","x":440,"y":-1040,"width":4960,"height":2320,"label":"Version 1.0 (MVP)"},
+		{"id":"d2e9931fc8de88ba","type":"group","x":1180,"y":320,"width":835,"height":400,"label":"Design Navigation UI"},
+		{"id":"58d9c7b9322fc09e","type":"file","file":"Versions/Oddish - v1.0 (MVP)/Oddish.io - v1.0 (MVP).md","x":760,"y":-958,"width":400,"height":280},
+		{"id":"b6f2baa0e7ec6f46","type":"file","file":"Versions/Oddish - v1.0 (MVP)/Navigation - v1.0.md","x":760,"y":-560,"width":400,"height":400},
+		{"id":"754b47c19b1442f2","type":"text","text":"Develop Navigation UI","x":835,"y":100,"width":250,"height":60},
+		{"id":"0fc2aa0e697c04dd","type":"file","file":"Versions/Oddish - v1.0 (MVP)/Hosting - v1.0.md","x":4460,"y":-560,"width":400,"height":400},
+		{"id":"5012184a1cc22372","type":"file","file":"Versions/Oddish - v1.0 (MVP)/CICD - v1.0.md","x":3980,"y":-560,"width":400,"height":400},
+		{"id":"214baa51ccfd1b79","type":"file","file":"Versions/Oddish - v1.0 (MVP)/Oddish.Stats - v1.0.md","x":3500,"y":-560,"width":400,"height":400},
+		{"id":"14863556a591cb31","type":"file","file":"Versions/Oddish - v1.0 (MVP)/Geo.Sketch - v1.0.md","x":3020,"y":-560,"width":400,"height":400},
+		{"id":"d5fc671d129170b5","type":"file","file":"Versions/Oddish - v1.0 (MVP)/GeoEngine - v1.0.md","x":2540,"y":-560,"width":400,"height":400},
+		{"id":"31ed57fd4d043c57","type":"file","file":"Versions/Oddish - v1.0 (MVP)/GeoData - v1.0.md","x":2040,"y":-560,"width":400,"height":400},
+		{"id":"df35529460d0be5d","type":"text","text":"Design Navigation UI","x":835,"y":490,"width":250,"height":60},
+		{"id":"60b58ce2e495f047","type":"text","text":"","x":1200,"y":360,"width":250,"height":60},
+		{"id":"bdb270e82230a4e6","type":"text","text":"Choose Colors","x":1200,"y":440,"width":250,"height":60},
+		{"id":"fe9a622d229b7c2c","type":"text","text":"Domain Navigation","x":1470,"y":440,"width":250,"height":60},
+		{"id":"5dfc1279229b6a06","type":"text","text":"Game Navigation","x":1740,"y":440,"width":250,"height":60},
+		{"id":"4eafc282a796a9fe","type":"text","text":"TopoJson Data Available ","x":2114,"y":42,"width":250,"height":60},
+		{"id":"6fa50df5a9f5e413","type":"text","text":"Morph between any two topojsons","x":2615,"y":102,"width":250,"height":60},
+		{"id":"b89b4f1b2dfc8f42","type":"text","text":"Display Single Country","x":2615,"y":220,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"ff1bcd635aa7046c","fromNode":"754b47c19b1442f2","fromSide":"top","toNode":"b6f2baa0e7ec6f46","toSide":"bottom"},
+		{"id":"7513006a507ce029","fromNode":"df35529460d0be5d","fromSide":"top","toNode":"754b47c19b1442f2","toSide":"bottom"},
+		{"id":"b2d23166bc9895e1","fromNode":"d2e9931fc8de88ba","fromSide":"left","toNode":"df35529460d0be5d","toSide":"right","toEnd":"none"},
+		{"id":"155af385f0e79ed8","fromNode":"4eafc282a796a9fe","fromSide":"top","toNode":"31ed57fd4d043c57","toSide":"bottom"}
+	]
+}

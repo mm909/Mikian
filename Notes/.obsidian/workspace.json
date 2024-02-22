@@ -4,55 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "2aa58949c4ce002e",
+        "id": "2ded8730ba3d7d70",
         "type": "tabs",
         "children": [
           {
-            "id": "9917acff013189b2",
+            "id": "9c9a6d7a7a114292",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "canvas",
               "state": {
-                "file": "UI Reference/ColorPallets/ColorPallet1.png"
-              }
-            }
-          },
-          {
-            "id": "3174aa853884f4af",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/General.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fad84ff05c4f8156",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UI Reference/Ideas.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "23c8073b84f35256",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.5.3"
+                "file": "Master Blueprint.canvas",
+                "viewState": {
+                  "x": 2696.2989789830986,
+                  "y": 166.64197795605213,
+                  "zoom": -1.2920947462053156
+                }
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -102,7 +72,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 293.5
   },
   "right": {
     "id": "7f5fb0549dc9fdb8",
@@ -118,13 +88,13 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "UI Reference/Ideas.md",
+                "file": "Master Blueprint.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               }
             }
@@ -135,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "UI Reference/Ideas.md",
+                "file": "Master Blueprint.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "UI Reference/Ideas.md"
+                "file": "Master Blueprint.canvas"
               }
             }
           }
@@ -166,7 +136,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -179,11 +149,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "23c8073b84f35256",
+  "active": "9c9a6d7a7a114292",
   "lastOpenFiles": [
     "Untitled.md",
-    "UI Reference/Ideas.md",
+    "Master Blueprint.canvas",
+    "Planning/Scratch Notes.md",
+    "Planning/Oddish - v1.0 MVP/Feature List.md",
+    "Versions/Oddish - v1.0 (MVP)/CICD - v1.0.md",
+    "Versions/Oddish - v1.0 (MVP)/Oddish.io - v1.0 (MVP).md",
+    "CD - v1.0.md",
+    "Versions/Oddish - v1.0 (MVP)/Navigation - v1.0.md",
+    "Versions/Oddish - v1.0 (MVP)/Oddish.Stats - v1.0.md",
+    "Versions/Oddish - v1.0 (MVP)/GeoData - v1.0.md",
+    "Versions/Oddish - v1.0 (MVP)/Hosting - v1.0.md",
+    "CI",
+    "Versions/Oddish - v1.0 (MVP)/Geo.Sketch - v1.0.md",
+    "Versions/Oddish - v1.0 (MVP)/GeoEngine - v1.0.md",
+    "Versions/Oddish - v1.0 (MVP)",
+    "Versions",
+    "Planning/Oddish - v1.0 MVP",
+    "Oddish",
+    "Planning",
     "Notes/General.md",
+    "UI Reference/Ideas.md",
     "UI Reference/ColorPallets/ColorPallet1.png",
     "Notes",
     "UI Reference/ColorPallets",
