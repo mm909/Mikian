@@ -7,6 +7,7 @@ import { MousePositionProvider } from '@/Utilities/MousePositionContext.jsx'
 
 import Navagation from '@/Navagation/Navagation.jsx'
 import GeoQuest from '@/Geo/Apps/GeoQuest.jsx'
+import SketchBox from '@/Geo/Apps/SketchBox.jsx'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Navagation />}>
                   <Route path="/GeoQuest" element={<GeoQuest />} />
+                  <Route path="/SketchBox" element={<SketchBox />} />
                   {/* <Route path="*" element={<NotFound />} />  */}
               </Route>
             </Routes>

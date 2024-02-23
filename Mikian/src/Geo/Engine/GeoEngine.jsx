@@ -80,47 +80,6 @@ const GeoEngine = ({
             .on('mouseenter', onMouseEnter)
             .on('mouseleave', onMouseLeave);
 
-
-            d3.select(`#${geoEngineId} g.map`).call(d3.drag().on('drag', (event, d) => {
-
-                let numPoints = d3.select(`#${geoEngineId} g.map`).selectAll("path").size();
-                console.log(`Number of points: ${numPoints}`);
-
-                const rotate = projection.rotate()
-                const k = 350 / projection.scale()
-                console.log(event)
-                projection.rotate([
-                  rotate[0] + event.dx * k,
-                  rotate[1] - event.dy * k
-                ])
-                let path = d3.geoPath().projection(projection)
-                d3.select(`#${geoEngineId} g.map`).selectAll("path").attr("d", path)
-              }))
-                .call(d3.zoom().on('zoom', (event) => {
-                  if(event.transform.k > 0.3) {
-                    projection.scale(initialScale * d3.event.transform.k)
-                    let path = d3.geoPath().projection(projection)
-                    d3.select(`#${geoEngineId} g.map`).selectAll("path").attr("d", path)
-                    globe.attr("r", projection.scale())
-                  }
-                  else {
-                    event.transform.k = 0.3
-                  }
-                }))
-        
-    //Optional rotate
-    // d3.timer(function(elapsed) {
-    //     const rotate = projection.rotate()
-    //     const k = 75 / projection.scale()
-    //     projection.rotate([
-    //         rotate[0] - 1 * k,
-    //         rotate[1]
-    //     ])
-    //     let path = d3.geoPath().projection(projection)
-    //     d3.select(`#${geoEngineId} g.map`).selectAll("path").attr("d", path)
-    // },100)
-
-
         return () => {
             geo_listeners.on('click', null)
                 .on('mouseenter', null)
