@@ -6,10 +6,11 @@ export function highlightGeometry(d, current_level = 1) {
     let max_levels = root_id.split('-').length;
     let current_id = d.properties.id.split('-').slice(0, max_levels + 1 - current_level).join('-');
 
-    let current_stroke_width = .01 + current_level * .025;
+    let current_stroke_width = .01 + current_level * .5;
     
     d3.select(`#object-${current_id}`)
         .attr('fill', '#ffffff10')
+        .attr('stroke', '#ffffff')
         .attr('stroke-width', current_stroke_width);
 
     if (current_level < max_levels) {
@@ -25,7 +26,8 @@ export function unhighlightGeometry(d, current_level = 1) {
 
     d3.select(`#object-${current_id}`)
         .attr('fill', 'transparent')
-        .attr('stroke-width', .01);
+        .attr('stroke', '#666')
+        .attr('stroke-width', .3);
 
     if (current_level < max_levels) {
         unhighlightGeometry(d, current_level + 1);

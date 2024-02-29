@@ -6,7 +6,7 @@ export const GeoContext = createContext();
 
 export const GeoContextProvider = ({ children }) => {
 
-    const [geoFileName, setGeoFileName] = useState('/output.json');
+    const [geoFileName, setGeoFileName] = useState('/amd0_0_1.json');
     const [geoData, setGeoData] = useState(null);
 
     useEffect(() => {

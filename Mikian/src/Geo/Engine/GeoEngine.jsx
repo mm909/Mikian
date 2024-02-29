@@ -30,7 +30,7 @@ const GeoEngine = ({
 
     const [geoEngineId, setGeoEngineId] = useState('geoEngine-' + uuidv4());
 
-    const projection = useMemo(() => d3.geoOrthographic(), []); // geoEquirectangular geoOrthographic
+    const projection = useMemo(() => d3.geoEquirectangular(), []); // geoEquirectangular geoOrthographic
     const geoGenerator = useMemo(() => d3.geoPath().projection(projection), [projection]);
 
     const {
@@ -57,8 +57,8 @@ const GeoEngine = ({
                     .attr('class', (d, i) => `object-${d.properties.id}`)
                     .attr('d', geoGenerator)
                     .attr('fill', 'transparent')
-                    .attr('stroke', '#fff')
-                    .attr('stroke-width', .1);
+                    .attr('stroke', '#666')
+                    .attr('stroke-width', .3);
             });
 
             // onLoad();

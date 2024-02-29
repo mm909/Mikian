@@ -4,74 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "483740f0c8af34e5",
+        "id": "d35e17071d4d06e1",
         "type": "tabs",
         "children": [
           {
-            "id": "0b4e97f36ea4fd27",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Templates/Open Ticket.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8719dbe95ef24ff9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "878e9e72e30b7840",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled 1.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "303ae1c2f97d666e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled 2.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6cd66ecd7c5e0bf2",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Untitled 1.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
-                }
-              }
-            }
-          },
-          {
-            "id": "4299352f9fc8a7a6",
+            "id": "f265d9fb5fbcce4c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -82,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -133,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 293.5
+    "width": 200
   },
   "right": {
     "id": "7f5fb0549dc9fdb8",
@@ -214,46 +150,46 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "4299352f9fc8a7a6",
+  "active": "f265d9fb5fbcce4c",
   "lastOpenFiles": [
-    "Tickets/(8) null/(8) null.md",
+    "Tickets/(16) asdf/(16) asdf.md",
     "Templates/Open Ticket.md",
-    "Tickets/(8) null",
-    "Tickets/(6) asdfad/(6) asdfad.md",
-    "Untitled 2.md",
-    "Untitled 1.canvas",
-    "Versions/Oddish - v1.0 (MVP)/Geo.Sketch - v1.0.md",
-    "Untitled.canvas",
-    "Tickets/(7) asdfasdf/(7) asdfasdf.md",
-    "Tickets/(7) asdfasdf",
-    "Tickets/(6) asdfad",
-    "Untitled 1.md",
+    "Tickets/(16) asdf",
+    "Tickets/(15) asdf/(15) asdf.md",
+    "Tickets/(15) asdf",
     "Untitled.md",
-    "Tickets/(5) asdf/(5) asdf.md",
-    "Tickets/(5) asdf",
-    "Tickets/(4) Name of ticket/Untitled.md",
-    "Tickets/(3) asdf/(3) asdf.md",
-    "Tickets/(4) Name of ticket/(4) Name of ticket.md",
-    "Tickets/(4) Name of ticket",
-    "Tickets/(1) asdf/(1) asdf.md",
-    "Tickets/(2) asdf/(2) asdf.md",
-    "Tickets/(3) asdf",
-    "Tickets/(2) asdf",
-    "(0) asdf.md",
-    "Notes/asdf 2024-02-23.md",
-    "Tickets/(1) asdf",
-    "rand/asdf 2024-02-23.md",
-    "Notes/s.md",
-    "Notes/Test 2024-02-23.md",
-    "Tickets/(1) Build ticketing system in Obsidian.md",
-    "Tickets/(3) asdf.md",
-    "Tickets/asdf 2024-02-23.md",
-    "rand",
-    "sdf 2024-02-23.md",
-    "Tickets/2.md",
-    "Tickets/1.md",
+    "Tickets/(14) Test/(14) Test.md",
+    "Tickets/(14) Test",
+    "Tickets/(13) asdf/(13) asdf.md",
+    "Tickets/(13) asdf",
+    "(13) .md",
+    "Tickets/(12) null/(12) null.md",
+    "Tickets/(11) Need to make cool thing/(11) Need to make cool thing.md",
+    "Tickets/(12) null",
+    "Tickets/(11) Need to make cool thing",
+    "Versions/Oddish - v1.0 (MVP)/GeoData - v1.0.md",
+    "Versions/Oddish - v1.0 (MVP)/Geo.Sketch - v1.0.md",
+    "Versions/Oddish - v1.0 (MVP)/GeoEngine - v1.0.md",
     "Master Blueprint.canvas",
-    "Notes",
+    "Tickets/(10) null/(10) null.md",
+    "Tickets/(10) null",
+    "Tickets/(9) test/(9) test.md",
+    "Tickets/(9) test",
+    "Tickets/(8) asdf/(8) asdf.md",
+    "Tickets/(8) asdf",
+    "(8) .md",
+    "Tickets/(7) aasdf/(7) aasdf.md",
+    "Tickets/(7) aasdf",
+    "Tickets/(6) asdf/(6) asdf.md",
+    "Tickets/(5) asdf/(5) asdf.md",
+    "Tickets/(4) asdf/(4) asdf.md",
+    "(4) .md",
+    "Tickets/(3) asdf/(3) asdf.md",
+    "Tickets/(2) asdf/(2) asdf.md",
+    "Tickets/(1) null/(1) null.md",
+    "Templates/tyest.md",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
     "UI Reference/ColorPallets/ColorPallet1.png"
   ]
 }
