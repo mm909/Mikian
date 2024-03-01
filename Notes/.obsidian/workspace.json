@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d35e17071d4d06e1",
+        "id": "8cd3a7064fc453aa",
         "type": "tabs",
         "children": [
           {
-            "id": "f265d9fb5fbcce4c",
+            "id": "63ec5c6f01d0cde8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Templates/Open Ticket.md",
+                "file": "Tickets/(1) Create a ticketing system in Obsidian/(1) Create a ticketing system in Obsidian.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tp.file",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Templates/Open Ticket.md",
+                "file": "Tickets/(1) Create a ticketing system in Obsidian/(1) Create a ticketing system in Obsidian.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Templates/Open Ticket.md",
+                "file": "Tickets/(1) Create a ticketing system in Obsidian/(1) Create a ticketing system in Obsidian.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Templates/Open Ticket.md"
+                "file": "Tickets/(1) Create a ticketing system in Obsidian/(1) Create a ticketing system in Obsidian.md"
               }
             }
           }
@@ -150,46 +150,47 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f265d9fb5fbcce4c",
+  "active": "63ec5c6f01d0cde8",
   "lastOpenFiles": [
-    "Tickets/(16) asdf/(16) asdf.md",
-    "Templates/Open Ticket.md",
-    "Tickets/(16) asdf",
-    "Tickets/(15) asdf/(15) asdf.md",
-    "Tickets/(15) asdf",
-    "Untitled.md",
-    "Tickets/(14) Test/(14) Test.md",
-    "Tickets/(14) Test",
-    "Tickets/(13) asdf/(13) asdf.md",
-    "Tickets/(13) asdf",
-    "(13) .md",
-    "Tickets/(12) null/(12) null.md",
-    "Tickets/(11) Need to make cool thing/(11) Need to make cool thing.md",
-    "Tickets/(12) null",
-    "Tickets/(11) Need to make cool thing",
-    "Versions/Oddish - v1.0 (MVP)/GeoData - v1.0.md",
+    "Versions/Oddish - v1.0 (MVP)/_Oddish.io - v1.0 (MVP).md",
+    "Versions/Oddish - v1.0 (MVP)/CICD - v1.0.md",
     "Versions/Oddish - v1.0 (MVP)/Geo.Sketch - v1.0.md",
+    "Versions/Oddish - v1.0 (MVP)/GeoData - v1.0.md",
     "Versions/Oddish - v1.0 (MVP)/GeoEngine - v1.0.md",
-    "Master Blueprint.canvas",
-    "Tickets/(10) null/(10) null.md",
-    "Tickets/(10) null",
-    "Tickets/(9) test/(9) test.md",
-    "Tickets/(9) test",
-    "Tickets/(8) asdf/(8) asdf.md",
-    "Tickets/(8) asdf",
-    "(8) .md",
-    "Tickets/(7) aasdf/(7) aasdf.md",
-    "Tickets/(7) aasdf",
-    "Tickets/(6) asdf/(6) asdf.md",
-    "Tickets/(5) asdf/(5) asdf.md",
-    "Tickets/(4) asdf/(4) asdf.md",
-    "(4) .md",
-    "Tickets/(3) asdf/(3) asdf.md",
-    "Tickets/(2) asdf/(2) asdf.md",
-    "Tickets/(1) null/(1) null.md",
-    "Templates/tyest.md",
-    "Untitled 1.canvas",
+    "Versions/Oddish - v1.0 (MVP)/Hosting - v1.0.md",
+    "Versions/Oddish - v1.0 (MVP)/Navigation - v1.0.md",
+    "Versions/Oddish - v1.0 (MVP)/Oddish.Stats - v1.0.md",
+    "2024-03-01.md",
     "Untitled.canvas",
+    "Untitled 1.md",
+    "Master Blueprint.canvas",
+    "Untitled.md",
+    "Tickets/(1) Create a ticketing system in Obsidian/(1) Create a ticketing system in Obsidian.md",
+    "Templates/Open Ticket.md",
+    "Tickets/(1) Create a ticketing system in Obsidian",
+    "Tickets/(2) Create a ticketing system in Obsidian/(2) Create a ticketing system in Obsidian.md",
+    "Tickets/(2) Create a ticketing system in Obsidian",
+    "Tickets/(1) Create a ticketing system in Obisidan/(1) Create a ticketing system in Obisidan.md",
+    "Tickets/(2) asdfasdf/(2) asdfasdf.md",
+    "Tickets/(2) asdfasdf",
+    "Tickets/(1) Create a ticketing system in Obisidan",
+    "Tickets/(6) asdfasdf/(6) asdfasdf.md",
+    "Tickets/(1) Test/(1) Test.md",
+    "Tickets/(3) asdfasdf/(3) asdfasdf.md",
+    "Tickets/(5) asdfasdf/(5) asdfasdf.md",
+    "Tickets/(6) asdfasdf",
+    "Tickets/(5) asdfasdf",
+    "Tickets/(4) asdfasdf",
+    "Tickets/(4) asdfasdf/(4) asdfasdf.md",
+    "Tickets/(3) asdfasdf",
+    "Tickets/(1) Test",
+    "Tickets/(1) Make a ticketing system in Obisidan/(1) Make a ticketing system in Obisidan.md",
+    "Tickets/(16) asdfasdf/(16) asdfasdf.md",
+    "Tickets/(16) asdfasdf",
+    "Tickets/(15) asdfasdf/(15) asdfasdf.md",
+    "Tickets/(14) asdf/(14) asdf.md",
+    "Tickets/(13) asdfasdf/(13) asdfasdf.md",
+    "Untitled 1.canvas",
     "UI Reference/ColorPallets/ColorPallet1.png"
   ]
 }
